@@ -23,7 +23,8 @@ namespace ServicioW
         public string HelloWorld()
         {
             log.Info("Prueba"); //Los log van siempre antes del return
-
+            //log.Debug("");
+            //log.Error("");
             return "Hola a todos";
             
         }
