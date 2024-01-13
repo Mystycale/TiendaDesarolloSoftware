@@ -15,7 +15,7 @@ namespace VisualCore
             string respuesta = cliente.HelloWorld(); //Helloworld es uno de los metodos del servicio web
             //Recuerda que cada vez que se agregues un nuevo metodo en el servicio web, se debe...
             //dar click derecho sobre "ServicioDelCore"(esta adentro de "Connected Services en visualCore") y...
-            //Click en actualizar referencia del servicio
+            //Click en actualizar referencia del servicio NADA
 
             Console.WriteLine(respuesta);
         }
