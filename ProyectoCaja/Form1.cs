@@ -12,9 +12,17 @@ namespace ProyectoCaja
 {
     public partial class Form1 : Form
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            log.Info("La aplicacion ha subido"); //ejemplo de como usar el log
+            //log.Error("");
+            //log.Debug("");
         }
     }
 }
