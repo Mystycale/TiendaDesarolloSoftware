@@ -104,6 +104,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\WebCoreDB.mdf" />
+    <Content Include="App_Data\WebCoreDB_log.ldf">
+      <DependentUpon>WebCoreDB.mdf</DependentUpon>
+    </Content>
     <Content Include="CoreWebService.asmx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -134,7 +138,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
