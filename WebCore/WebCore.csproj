@@ -104,9 +104,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\WebCoreDB.mdf" />
-    <Content Include="App_Data\WebCoreDB_log.ldf">
-      <DependentUpon>WebCoreDB.mdf</DependentUpon>
+    <Content Include="App_Data\WebCoreDb.mdf" />
+    <Content Include="App_Data\WebCoreDb_log.ldf">
+      <DependentUpon>WebCoreDb.mdf</DependentUpon>
     </Content>
     <Content Include="CoreWebService.asmx" />
     <Content Include="Global.asax" />
