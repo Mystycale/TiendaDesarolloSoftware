@@ -43,7 +43,13 @@ namespace ProyectoCaja
             txtContraseña.PasswordChar = '*';
         }
 
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            FuncionesGenerales.abrirVentana(new FormCajaPrincipal(), panelLogin);
+        }
+
         #endregion
+
 
     }
 }
