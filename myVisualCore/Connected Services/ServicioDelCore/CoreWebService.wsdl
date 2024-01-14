@@ -32,16 +32,10 @@
       <s:element name="InsertCajeroResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="InsertCajeroResult" type="tns:WCRespuesta" />
+            <s:element minOccurs="1" maxOccurs="1" name="InsertCajeroResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="WCRespuesta">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="Mensaje" type="s:int" />
-        </s:sequence>
-      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">

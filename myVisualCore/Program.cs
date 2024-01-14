@@ -30,6 +30,8 @@ namespace myVisualCore
                 Console.WriteLine("------MENU------");
                 Console.WriteLine("1. Registrar cajero");
 
+                
+
                 int op = int.Parse(Console.ReadLine());
 
                 if (op == 1)

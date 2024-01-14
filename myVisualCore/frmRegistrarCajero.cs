@@ -18,9 +18,6 @@ namespace myVisualCore
             InitializeComponent();
         }
 
-
-
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -29,12 +26,11 @@ namespace myVisualCore
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            ServicioDelCore.CoreWebServiceSoapClient client = new ServicioDelCore.CoreWebServiceSoapClient();
             //WCCajero myWCCajero = new WCCajero();
             //WCRespuesta myWCRespuesta = new WCRespuesta();
 
             ServicioDelCore.WCCajero myWCCajero = new ServicioDelCore.WCCajero();
-            ServicioDelCore.WCRespuesta myWCRespuesta = new ServicioDelCore.WCRespuesta();
+            //ServicioDelCore.WCRespuesta myWCRespuesta = new ServicioDelCore.WCRespuesta();
 
             myWCCajero.cjr_codigo = txtCodigo.Text;
             myWCCajero.cjr_nombre = txtNombre.Text;
@@ -43,10 +39,23 @@ namespace myVisualCore
             myWCCajero.cjr_telefono = txtTelefono.Text;
             myWCCajero.cjr_direccion = txtDireccion.Text;
 
-            myWCRespuesta = client.InsertCajero(myWCCajero);
+            ServicioDelCore.CoreWebServiceSoapClient client = new ServicioDelCore.CoreWebServiceSoapClient();
+            int respWCQwery;
 
-            //MessageBox.Show(, "Mensaje del sistema");
-            MessageBox.Show(myWCRespuesta.Mensaje.ToString(), "Mensaje del sistema");
+            try
+            {
+                respWCQwery = client.InsertCajero(myWCCajero);
+                if (respWCQwery == 1)
+                {
+                    DialogResult r = MessageBox.Show("El cajero fue creado correctamente.", "Mensaje del core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (r == DialogResult.OK) { this.Close(); }
+                }
+            }
+            catch (Exception exx)
+            {
+                //TODO: log LA EXEPTION
+                MessageBox.Show("Ocurrio un error al crear el cajero. \nAsegurate de que la cedula y el codigo sean correctos",/*exx.Message,*/ "Mensaje del core", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }

@@ -138,65 +138,6 @@ namespace myVisualCore.ServicioDelCore {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="WCRespuesta", Namespace="http://google.com")]
-    [System.SerializableAttribute()]
-    public partial class WCRespuesta : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int CodigoField;
-        
-        private int MensajeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Codigo {
-            get {
-                return this.CodigoField;
-            }
-            set {
-                if ((this.CodigoField.Equals(value) != true)) {
-                    this.CodigoField = value;
-                    this.RaisePropertyChanged("Codigo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Mensaje {
-            get {
-                return this.MensajeField;
-            }
-            set {
-                if ((this.MensajeField.Equals(value) != true)) {
-                    this.MensajeField = value;
-                    this.RaisePropertyChanged("Mensaje");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://google.com", ConfigurationName="ServicioDelCore.CoreWebServiceSoap")]
     public interface CoreWebServiceSoap {
@@ -334,13 +275,13 @@ namespace myVisualCore.ServicioDelCore {
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://google.com")]
     public partial class InsertCajeroResponseBody {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public myVisualCore.ServicioDelCore.WCRespuesta InsertCajeroResult;
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int InsertCajeroResult;
         
         public InsertCajeroResponseBody() {
         }
         
-        public InsertCajeroResponseBody(myVisualCore.ServicioDelCore.WCRespuesta InsertCajeroResult) {
+        public InsertCajeroResponseBody(int InsertCajeroResult) {
             this.InsertCajeroResult = InsertCajeroResult;
         }
     }
@@ -400,7 +341,7 @@ namespace myVisualCore.ServicioDelCore {
             return base.Channel.InsertCajero(request);
         }
         
-        public myVisualCore.ServicioDelCore.WCRespuesta InsertCajero(myVisualCore.ServicioDelCore.WCCajero _WCCajero) {
+        public int InsertCajero(myVisualCore.ServicioDelCore.WCCajero _WCCajero) {
             myVisualCore.ServicioDelCore.InsertCajeroRequest inValue = new myVisualCore.ServicioDelCore.InsertCajeroRequest();
             inValue.Body = new myVisualCore.ServicioDelCore.InsertCajeroRequestBody();
             inValue.Body._WCCajero = _WCCajero;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Windows.Forms;
 using WebCore.Modelos;
 using WebCore.WebCoreDataSetTableAdapters;
 
@@ -32,17 +33,21 @@ namespace WebCore
 
 
         [WebMethod]
-        public WCRespuesta InsertCajero(WCCajero _WCCajero)
+        public int InsertCajero(WCCajero _WCCajero)
         {
             CAJEROTableAdapter myCAJEROTableAdapter = new CAJEROTableAdapter();
 
-            WCRespuesta _WCRespuesta = new WCRespuesta();
+            //WCRespuesta _WCRespuesta = new WCRespuesta();
 
-            _WCRespuesta.Mensaje = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
-                        
-            _WCRespuesta.Codigo = 100;
+            //_WCRespuesta.Mensaje = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
+            int respQwery = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
 
-            return _WCRespuesta;
+            
+            //MessageBox.Show(respQwery.ToString(), "Mensaje del WebCore", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //_WCRespuesta.Codigo = 100;
+
+            return respQwery;
         }
     }
 }
