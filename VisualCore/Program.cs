@@ -11,6 +11,10 @@ CLIENTE creada
 FACTURA creada
 FCT_PROD creada
 FCT_SERV creada
+-
+PERFIL creada
+USUARIO creada
+configurando estado default 1 de todas las tablas
 */
 
 namespace VisualCore
