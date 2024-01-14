@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//Creacion de todas las tablas
 /*
 PRODUCTO creada
 CAJERO crada
@@ -15,7 +11,19 @@ FCT_SERV creada
 PERFIL creada
 USUARIO creada
 configurando estado default 1 de todas las tablas
+-
+Creacion del MyCoreDataSet
+Ingreso de la tabla CAJERO al dataset
+Creacion del WebMethod IngresarCajero
+-
 */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace VisualCore
 {
