@@ -63,7 +63,6 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.txtContraseña);
@@ -105,7 +104,7 @@
             this.btnMostrarContra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMostrarContra.FlatAppearance.BorderSize = 0;
             this.btnMostrarContra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMostrarContra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMostrarContra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnMostrarContra.Location = new System.Drawing.Point(260, 3);
             this.btnMostrarContra.Name = "btnMostrarContra";
             this.btnMostrarContra.Size = new System.Drawing.Size(30, 30);
@@ -116,7 +115,6 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.textBox1);
@@ -151,7 +149,6 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Location = new System.Drawing.Point(337, 379);
             this.btnRegistrar.Name = "btnRegistrar";
@@ -163,7 +160,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -175,7 +171,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -187,7 +182,6 @@
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.Location = new System.Drawing.Point(337, 337);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
@@ -202,9 +196,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 611);
             this.Controls.Add(this.panelLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(960, 650);
             this.Name = "FormLogin";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
