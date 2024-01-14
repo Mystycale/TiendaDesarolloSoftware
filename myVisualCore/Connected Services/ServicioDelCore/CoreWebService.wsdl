@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://google.com" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://google.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://google.com">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCajero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_WCCajero" type="tns:WCCajero" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WCCajero">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="cjr_codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cjr_cedula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cjr_nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cjr_apellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cjr_telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cjr_direccion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertCajeroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCajeroResult" type="tns:WCRespuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WCRespuesta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Codigo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mensaje" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCajeroSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCajero" />
+  </wsdl:message>
+  <wsdl:message name="InsertCajeroSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCajeroResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CoreWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCajero">
+      <wsdl:input message="tns:InsertCajeroSoapIn" />
+      <wsdl:output message="tns:InsertCajeroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CoreWebServiceSoap" type="tns:CoreWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://google.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCajero">
+      <soap:operation soapAction="http://google.com/InsertCajero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CoreWebServiceSoap12" type="tns:CoreWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://google.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCajero">
+      <soap12:operation soapAction="http://google.com/InsertCajero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CoreWebService">
+    <wsdl:port name="CoreWebServiceSoap" binding="tns:CoreWebServiceSoap">
+      <soap:address location="https://localhost:44311/CoreWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CoreWebServiceSoap12" binding="tns:CoreWebServiceSoap12">
+      <soap12:address location="https://localhost:44311/CoreWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

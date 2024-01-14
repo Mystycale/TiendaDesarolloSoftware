@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using WebCore.Modelos;
 using WebCore.WebCoreDataSetTableAdapters;
 
 namespace WebCore
@@ -31,10 +32,17 @@ namespace WebCore
 
 
         [WebMethod]
-        public void InsertCajero(string cjr_codigo, string cjr_cedula, string cjr_nombre, string cjr_apellido, string cjr_telefono, string cjr_direccion)
+        public WCRespuesta InsertCajero(WCCajero _WCCajero)
         {
             CAJEROTableAdapter myCAJEROTableAdapter = new CAJEROTableAdapter();
-            myCAJEROTableAdapter.ppInsertCAJERO(cjr_codigo, cjr_cedula, cjr_nombre, cjr_apellido, cjr_telefono, cjr_direccion);
+
+            WCRespuesta _WCRespuesta = new WCRespuesta();
+
+            _WCRespuesta.Mensaje = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
+                        
+            _WCRespuesta.Codigo = 100;
+
+            return _WCRespuesta;
         }
     }
 }
