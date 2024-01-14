@@ -9,7 +9,134 @@
 //------------------------------------------------------------------------------
 
 namespace ConsolaParaProbarMetodos.ServiceReference1 {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Cajero", Namespace="http://intec.edu.do")]
+    [System.SerializableAttribute()]
+    public partial class Cajero : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string codigoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string cedulaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string apellidoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string telefonoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string direccionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.codigoField, value) != true)) {
+                    this.codigoField = value;
+                    this.RaisePropertyChanged("codigo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string cedula {
+            get {
+                return this.cedulaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cedulaField, value) != true)) {
+                    this.cedulaField = value;
+                    this.RaisePropertyChanged("cedula");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nombreField, value) != true)) {
+                    this.nombreField = value;
+                    this.RaisePropertyChanged("nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string apellido {
+            get {
+                return this.apellidoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.apellidoField, value) != true)) {
+                    this.apellidoField = value;
+                    this.RaisePropertyChanged("apellido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.telefonoField, value) != true)) {
+                    this.telefonoField = value;
+                    this.RaisePropertyChanged("telefono");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.direccionField, value) != true)) {
+                    this.direccionField = value;
+                    this.RaisePropertyChanged("direccion");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://intec.edu.do", ConfigurationName="ServiceReference1.ServicioCapaSoap")]
@@ -70,6 +197,13 @@ namespace ConsolaParaProbarMetodos.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarFacturaServicio", ReplyAction="*")]
         System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse> insertarFacturaServicioAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento ObtenerCajeroResult del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/ObtenerCajero", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponse ObtenerCajero(ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/ObtenerCajero", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponse> ObtenerCajeroAsync(ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -688,6 +822,67 @@ namespace ConsolaParaProbarMetodos.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerCajeroRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerCajero", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequestBody Body;
+        
+        public ObtenerCajeroRequest() {
+        }
+        
+        public ObtenerCajeroRequest(ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ObtenerCajeroRequestBody {
+        
+        public ObtenerCajeroRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ObtenerCajeroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ObtenerCajeroResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponseBody Body;
+        
+        public ObtenerCajeroResponse() {
+        }
+        
+        public ObtenerCajeroResponse(ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class ObtenerCajeroResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.Cajero[] ObtenerCajeroResult;
+        
+        public ObtenerCajeroResponseBody() {
+        }
+        
+        public ObtenerCajeroResponseBody(ConsolaParaProbarMetodos.ServiceReference1.Cajero[] ObtenerCajeroResult) {
+            this.ObtenerCajeroResult = ObtenerCajeroResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServicioCapaSoapChannel : ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap, System.ServiceModel.IClientChannel {
     }
@@ -968,6 +1163,29 @@ namespace ConsolaParaProbarMetodos.ServiceReference1 {
             inValue.Body.precio = precio;
             inValue.Body.total = total;
             return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarFacturaServicioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.ObtenerCajero(ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest request) {
+            return base.Channel.ObtenerCajero(request);
+        }
+        
+        public ConsolaParaProbarMetodos.ServiceReference1.Cajero[] ObtenerCajero() {
+            ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequestBody();
+            ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).ObtenerCajero(inValue);
+            return retVal.Body.ObtenerCajeroResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.ObtenerCajeroAsync(ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest request) {
+            return base.Channel.ObtenerCajeroAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroResponse> ObtenerCajeroAsync() {
+            ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.ObtenerCajeroRequestBody();
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).ObtenerCajeroAsync(inValue);
         }
     }
 }

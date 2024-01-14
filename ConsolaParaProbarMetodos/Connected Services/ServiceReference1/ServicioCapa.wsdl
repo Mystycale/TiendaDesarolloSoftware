@@ -114,6 +114,31 @@
       <s:element name="insertarFacturaServicioResponse">
         <s:complexType />
       </s:element>
+      <s:element name="ObtenerCajero">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerCajeroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCajeroResult" type="tns:ArrayOfCajero" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCajero">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cajero" nillable="true" type="tns:Cajero" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cajero">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -164,6 +189,12 @@
   <wsdl:message name="insertarFacturaServicioSoapOut">
     <wsdl:part name="parameters" element="tns:insertarFacturaServicioResponse" />
   </wsdl:message>
+  <wsdl:message name="ObtenerCajeroSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCajero" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCajeroSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCajeroResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServicioCapaSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
@@ -196,6 +227,10 @@
     <wsdl:operation name="insertarFacturaServicio">
       <wsdl:input message="tns:insertarFacturaServicioSoapIn" />
       <wsdl:output message="tns:insertarFacturaServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCajero">
+      <wsdl:input message="tns:ObtenerCajeroSoapIn" />
+      <wsdl:output message="tns:ObtenerCajeroSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServicioCapaSoap" type="tns:ServicioCapaSoap">
@@ -272,6 +307,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ObtenerCajero">
+      <soap:operation soapAction="http://intec.edu.do/ObtenerCajero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServicioCapaSoap12" type="tns:ServicioCapaSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -340,6 +384,15 @@
     </wsdl:operation>
     <wsdl:operation name="insertarFacturaServicio">
       <soap12:operation soapAction="http://intec.edu.do/insertarFacturaServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCajero">
+      <soap12:operation soapAction="http://intec.edu.do/ObtenerCajero" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

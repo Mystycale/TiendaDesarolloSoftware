@@ -1,6 +1,7 @@
 ﻿using ServicioW.DataSetCapaTableAdapters;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
@@ -27,6 +28,36 @@ namespace ServicioW
         PRODUCTOTableAdapter adaptarProducto = new PRODUCTOTableAdapter(); //adaptador de tabla producto
         FCT_PRODTableAdapter adaptarFCTProducto = new FCT_PRODTableAdapter(); //Adaptador de tabla  FCT_PROD
         FCT_SERVTableAdapter adaptarFCTServicio = new FCT_SERVTableAdapter(); //Adaptador de tabla FCT_Serv
+
+
+        // Clase para retornar los cajeros
+        public class Cajero
+        {
+            public string codigo { get; set; }
+            public string cedula { get; set; }
+            public string nombre { get; set; }
+            public string apellido { get; set; }
+            public string telefono { get; set; }
+            public string direccion { get; set; }
+        }
+
+        // Clase para retornar los clientes
+        public class Cliente
+        {
+            public string codigo { get; set; }
+            public string cedula { get; set; }
+            public string nombre { get; set; }
+            public string apellido { get; set; }
+            public string telefono { get; set; }
+            public string direccion { get; set; }
+            public decimal saldo { get; set; }
+        }
+
+
+
+
+
+
 
         [WebMethod]
         public string HelloWorld()
@@ -164,6 +195,69 @@ namespace ServicioW
             }
 
         }
+
+
+        //Obtener cajero
+        [WebMethod]
+        public List<Cajero> ObtenerCajero()
+        {
+            log.Debug("Se estan solicitando los cajeros...");
+            var dt = adaptarCajero.GetDataBy1(); //almacena los datos obteneidos del select
+
+            var cajeros = new List<Cajero>();
+            
+            foreach (DataRow row in dt.Rows) //intera para obtener los datos
+            {
+                var cajero = new Cajero
+                {
+                    codigo = Convert.ToString(row["cjr_codigo"]),
+                    cedula = Convert.ToString(row["cjr_cedula"]),
+                    nombre = Convert.ToString(row["cjr_nombre"]),
+                    apellido = Convert.ToString(row["cjr_apellido"]),
+                    telefono = Convert.ToString(row["cjr_telefono"]),
+                    direccion = Convert.ToString(row["cjr_direccion"])
+                };
+
+                cajeros.Add(cajero);
+            }
+
+            log.Info("Datos de cajeros enviados");
+            return cajeros;
+
+        }
+
+
+        //Obtener clientes
+        [WebMethod]
+        public List<Cliente> ObtenerCliente()
+        {
+            log.Debug("Se estan solicitando los cajeros...");
+            var dt = adaptarCajero.GetDataBy1(); //almacena los datos obteneidos del select
+
+            var clientes = new List<Cliente>();
+
+            foreach (DataRow row in dt.Rows) //intera para obtener los datos
+            {
+                var cliente = new Cliente
+                {
+                    codigo = Convert.ToString(row["clt_codigo"]),
+                    cedula = Convert.ToString(row["clt_cedula"]),
+                    nombre = Convert.ToString(row["clt_nombre"]),
+                    apellido = Convert.ToString(row["clt_apellido"]),
+                    telefono = Convert.ToString(row["clt_telefono"]),
+                    direccion = Convert.ToString(row["clt_direccion"]),
+                    saldo = Convert.ToDecimal(row["clt_saldo"])
+                };
+
+                clientes.Add(cliente);
+            }
+
+            log.Info("Datos de clientes enviados");
+            return clientes;
+
+        }
+
+
 
 
     }
