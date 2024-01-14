@@ -12,6 +12,108 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="insertarCajero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarCajeroResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldo" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarClienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertarServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarServicioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertarFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bit" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="metodoPago" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoCajero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoCliente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarFacturaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertarProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stock" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertarFacturaProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoProducto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoFactura" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarFacturaProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="insertarFacturaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoFactura" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarFacturaServicioResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="HelloWorldSoapIn">
@@ -20,10 +122,80 @@
   <wsdl:message name="HelloWorldSoapOut">
     <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
   </wsdl:message>
+  <wsdl:message name="insertarCajeroSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarCajero" />
+  </wsdl:message>
+  <wsdl:message name="insertarCajeroSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarCajeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarCliente" />
+  </wsdl:message>
+  <wsdl:message name="insertarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarServicio" />
+  </wsdl:message>
+  <wsdl:message name="insertarServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarFactura" />
+  </wsdl:message>
+  <wsdl:message name="insertarFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarProducto" />
+  </wsdl:message>
+  <wsdl:message name="insertarProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarFacturaProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarFacturaProducto" />
+  </wsdl:message>
+  <wsdl:message name="insertarFacturaProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarFacturaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarFacturaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarFacturaServicio" />
+  </wsdl:message>
+  <wsdl:message name="insertarFacturaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarFacturaServicioResponse" />
+  </wsdl:message>
   <wsdl:portType name="ServicioCapaSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
       <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarCajero">
+      <wsdl:input message="tns:insertarCajeroSoapIn" />
+      <wsdl:output message="tns:insertarCajeroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarCliente">
+      <wsdl:input message="tns:insertarClienteSoapIn" />
+      <wsdl:output message="tns:insertarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarServicio">
+      <wsdl:input message="tns:insertarServicioSoapIn" />
+      <wsdl:output message="tns:insertarServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarFactura">
+      <wsdl:input message="tns:insertarFacturaSoapIn" />
+      <wsdl:output message="tns:insertarFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarProducto">
+      <wsdl:input message="tns:insertarProductoSoapIn" />
+      <wsdl:output message="tns:insertarProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarFacturaProducto">
+      <wsdl:input message="tns:insertarFacturaProductoSoapIn" />
+      <wsdl:output message="tns:insertarFacturaProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarFacturaServicio">
+      <wsdl:input message="tns:insertarFacturaServicioSoapIn" />
+      <wsdl:output message="tns:insertarFacturaServicioSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServicioCapaSoap" type="tns:ServicioCapaSoap">
@@ -37,11 +209,137 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="insertarCajero">
+      <soap:operation soapAction="http://intec.edu.do/insertarCajero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarCliente">
+      <soap:operation soapAction="http://intec.edu.do/insertarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarServicio">
+      <soap:operation soapAction="http://intec.edu.do/insertarServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarFactura">
+      <soap:operation soapAction="http://intec.edu.do/insertarFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarProducto">
+      <soap:operation soapAction="http://intec.edu.do/insertarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarFacturaProducto">
+      <soap:operation soapAction="http://intec.edu.do/insertarFacturaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarFacturaServicio">
+      <soap:operation soapAction="http://intec.edu.do/insertarFacturaServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="ServicioCapaSoap12" type="tns:ServicioCapaSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="HelloWorld">
       <soap12:operation soapAction="http://intec.edu.do/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarCajero">
+      <soap12:operation soapAction="http://intec.edu.do/insertarCajero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarCliente">
+      <soap12:operation soapAction="http://intec.edu.do/insertarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarServicio">
+      <soap12:operation soapAction="http://intec.edu.do/insertarServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarFactura">
+      <soap12:operation soapAction="http://intec.edu.do/insertarFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarProducto">
+      <soap12:operation soapAction="http://intec.edu.do/insertarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarFacturaProducto">
+      <soap12:operation soapAction="http://intec.edu.do/insertarFacturaProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarFacturaServicio">
+      <soap12:operation soapAction="http://intec.edu.do/insertarFacturaServicio" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

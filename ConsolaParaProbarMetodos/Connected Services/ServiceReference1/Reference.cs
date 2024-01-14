@@ -21,6 +21,55 @@ namespace ConsolaParaProbarMetodos.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/HelloWorld", ReplyAction="*")]
         System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.HelloWorldResponse> HelloWorldAsync(ConsolaParaProbarMetodos.ServiceReference1.HelloWorldRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento codigo del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarCajero", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponse insertarCajero(ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarCajero", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponse> insertarCajeroAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento codigo del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarCliente", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponse insertarCliente(ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarCliente", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponse> insertarClienteAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento codigo del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarServicio", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponse insertarServicio(ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarServicio", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponse> insertarServicioAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento codigo del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarFactura", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponse insertarFactura(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarFactura", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponse> insertarFacturaAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento codigo del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarProducto", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponse insertarProducto(ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarProducto", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponse> insertarProductoAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento codigoProducto del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarFacturaProducto", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponse insertarFacturaProducto(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarFacturaProducto", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponse> insertarFacturaProductoAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento codigoServicio del espacio de nombres http://intec.edu.do no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarFacturaServicio", ReplyAction="*")]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse insertarFacturaServicio(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://intec.edu.do/insertarFacturaServicio", ReplyAction="*")]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse> insertarFacturaServicioAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -84,6 +133,561 @@ namespace ConsolaParaProbarMetodos.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarCajeroRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarCajero", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequestBody Body;
+        
+        public insertarCajeroRequest() {
+        }
+        
+        public insertarCajeroRequest(ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class insertarCajeroRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string codigo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string cedula;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string apellido;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string telefono;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string direccion;
+        
+        public insertarCajeroRequestBody() {
+        }
+        
+        public insertarCajeroRequestBody(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion) {
+            this.codigo = codigo;
+            this.cedula = cedula;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.telefono = telefono;
+            this.direccion = direccion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarCajeroResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarCajeroResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponseBody Body;
+        
+        public insertarCajeroResponse() {
+        }
+        
+        public insertarCajeroResponse(ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class insertarCajeroResponseBody {
+        
+        public insertarCajeroResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarClienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarCliente", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequestBody Body;
+        
+        public insertarClienteRequest() {
+        }
+        
+        public insertarClienteRequest(ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class insertarClienteRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string codigo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string cedula;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string apellido;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string telefono;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string direccion;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=6)]
+        public decimal saldo;
+        
+        public insertarClienteRequestBody() {
+        }
+        
+        public insertarClienteRequestBody(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion, decimal saldo) {
+            this.codigo = codigo;
+            this.cedula = cedula;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.telefono = telefono;
+            this.direccion = direccion;
+            this.saldo = saldo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarClienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarClienteResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponseBody Body;
+        
+        public insertarClienteResponse() {
+        }
+        
+        public insertarClienteResponse(ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class insertarClienteResponseBody {
+        
+        public insertarClienteResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarServicioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarServicio", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequestBody Body;
+        
+        public insertarServicioRequest() {
+        }
+        
+        public insertarServicioRequest(ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class insertarServicioRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string codigo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string descripcion;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public decimal precio;
+        
+        public insertarServicioRequestBody() {
+        }
+        
+        public insertarServicioRequestBody(string codigo, string nombre, string descripcion, decimal precio) {
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.precio = precio;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarServicioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarServicioResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponseBody Body;
+        
+        public insertarServicioResponse() {
+        }
+        
+        public insertarServicioResponse(ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class insertarServicioResponseBody {
+        
+        public insertarServicioResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarFacturaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarFactura", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequestBody Body;
+        
+        public insertarFacturaRequest() {
+        }
+        
+        public insertarFacturaRequest(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class insertarFacturaRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string codigo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public bool bit;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public System.DateTime fecha;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public decimal total;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public int metodoPago;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string codigoCajero;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string codigoCliente;
+        
+        public insertarFacturaRequestBody() {
+        }
+        
+        public insertarFacturaRequestBody(string codigo, bool bit, System.DateTime fecha, decimal total, int metodoPago, string codigoCajero, string codigoCliente) {
+            this.codigo = codigo;
+            this.bit = bit;
+            this.fecha = fecha;
+            this.total = total;
+            this.metodoPago = metodoPago;
+            this.codigoCajero = codigoCajero;
+            this.codigoCliente = codigoCliente;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarFacturaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarFacturaResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponseBody Body;
+        
+        public insertarFacturaResponse() {
+        }
+        
+        public insertarFacturaResponse(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class insertarFacturaResponseBody {
+        
+        public insertarFacturaResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarProducto", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequestBody Body;
+        
+        public insertarProductoRequest() {
+        }
+        
+        public insertarProductoRequest(ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class insertarProductoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string codigo;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string nombre;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string descripcion;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public int stock;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public decimal precio;
+        
+        public insertarProductoRequestBody() {
+        }
+        
+        public insertarProductoRequestBody(string codigo, string nombre, string descripcion, int stock, decimal precio) {
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.descripcion = descripcion;
+            this.stock = stock;
+            this.precio = precio;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarProductoResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponseBody Body;
+        
+        public insertarProductoResponse() {
+        }
+        
+        public insertarProductoResponse(ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class insertarProductoResponseBody {
+        
+        public insertarProductoResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarFacturaProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarFacturaProducto", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequestBody Body;
+        
+        public insertarFacturaProductoRequest() {
+        }
+        
+        public insertarFacturaProductoRequest(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class insertarFacturaProductoRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string codigoProducto;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string codigoFactura;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int cantidad;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public decimal precio;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public decimal total;
+        
+        public insertarFacturaProductoRequestBody() {
+        }
+        
+        public insertarFacturaProductoRequestBody(string codigoProducto, string codigoFactura, int cantidad, decimal precio, decimal total) {
+            this.codigoProducto = codigoProducto;
+            this.codigoFactura = codigoFactura;
+            this.cantidad = cantidad;
+            this.precio = precio;
+            this.total = total;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarFacturaProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarFacturaProductoResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponseBody Body;
+        
+        public insertarFacturaProductoResponse() {
+        }
+        
+        public insertarFacturaProductoResponse(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class insertarFacturaProductoResponseBody {
+        
+        public insertarFacturaProductoResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarFacturaServicioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarFacturaServicio", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequestBody Body;
+        
+        public insertarFacturaServicioRequest() {
+        }
+        
+        public insertarFacturaServicioRequest(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://intec.edu.do")]
+    public partial class insertarFacturaServicioRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string codigoServicio;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string codigoFactura;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int cantidad;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public decimal precio;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public decimal total;
+        
+        public insertarFacturaServicioRequestBody() {
+        }
+        
+        public insertarFacturaServicioRequestBody(string codigoServicio, string codigoFactura, int cantidad, decimal precio, decimal total) {
+            this.codigoServicio = codigoServicio;
+            this.codigoFactura = codigoFactura;
+            this.cantidad = cantidad;
+            this.precio = precio;
+            this.total = total;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class insertarFacturaServicioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertarFacturaServicioResponse", Namespace="http://intec.edu.do", Order=0)]
+        public ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponseBody Body;
+        
+        public insertarFacturaServicioResponse() {
+        }
+        
+        public insertarFacturaServicioResponse(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class insertarFacturaServicioResponseBody {
+        
+        public insertarFacturaServicioResponseBody() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ServicioCapaSoapChannel : ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap, System.ServiceModel.IClientChannel {
     }
@@ -132,6 +736,238 @@ namespace ConsolaParaProbarMetodos.ServiceReference1 {
             ConsolaParaProbarMetodos.ServiceReference1.HelloWorldRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.HelloWorldRequest();
             inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.HelloWorldRequestBody();
             return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).HelloWorldAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarCajero(ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest request) {
+            return base.Channel.insertarCajero(request);
+        }
+        
+        public void insertarCajero(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.cedula = cedula;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apellido = apellido;
+            inValue.Body.telefono = telefono;
+            inValue.Body.direccion = direccion;
+            ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarCajero(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarCajeroAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest request) {
+            return base.Channel.insertarCajeroAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponse> insertarCajeroAsync(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.cedula = cedula;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apellido = apellido;
+            inValue.Body.telefono = telefono;
+            inValue.Body.direccion = direccion;
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarCajeroAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarCliente(ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest request) {
+            return base.Channel.insertarCliente(request);
+        }
+        
+        public void insertarCliente(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion, decimal saldo) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.cedula = cedula;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apellido = apellido;
+            inValue.Body.telefono = telefono;
+            inValue.Body.direccion = direccion;
+            inValue.Body.saldo = saldo;
+            ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarCliente(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarClienteAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest request) {
+            return base.Channel.insertarClienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponse> insertarClienteAsync(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion, decimal saldo) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarClienteRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.cedula = cedula;
+            inValue.Body.nombre = nombre;
+            inValue.Body.apellido = apellido;
+            inValue.Body.telefono = telefono;
+            inValue.Body.direccion = direccion;
+            inValue.Body.saldo = saldo;
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarClienteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarServicio(ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest request) {
+            return base.Channel.insertarServicio(request);
+        }
+        
+        public void insertarServicio(string codigo, string nombre, string descripcion, decimal precio) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.nombre = nombre;
+            inValue.Body.descripcion = descripcion;
+            inValue.Body.precio = precio;
+            ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarServicio(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarServicioAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest request) {
+            return base.Channel.insertarServicioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponse> insertarServicioAsync(string codigo, string nombre, string descripcion, decimal precio) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarServicioRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.nombre = nombre;
+            inValue.Body.descripcion = descripcion;
+            inValue.Body.precio = precio;
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarServicioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarFactura(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest request) {
+            return base.Channel.insertarFactura(request);
+        }
+        
+        public void insertarFactura(string codigo, bool bit, System.DateTime fecha, decimal total, int metodoPago, string codigoCajero, string codigoCliente) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.bit = bit;
+            inValue.Body.fecha = fecha;
+            inValue.Body.total = total;
+            inValue.Body.metodoPago = metodoPago;
+            inValue.Body.codigoCajero = codigoCajero;
+            inValue.Body.codigoCliente = codigoCliente;
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarFactura(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarFacturaAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest request) {
+            return base.Channel.insertarFacturaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponse> insertarFacturaAsync(string codigo, bool bit, System.DateTime fecha, decimal total, int metodoPago, string codigoCajero, string codigoCliente) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.bit = bit;
+            inValue.Body.fecha = fecha;
+            inValue.Body.total = total;
+            inValue.Body.metodoPago = metodoPago;
+            inValue.Body.codigoCajero = codigoCajero;
+            inValue.Body.codigoCliente = codigoCliente;
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarFacturaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarProducto(ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest request) {
+            return base.Channel.insertarProducto(request);
+        }
+        
+        public void insertarProducto(string codigo, string nombre, string descripcion, int stock, decimal precio) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.nombre = nombre;
+            inValue.Body.descripcion = descripcion;
+            inValue.Body.stock = stock;
+            inValue.Body.precio = precio;
+            ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarProducto(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarProductoAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest request) {
+            return base.Channel.insertarProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponse> insertarProductoAsync(string codigo, string nombre, string descripcion, int stock, decimal precio) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarProductoRequestBody();
+            inValue.Body.codigo = codigo;
+            inValue.Body.nombre = nombre;
+            inValue.Body.descripcion = descripcion;
+            inValue.Body.stock = stock;
+            inValue.Body.precio = precio;
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarFacturaProducto(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest request) {
+            return base.Channel.insertarFacturaProducto(request);
+        }
+        
+        public void insertarFacturaProducto(string codigoProducto, string codigoFactura, int cantidad, decimal precio, decimal total) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequestBody();
+            inValue.Body.codigoProducto = codigoProducto;
+            inValue.Body.codigoFactura = codigoFactura;
+            inValue.Body.cantidad = cantidad;
+            inValue.Body.precio = precio;
+            inValue.Body.total = total;
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarFacturaProducto(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarFacturaProductoAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest request) {
+            return base.Channel.insertarFacturaProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponse> insertarFacturaProductoAsync(string codigoProducto, string codigoFactura, int cantidad, decimal precio, decimal total) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoRequestBody();
+            inValue.Body.codigoProducto = codigoProducto;
+            inValue.Body.codigoFactura = codigoFactura;
+            inValue.Body.cantidad = cantidad;
+            inValue.Body.precio = precio;
+            inValue.Body.total = total;
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarFacturaProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarFacturaServicio(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest request) {
+            return base.Channel.insertarFacturaServicio(request);
+        }
+        
+        public void insertarFacturaServicio(string codigoServicio, string codigoFactura, int cantidad, decimal precio, decimal total) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequestBody();
+            inValue.Body.codigoServicio = codigoServicio;
+            inValue.Body.codigoFactura = codigoFactura;
+            inValue.Body.cantidad = cantidad;
+            inValue.Body.precio = precio;
+            inValue.Body.total = total;
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse retVal = ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarFacturaServicio(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse> ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap.insertarFacturaServicioAsync(ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest request) {
+            return base.Channel.insertarFacturaServicioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse> insertarFacturaServicioAsync(string codigoServicio, string codigoFactura, int cantidad, decimal precio, decimal total) {
+            ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest inValue = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequest();
+            inValue.Body = new ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioRequestBody();
+            inValue.Body.codigoServicio = codigoServicio;
+            inValue.Body.codigoFactura = codigoFactura;
+            inValue.Body.cantidad = cantidad;
+            inValue.Body.precio = precio;
+            inValue.Body.total = total;
+            return ((ConsolaParaProbarMetodos.ServiceReference1.ServicioCapaSoap)(this)).insertarFacturaServicioAsync(inValue);
         }
     }
 }

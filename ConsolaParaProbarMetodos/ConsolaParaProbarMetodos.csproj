@@ -58,6 +58,27 @@
     <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.insertarCajeroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.insertarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.insertarFacturaServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.insertarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\ConsolaParaProbarMetodos.ServiceReference1.insertarServicioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference1\ServicioCapa.wsdl" />
   </ItemGroup>
   <ItemGroup>

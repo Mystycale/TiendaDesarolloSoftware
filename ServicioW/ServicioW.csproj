@@ -104,6 +104,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CopiaDB.mdf" />
+    <Content Include="App_Data\CopiaDB_log.ldf">
+      <DependentUpon>CopiaDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="ServicioCapa.asmx" />
     <Content Include="Web.config" />
@@ -111,6 +115,11 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="DataSetCapa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCapa.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -125,6 +134,17 @@
     <Content Include="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="DataSetCapa.xsc">
+      <DependentUpon>DataSetCapa.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSetCapa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCapa.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSetCapa.xss">
+      <DependentUpon>DataSetCapa.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -134,7 +154,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
