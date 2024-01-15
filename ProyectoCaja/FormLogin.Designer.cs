@@ -48,7 +48,7 @@
             // 
             // panelLogin
             // 
-            this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.panelLogin.Controls.Add(this.panel3);
             this.panelLogin.Controls.Add(this.panel2);
             this.panelLogin.Controls.Add(this.btnRegistrar);

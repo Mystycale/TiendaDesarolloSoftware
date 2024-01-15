@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -51,5 +52,55 @@ namespace ProyectoCaja
         #endregion
 
 
+        public class RoundedPanel : Panel
+        {
+            private int cornerRadius = 15;
+
+            public int CornerRadius
+            {
+                get { return cornerRadius; }
+                set
+                {
+                    if (value >= 0)
+                    {
+                        cornerRadius = value;
+                        Invalidate();
+                    }
+                }
+            }
+
+            protected override void OnPaint(PaintEventArgs e)
+            {
+                base.OnPaint(e);
+
+                using (GraphicsPath path = GetRoundedPath(ClientRectangle, cornerRadius))
+                using (SolidBrush brush = new SolidBrush(BackColor))
+                {
+                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    e.Graphics.FillPath(brush, path);
+                }
+            }
+
+            private GraphicsPath GetRoundedPath(Rectangle bounds, int radius)
+            {
+                GraphicsPath path = new GraphicsPath();
+
+                int diameter = radius * 2;
+                Size size = new Size(diameter, diameter);
+                Rectangle arc = new Rectangle(bounds.Location, size);
+
+                path.AddArc(arc, 180, 90); // top-left
+                arc.X = bounds.Right - diameter;
+                path.AddArc(arc, 270, 90); // top-right
+                arc.Y = bounds.Bottom - diameter;
+                path.AddArc(arc, 0, 90);   // bottom-right
+                arc.X = bounds.Left;
+                path.AddArc(arc, 90, 90);  // bottom-left
+
+                path.CloseFigure();
+
+                return path;
+            }
+        }
     }
 }
