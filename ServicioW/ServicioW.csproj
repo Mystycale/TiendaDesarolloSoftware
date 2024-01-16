@@ -115,7 +115,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="DataSetCapa.Designer.cs">
+    <Compile Include="DataSetCapa1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetCapa.xsd</DependentUpon>
@@ -140,7 +140,7 @@
     <None Include="DataSetCapa.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetCapa.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetCapa1.Designer.cs</LastGenOutput>
     </None>
     <Content Include="DataSetCapa.xss">
       <DependentUpon>DataSetCapa.xsd</DependentUpon>

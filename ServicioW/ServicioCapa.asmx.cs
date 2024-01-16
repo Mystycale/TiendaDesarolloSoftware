@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Web;
 using System.Web.Services;
 
 namespace ServicioW
@@ -30,34 +27,137 @@ namespace ServicioW
         FCT_SERVTableAdapter adaptarFCTServicio = new FCT_SERVTableAdapter(); //Adaptador de tabla FCT_Serv
 
 
-        // Clase para retornar los cajeros
-        public class Cajero
+        //// Clase para retornar los cajeros
+        //public class Cajero
+        //{
+        //    public string codigo { get; set; }
+        //    public string cedula { get; set; }
+        //    public string nombre { get; set; }
+        //    public string apellido { get; set; }
+        //    public string telefono { get; set; }
+        //    public string direccion { get; set; }
+        //}
+
+        //// Clase para retornar los clientes
+        //public class Cliente
+        //{
+        //    public string codigo { get; set; }
+        //    public string cedula { get; set; }
+        //    public string nombre { get; set; }
+        //    public string apellido { get; set; }
+        //    public string telefono { get; set; }
+        //    public string direccion { get; set; }
+        //    public decimal saldo { get; set; }
+        //}
+
+        //Clase para retornar los productos
+
+        public class Producto
         {
             public string codigo { get; set; }
-            public string cedula { get; set; }
             public string nombre { get; set; }
-            public string apellido { get; set; }
-            public string telefono { get; set; }
-            public string direccion { get; set; }
+            public string descripcion { get; set; }
+            public int stock { get; set; }
+            public decimal precio { get; set; }
         }
 
-        // Clase para retornar los clientes
-        public class Cliente
+        //Clase para retornar los servicios
+
+        public class Servicio
         {
             public string codigo { get; set; }
-            public string cedula { get; set; }
             public string nombre { get; set; }
-            public string apellido { get; set; }
-            public string telefono { get; set; }
-            public string direccion { get; set; }
-            public decimal saldo { get; set; }
+            public string descripcion { get; set; }
+            public decimal precio { get; set; }
+        }
+
+        /*
+        //Metodo para ver si algun producto no esta ingresado en el Core atravez de su estado
+        [WebMethod]
+        public void VerificarProductosIntroducidosACore()
+        {
+            log.Debug("Se esta solicitando actualizar el Core...");
+            try
+            {
+                log.Debug("Buscando productos sin insertar en el Core....");
+                var dt = adaptarProducto.GetDataBy1(); //almacena los datos obteneidos del select
+
+                foreach (DataRow row in dt.Rows) //intera para obtener los datos
+                {
+
+                    string codigo = Convert.ToString(row["prod_codigo"]);
+                    string nombre = Convert.ToString(row["prod_nombre"]);
+                    string descripcion = Convert.ToString(row["prod_desc"]);
+                    int stock = Convert.ToInt32(row["prod_stock"]);
+                    decimal precio = Convert.ToDecimal(row["prod_precio"]);
+                    if (Convert.ToInt32(row["prod_estado"]) == 0)
+                    {
+                        try
+                        {
+                            //metodo para insertar al core
+                            log.Info("Producto insertado al Core...");
+                            adaptarProducto.ActualizarEstado(1, codigo);
+                        }
+                        catch (Exception ex)
+                        {
+                            log.Error("Error al intentar actualizar Core... Exception: " + ex);
+                        }
+
+                    }
+
+                }
+            }
+            catch(Exception ex)
+            {
+                log.Error("Error al intentar obtener productos para insertar en el Core.... Exception: "+ ex);
+            }
         }
 
 
 
+        //Buscar Servicios que no esten insertados en el Core
+        
+        [WebMethod]
+        public void VerificarServiciosIntroducidosACore()
+        {
+            log.Debug("Se esta solicitando actualizar el Core...");
+            try
+            {
+                log.Debug("Buscando servicios sin insertar en el Core....");
+                var dt = adaptarServicio.GetDataBy1(); //almacena los datos obteneidos del select
 
+                foreach (DataRow row in dt.Rows) //intera para obtener los datos
+                {
 
+                    string codigo = Convert.ToString(row["serv_codigo"]);
+                    string nombre = Convert.ToString(row["serv_nombre"]);
+                    string descripcion = Convert.ToString(row["serv_desc"]);
+                    decimal precio = Convert.ToDecimal(row["serv_precio"]);
 
+                    if (Convert.ToInt32(row["serv_estado"]) == 0)
+                    {
+                        try
+                        {
+                            //metodo para insertar al core
+                            log.Info("Servicio insertado al Core...");
+                            adaptarServicio.ActualizarEstadoSer(1, codigo);
+                        }
+                        catch (Exception ex)
+                        {
+                            log.Error("Error al intentar actualizar Core... Exception: " + ex);
+                        }
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error al intentar obtener productos para insertar en el Core.... Exception: " + ex);
+            }
+        }
+
+        */
 
         [WebMethod]
         public string HelloWorld()
@@ -197,68 +297,268 @@ namespace ServicioW
         }
 
 
-        //Obtener cajero
-        [WebMethod]
-        public List<Cajero> ObtenerCajero()
-        {
-            log.Debug("Se estan solicitando los cajeros...");
-            var dt = adaptarCajero.GetDataBy1(); //almacena los datos obteneidos del select
+        ////Obtener cajero
+        //[WebMethod]
+        //public List<Cajero> ObtenerCajero()
+        //{
+        //    log.Debug("Se estan solicitando los cajeros...");
+        //    var dt = adaptarCajero.GetDataBy1(); //almacena los datos obteneidos del select
 
-            var cajeros = new List<Cajero>();
+        //    var cajeros = new List<Cajero>();
             
-            foreach (DataRow row in dt.Rows) //intera para obtener los datos
-            {
-                var cajero = new Cajero
-                {
-                    codigo = Convert.ToString(row["cjr_codigo"]),
-                    cedula = Convert.ToString(row["cjr_cedula"]),
-                    nombre = Convert.ToString(row["cjr_nombre"]),
-                    apellido = Convert.ToString(row["cjr_apellido"]),
-                    telefono = Convert.ToString(row["cjr_telefono"]),
-                    direccion = Convert.ToString(row["cjr_direccion"])
-                };
+        //    foreach (DataRow row in dt.Rows) //intera para obtener los datos
+        //    {
+        //        var cajero = new Cajero
+        //        {
+        //            codigo = Convert.ToString(row["cjr_codigo"]),
+        //            cedula = Convert.ToString(row["cjr_cedula"]),
+        //            nombre = Convert.ToString(row["cjr_nombre"]),
+        //            apellido = Convert.ToString(row["cjr_apellido"]),
+        //            telefono = Convert.ToString(row["cjr_telefono"]),
+        //            direccion = Convert.ToString(row["cjr_direccion"])
+        //        };
 
-                cajeros.Add(cajero);
-            }
+        //        cajeros.Add(cajero);
+        //    }
 
-            log.Info("Datos de cajeros enviados");
-            return cajeros;
+        //    log.Info("Datos de cajeros enviados");
+        //    return cajeros;
 
-        }
+        //}
 
 
-        //Obtener clientes
+        ////Obtener clientes
+        //[WebMethod]
+        //public List<Cliente> ObtenerCliente()
+        //{
+        //    log.Debug("Se estan solicitando los cajeros...");
+        //    var dt = adaptarCajero.GetDataBy1(); //almacena los datos obteneidos del select
+
+        //    var clientes = new List<Cliente>();
+
+        //    foreach (DataRow row in dt.Rows) //intera para obtener los datos
+        //    {
+        //        var cliente = new Cliente
+        //        {
+        //            codigo = Convert.ToString(row["clt_codigo"]),
+        //            cedula = Convert.ToString(row["clt_cedula"]),
+        //            nombre = Convert.ToString(row["clt_nombre"]),
+        //            apellido = Convert.ToString(row["clt_apellido"]),
+        //            telefono = Convert.ToString(row["clt_telefono"]),
+        //            direccion = Convert.ToString(row["clt_direccion"]),
+        //            saldo = Convert.ToDecimal(row["clt_saldo"])
+        //        };
+
+        //        clientes.Add(cliente);
+        //    }
+
+        //    log.Info("Datos de clientes enviados");
+        //    return clientes;
+
+        //}
+
+
+
+
+        //----------------
+        //metodos con retorno
+        //----------------
+
+        //Obtener productos
+
+        
+        
         [WebMethod]
-        public List<Cliente> ObtenerCliente()
+        public List<Producto> ObtenerProductos()
         {
-            log.Debug("Se estan solicitando los cajeros...");
-            var dt = adaptarCajero.GetDataBy1(); //almacena los datos obteneidos del select
+            log.Debug("Se estan solicitando los productos...");
+            var dt = adaptarProducto.GetDataBy1(); //almacena los datos obteneidos del select
 
-            var clientes = new List<Cliente>();
+            var productos = new List<Producto>();
 
             foreach (DataRow row in dt.Rows) //intera para obtener los datos
             {
-                var cliente = new Cliente
+                var cliente = new Producto
                 {
-                    codigo = Convert.ToString(row["clt_codigo"]),
-                    cedula = Convert.ToString(row["clt_cedula"]),
-                    nombre = Convert.ToString(row["clt_nombre"]),
-                    apellido = Convert.ToString(row["clt_apellido"]),
-                    telefono = Convert.ToString(row["clt_telefono"]),
-                    direccion = Convert.ToString(row["clt_direccion"]),
-                    saldo = Convert.ToDecimal(row["clt_saldo"])
+                    codigo = Convert.ToString(row["prod_codigo"]),
+                    nombre = Convert.ToString(row["prod_nombre"]),
+                    descripcion = Convert.ToString(row["prod_desc"]),
+                    stock = Convert.ToInt32(row["prod_stock"]),
+                    precio = Convert.ToDecimal(row["prod_precio"])
                 };
 
-                clientes.Add(cliente);
+                productos.Add(cliente);
             }
 
-            log.Info("Datos de clientes enviados");
-            return clientes;
+            log.Info("Datos de productos enviados");
+            return productos;
 
         }
 
 
+        //obtener servicios
+        [WebMethod]
+        public List<Servicio> ObtenerServicios()
+        {
+            log.Debug("Se estan solicitando los servicios...");
+            var dt = adaptarServicio.GetDataBy1(); //almacena los datos obteneidos del select
 
+            var productos = new List<Servicio>();
+
+            foreach (DataRow row in dt.Rows) //intera para obtener los datos
+            {
+                var cliente = new Servicio
+                {
+                    codigo = Convert.ToString(row["serv_codigo"]),
+                    nombre = Convert.ToString(row["serv_nombre"]),
+                    descripcion = Convert.ToString(row["serv_desc"]),
+                    precio = Convert.ToDecimal(row["serv_precio"])
+                };
+
+                productos.Add(cliente);
+            }
+
+            log.Info("Datos de servicios enviados");
+            return productos;
+
+        }
+
+
+        //----------------------------------------
+        //Insertar datos desde el core
+        //----------------------------------------
+
+
+
+        //Insertar Cajero
+        [WebMethod]
+        public void DelCoreCajero(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion)
+        {
+
+
+            log.Debug("Intentando insertar cajero...");
+            try
+            {
+                //El parametro estado representara si se ha introducido el dato al Core, en este caso, estado=1 significa que si
+                adaptarCajero.InsertarCajero(codigo, cedula, nombre, apellido, telefono, direccion, 1);
+                log.Info("Se ha insertado un nuevo cajero con codigo:" + codigo);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error, no se ha podido ingresar el cajero...Exception:" + ex.Message);
+            }
+
+
+
+        }
+
+
+        //Insertar Cliente
+        [WebMethod]
+        public void DelCoreCliente(string codigo, string cedula, string nombre, string apellido, string telefono, string direccion, decimal saldo)
+        {
+            log.Debug("Intentando insertar cliente...");
+            try
+            {
+
+                adaptarCliente.InsertarCliente(codigo, cedula, nombre, apellido, telefono, direccion, saldo, 1);
+                log.Info("Se ha insertado un nuevo cliente con codigo:" + codigo);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error, no se ha podido ingresar el cliente...Exception:" + ex.Message);
+            }
+
+
+        }
+
+        //Insertar servicio
+        [WebMethod]
+        public void DelCoreServicio(string codigo, string nombre, string descripcion, decimal precio)
+        {
+            log.Debug("Intentando insertar Servicio...");
+            try
+            {
+
+                adaptarServicio.InsertarServicio(codigo, nombre, descripcion, precio, 1);
+                log.Info("Se ha insertado un nuevo Servicio con codigo:" + codigo);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error, no se ha podido ingresar el servicio...Exception:" + ex.Message);
+            }
+
+
+        }
+
+        //Insertar factura
+        [WebMethod]
+        public void DelCoreFactura(string codigo, bool bit, DateTime fecha, decimal total, int metodoPago, string codigoCajero, string codigoCliente)
+        {
+            log.Debug("Intentando insertar Factura...");
+            try
+            {
+                adaptarFactura.InsertarFactura(codigo, bit, fecha, total, metodoPago, codigoCajero, codigoCliente, 1);
+                log.Info("Se ha insertado una nueva Factura con codigo:" + codigo);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error, no se ha podido ingresar la factura...Exception:" + ex.Message);
+            }
+
+        }
+
+        //Insertar producto
+        [WebMethod]
+        public void DelCoreProducto(string codigo, string nombre, string descripcion, int stock, decimal precio)
+        {
+            log.Debug("Intentando insertar Producto...");
+            try
+            {
+                adaptarProducto.InsertarProducto(codigo, nombre, descripcion, stock, precio, 1);
+                log.Info("Se ha insertado un nuevo Producto con codigo:" + codigo);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error, no se ha podido ingresar el producto...Exception:" + ex.Message);
+            }
+
+        }
+
+
+        //Insertar factura_producto
+        [WebMethod]
+        public void DelCoreFacturaProducto(string codigoProducto, string codigoFactura, int cantidad, decimal precio, decimal total)
+        {
+            log.Debug("Intentando insertar datos a Factura_Producto...");
+            try
+            {
+                adaptarFCTProducto.InsertarFCTProducto(codigoProducto, codigoFactura, cantidad, precio, total, 1);
+                log.Info("Se ha insertado un nuevo Factura_Producto con codigo producto:" + codigoProducto + " Y codigo factura:" + codigoFactura);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error, no se ha podido ingresar la factura_producto...Exception:" + ex.Message);
+            }
+
+        }
+
+        //Insertar factura_servicio
+        [WebMethod]
+        public void DelCoreFacturaServicio(string codigoServicio, string codigoFactura, int cantidad, decimal precio, decimal total)
+        {
+            log.Debug("Intentando insertar datos a Factura_Servcio...");
+            try
+            {
+                log.Info("Se ha insertado un nuevo Factura_Producto con codigo servicio:" + codigoServicio + " Y codigo factura:" + codigoFactura);
+                adaptarFCTServicio.InsertarFCTServicio(codigoServicio, codigoFactura, cantidad, precio, total, 1);
+            }
+            catch (Exception ex)
+            {
+                log.Error("Error, no se ha podido ingresar la factura_servicio...Exception:" + ex.Message);
+            }
+
+        }
 
     }
 }
