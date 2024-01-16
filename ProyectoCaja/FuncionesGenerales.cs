@@ -11,12 +11,9 @@ namespace ProyectoCaja
     {
         #region Ventanas
         private static Form ventanaActual;
+
         public static void abrirVentana(Form form, Panel panel)
         {
-            //Si existe una ventana abierta, se cierra.
-            if (ventanaActual != null)
-                ventanaActual.Close();
-
             ventanaActual = form;
 
             //Se declara como formulario secundario.

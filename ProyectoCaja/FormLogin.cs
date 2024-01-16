@@ -18,6 +18,7 @@ namespace ProyectoCaja
         public FormLogin()
         {
             InitializeComponent();
+            gpAdmin.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,7 +32,11 @@ namespace ProyectoCaja
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            FuncionesGenerales.abrirVentana(new FormRegistrarCajero(), panelLogin);
+            if (gpAdmin.Visible == false)
+            {
+                gpAdmin.Visible = true;
+            }
+            else { gpAdmin.Visible = false; }
         }
 
         private void btnMostrarContra_MouseDown(object sender, MouseEventArgs e)
@@ -46,61 +51,21 @@ namespace ProyectoCaja
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+
             FuncionesGenerales.abrirVentana(new FormCajaPrincipal(), panelLogin);
+        }
+
+        private void btnIngresarAdmin_Click(object sender, EventArgs e)
+        {
+            FuncionesGenerales.abrirVentana(new FormRegistrarCajero(), panelLogin);
+        }
+
+        private void panelLogin_Click(object sender, EventArgs e)
+        {
+            gpAdmin.Visible = false;
         }
 
         #endregion
 
-
-        public class RoundedPanel : Panel
-        {
-            private int cornerRadius = 15;
-
-            public int CornerRadius
-            {
-                get { return cornerRadius; }
-                set
-                {
-                    if (value >= 0)
-                    {
-                        cornerRadius = value;
-                        Invalidate();
-                    }
-                }
-            }
-
-            protected override void OnPaint(PaintEventArgs e)
-            {
-                base.OnPaint(e);
-
-                using (GraphicsPath path = GetRoundedPath(ClientRectangle, cornerRadius))
-                using (SolidBrush brush = new SolidBrush(BackColor))
-                {
-                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                    e.Graphics.FillPath(brush, path);
-                }
-            }
-
-            private GraphicsPath GetRoundedPath(Rectangle bounds, int radius)
-            {
-                GraphicsPath path = new GraphicsPath();
-
-                int diameter = radius * 2;
-                Size size = new Size(diameter, diameter);
-                Rectangle arc = new Rectangle(bounds.Location, size);
-
-                path.AddArc(arc, 180, 90); // top-left
-                arc.X = bounds.Right - diameter;
-                path.AddArc(arc, 270, 90); // top-right
-                arc.Y = bounds.Bottom - diameter;
-                path.AddArc(arc, 0, 90);   // bottom-right
-                arc.X = bounds.Left;
-                path.AddArc(arc, 90, 90);  // bottom-left
-
-                path.CloseFigure();
-
-                return path;
-            }
-        }
     }
 }

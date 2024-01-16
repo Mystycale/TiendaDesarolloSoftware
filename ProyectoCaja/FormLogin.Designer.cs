@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.gpAdmin = new System.Windows.Forms.GroupBox();
+            this.btnIngresarAdmin = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
@@ -41,7 +47,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelLogin.SuspendLayout();
+            this.gpAdmin.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +57,7 @@
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panelLogin.Controls.Add(this.gpAdmin);
             this.panelLogin.Controls.Add(this.panel3);
             this.panelLogin.Controls.Add(this.panel2);
             this.panelLogin.Controls.Add(this.btnRegistrar);
@@ -60,6 +69,76 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(1264, 681);
             this.panelLogin.TabIndex = 0;
+            this.panelLogin.Click += new System.EventHandler(this.panelLogin_Click);
+            // 
+            // gpAdmin
+            // 
+            this.gpAdmin.Controls.Add(this.btnIngresarAdmin);
+            this.gpAdmin.Controls.Add(this.textBox3);
+            this.gpAdmin.Controls.Add(this.label4);
+            this.gpAdmin.Controls.Add(this.textBox2);
+            this.gpAdmin.Controls.Add(this.label2);
+            this.gpAdmin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpAdmin.ForeColor = System.Drawing.Color.White;
+            this.gpAdmin.Location = new System.Drawing.Point(1000, 12);
+            this.gpAdmin.Name = "gpAdmin";
+            this.gpAdmin.Size = new System.Drawing.Size(252, 165);
+            this.gpAdmin.TabIndex = 1;
+            this.gpAdmin.TabStop = false;
+            this.gpAdmin.Text = "Privilegios Admin";
+            // 
+            // btnIngresarAdmin
+            // 
+            this.btnIngresarAdmin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnIngresarAdmin.Location = new System.Drawing.Point(18, 124);
+            this.btnIngresarAdmin.Name = "btnIngresarAdmin";
+            this.btnIngresarAdmin.Size = new System.Drawing.Size(218, 23);
+            this.btnIngresarAdmin.TabIndex = 10;
+            this.btnIngresarAdmin.Text = "Ingresar";
+            this.btnIngresarAdmin.UseVisualStyleBackColor = true;
+            this.btnIngresarAdmin.Click += new System.EventHandler(this.btnIngresarAdmin_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(18, 90);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
+            this.textBox3.Size = new System.Drawing.Size(218, 22);
+            this.textBox3.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 15);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Contraseña";
+            // 
+            // textBox2
+            // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(18, 41);
+            this.textBox2.MaxLength = 10;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(218, 22);
+            this.textBox2.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 15);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Usuario";
             // 
             // panel3
             // 
@@ -145,8 +224,10 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(39, 8);
+            this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(246, 20);
             this.textBox1.TabIndex = 1;
@@ -214,10 +295,11 @@
             this.Name = "FormLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
+            this.gpAdmin.ResumeLayout(false);
+            this.gpAdmin.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -240,6 +322,13 @@
         private System.Windows.Forms.Button btnMostrarContra;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox gpAdmin;
+        private System.Windows.Forms.Button btnIngresarAdmin;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

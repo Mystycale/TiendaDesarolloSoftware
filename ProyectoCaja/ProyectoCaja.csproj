@@ -57,6 +57,12 @@
     <Compile Include="FormCajaPrincipal.Designer.cs">
       <DependentUpon>FormCajaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFacturacionCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFacturacionCotizacion.Designer.cs">
+      <DependentUpon>FormFacturacionCotizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCajaPrincipal.resx">
       <DependentUpon>FormCajaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFacturacionCotizacion.resx">
+      <DependentUpon>FormFacturacionCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
