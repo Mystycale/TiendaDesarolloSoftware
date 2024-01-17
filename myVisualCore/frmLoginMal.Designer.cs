@@ -1,6 +1,6 @@
 ﻿namespace myVisualCore
 {
-    partial class frmLogin
+    partial class frmLoginMal
     {
         /// <summary>
         /// Required designer variable.
@@ -20,14 +20,15 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoginMal));
             this.panelLogin = new System.Windows.Forms.Panel();
             this.gpAdmin = new System.Windows.Forms.GroupBox();
             this.btnIngresarAdmin = new System.Windows.Forms.Button();
@@ -35,29 +36,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlContrasenia = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txtContrasenia = new System.Windows.Forms.TextBox();
             this.btnMostrarContra = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlId = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.panelLogin.SuspendLayout();
             this.gpAdmin.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlContrasenia.SuspendLayout();
+            this.pnlId.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLogin
             // 
             this.panelLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.panelLogin.Controls.Add(this.gpAdmin);
-            this.panelLogin.Controls.Add(this.panel3);
-            this.panelLogin.Controls.Add(this.panel2);
+            this.panelLogin.Controls.Add(this.pnlContrasenia);
+            this.panelLogin.Controls.Add(this.pnlId);
             this.panelLogin.Controls.Add(this.btnRegistrar);
             this.panelLogin.Controls.Add(this.label3);
             this.panelLogin.Controls.Add(this.label1);
@@ -65,8 +66,9 @@
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLogin.Location = new System.Drawing.Point(0, 0);
             this.panelLogin.Name = "panelLogin";
-            this.panelLogin.Size = new System.Drawing.Size(717, 704);
+            this.panelLogin.Size = new System.Drawing.Size(579, 523);
             this.panelLogin.TabIndex = 0;
+            this.panelLogin.Click += new System.EventHandler(this.panelLogin_Click);
             // 
             // gpAdmin
             // 
@@ -77,7 +79,7 @@
             this.gpAdmin.Controls.Add(this.label2);
             this.gpAdmin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpAdmin.ForeColor = System.Drawing.Color.White;
-            this.gpAdmin.Location = new System.Drawing.Point(453, 527);
+            this.gpAdmin.Location = new System.Drawing.Point(1000, 12);
             this.gpAdmin.Name = "gpAdmin";
             this.gpAdmin.Size = new System.Drawing.Size(252, 165);
             this.gpAdmin.TabIndex = 1;
@@ -94,6 +96,7 @@
             this.btnIngresarAdmin.TabIndex = 10;
             this.btnIngresarAdmin.Text = "Ingresar";
             this.btnIngresarAdmin.UseVisualStyleBackColor = true;
+            this.btnIngresarAdmin.Click += new System.EventHandler(this.btnIngresarAdmin_Click);
             // 
             // textBox3
             // 
@@ -136,22 +139,23 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Usuario";
             // 
-            // panel3
+            // pnlContrasenia
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.txtContrasenia);
-            this.panel3.Controls.Add(this.btnMostrarContra);
-            this.panel3.Location = new System.Drawing.Point(213, 317);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(293, 36);
-            this.panel3.TabIndex = 9;
+            this.pnlContrasenia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlContrasenia.BackColor = System.Drawing.Color.White;
+            this.pnlContrasenia.Controls.Add(this.button1);
+            this.pnlContrasenia.Controls.Add(this.txtContrasenia);
+            this.pnlContrasenia.Controls.Add(this.btnMostrarContra);
+            this.pnlContrasenia.Location = new System.Drawing.Point(144, 226);
+            this.pnlContrasenia.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlContrasenia.Name = "pnlContrasenia";
+            this.pnlContrasenia.Size = new System.Drawing.Size(293, 36);
+            this.pnlContrasenia.TabIndex = 9;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
@@ -176,6 +180,7 @@
             // btnMostrarContra
             // 
             this.btnMostrarContra.BackColor = System.Drawing.Color.Transparent;
+            this.btnMostrarContra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMostrarContra.BackgroundImage")));
             this.btnMostrarContra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMostrarContra.FlatAppearance.BorderSize = 0;
             this.btnMostrarContra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -185,22 +190,25 @@
             this.btnMostrarContra.Size = new System.Drawing.Size(30, 30);
             this.btnMostrarContra.TabIndex = 7;
             this.btnMostrarContra.UseVisualStyleBackColor = false;
+            this.btnMostrarContra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMostrarContra_MouseDown);
+            this.btnMostrarContra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnMostrarContra_MouseUp);
             // 
-            // panel2
+            // pnlId
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.txtID);
-            this.panel2.Location = new System.Drawing.Point(213, 253);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(293, 36);
-            this.panel2.TabIndex = 8;
+            this.pnlId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlId.BackColor = System.Drawing.Color.White;
+            this.pnlId.Controls.Add(this.button2);
+            this.pnlId.Controls.Add(this.txtId);
+            this.pnlId.Location = new System.Drawing.Point(144, 162);
+            this.pnlId.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlId.Name = "pnlId";
+            this.pnlId.Size = new System.Drawing.Size(293, 36);
+            this.pnlId.TabIndex = 8;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Enabled = false;
             this.button2.FlatAppearance.BorderSize = 0;
@@ -212,28 +220,29 @@
             this.button2.TabIndex = 5;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // txtID
+            // txtId
             // 
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(39, 8);
-            this.txtID.MaxLength = 10;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(246, 20);
-            this.txtID.TabIndex = 1;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(39, 8);
+            this.txtId.MaxLength = 10;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(246, 20);
+            this.txtId.TabIndex = 1;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(213, 435);
+            this.btnRegistrar.Location = new System.Drawing.Point(144, 344);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(293, 36);
             this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar Cajero";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // label3
             // 
@@ -241,7 +250,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(210, 297);
+            this.label3.Location = new System.Drawing.Point(141, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 17);
@@ -254,7 +263,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(210, 233);
+            this.label1.Location = new System.Drawing.Point(141, 142);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 17);
@@ -265,20 +274,21 @@
             // 
             this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(213, 393);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(144, 302);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(0);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(293, 36);
             this.btnIniciarSesion.TabIndex = 3;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(717, 704);
+            this.ClientSize = new System.Drawing.Size(579, 523);
             this.Controls.Add(this.panelLogin);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -286,14 +296,15 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Core - Login";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             this.gpAdmin.ResumeLayout(false);
             this.gpAdmin.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlContrasenia.ResumeLayout(false);
+            this.pnlContrasenia.PerformLayout();
+            this.pnlId.ResumeLayout(false);
+            this.pnlId.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -305,9 +316,9 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Panel pnlId;
+        private System.Windows.Forms.Panel pnlContrasenia;
         private System.Windows.Forms.TextBox txtContrasenia;
         private System.Windows.Forms.Button btnMostrarContra;
         private System.Windows.Forms.Button button1;
@@ -318,13 +329,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-
     }
-
-    
-
-
-
-    //private System.Windows.Forms.Label prueba;
-
 }
+

@@ -29,8 +29,8 @@ namespace myVisualCore
             {
                 Console.WriteLine("------MENU------");
                 Console.WriteLine("1. Registrar cajero");
+                Console.WriteLine("2. Login");
 
-                
 
                 int op = int.Parse(Console.ReadLine());
 
@@ -41,6 +41,11 @@ namespace myVisualCore
 
                     Console.WriteLine("Fin");
 
+                }
+                else if (op == 2)
+                {
+                    frmLogin frmLogin = new frmLogin();
+                    Application.Run(frmLogin);
                 }
 
             }
