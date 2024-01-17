@@ -477,7 +477,7 @@ namespace ServicioW
                 try
                 {
                     log.Debug("Intentado insertar datos de cajero a capa de integracion...");
-                    adaptarCajero.InsertarCajero(codigo, cedula, nombre, apellido, telefono, direccion, 1);
+                    adaptarCajero.InsertarCajero(codigo, cedula, nombre, apellido, telefono, direccion, 0);
                     log.Info("Datos de cajero con codigo: " +codigo+ " insertados a la capa de integracion");
                 }
                 catch(Exception nex)
@@ -508,7 +508,7 @@ namespace ServicioW
                 try
                 {
                     log.Debug("Intentado insertar datos de cliente a capa de integracion...");
-                    adaptarCliente.InsertarCliente(codigo, cedula, nombre, apellido, telefono, direccion, saldo, 1);
+                    adaptarCliente.InsertarCliente(codigo, cedula, nombre, apellido, telefono, direccion, saldo, 0);
                     log.Info("Datos de cliente con codigo: " + codigo + " insertados a la capa de integracion");
                 }
                 catch (Exception nex)
@@ -556,7 +556,7 @@ namespace ServicioW
                 try
                 {
                     log.Debug("Intentado insertar datos de factura a capa de integracion...");
-                    adaptarFactura.InsertarFactura(codigo, bit, fecha, total, metodoPago, codigoCajero, codigoCliente, 1);
+                    adaptarFactura.InsertarFactura(codigo, bit, fecha, total, metodoPago, codigoCajero, codigoCliente, 0);
                     log.Info("Datos de factura con codigo: " + codigo + " insertados a la capa de integracion");
                 }
                 catch (Exception nex)
@@ -601,7 +601,7 @@ namespace ServicioW
                 try
                 {
                     log.Debug("Intentado insertar datos de factura_producto a capa de integracion...");
-                    adaptarFCTProducto.InsertarFCTProducto(codigoProducto, codigoFactura, cantidad, precio, total, 1);
+                    adaptarFCTProducto.InsertarFCTProducto(codigoProducto, codigoFactura, cantidad, precio, total, 0);
                     log.Info("Datos de factura_producto con codigo factura: " + codigoFactura +" codigo producto: "+ codigoProducto +" insertados a la capa de integracion");
                 }
                 catch (Exception nex)
@@ -627,7 +627,7 @@ namespace ServicioW
                 try
                 {
                     log.Debug("Intentado insertar datos de factura_servicio a capa de integracion...");
-                    adaptarFCTServicio.InsertarFCTServicio(codigoServicio, codigoFactura, cantidad, precio, total, 1);
+                    adaptarFCTServicio.InsertarFCTServicio(codigoServicio, codigoFactura, cantidad, precio, total, 0);
                     log.Info("Datos de factura_servicio con codigo factura: " + codigoFactura + " codigo seervicio: " + codigoServicio + " insertados a la capa de integracion");
                 }
                 catch (Exception nex)
