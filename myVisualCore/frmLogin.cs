@@ -12,11 +12,6 @@ namespace myVisualCore
 {
     public partial class frmLogin : Form
     {
-        public string Codigo = "NA";
-        public string Nombre = "NA";
-        public string Apellido = "NA";
-        public int TipoPerfil = 0;         
-
         public frmLogin()
         {
             InitializeComponent();
@@ -25,7 +20,7 @@ namespace myVisualCore
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             string codigo = txtCodigo.Text;
-            string clave = txtClave.Text;            
+            string clave = txtClave.Text;
 
             ServicioDelCore.CoreWebServiceSoapClient client = new ServicioDelCore.CoreWebServiceSoapClient();
 
@@ -48,25 +43,26 @@ namespace myVisualCore
 
             bool encontrado = false;
 
+            string nombre = "NA";
+            string apellido = "NA";
+            int tipoPerfil = 0;
+
             foreach (var item in tblUsuarios)
             {
                 if (codigo == item.usr_codigo && clave == item.usr_clave)
                 {
-                    Nombre = item.usr_nombre;
-                    Apellido = item.usr_apellido;
-                    TipoPerfil = item.usr_perfil_id;
-                    Codigo = codigo;
+                    nombre = item.usr_nombre;
+                    apellido = item.usr_apellido;
+                    tipoPerfil = item.usr_perfil_id;
+
+                    MessageBox.Show(item.usr_nombre);
 
                     encontrado = true;
                     break;
                 }
             }
 
-            if (encontrado)
-            {
-                MessageBox.Show("Bienvenido, administrador " + Nombre + " " + Apellido + ". Perfil: " + TipoPerfil.ToString(), "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
+            if (encontrado) MessageBox.Show("Bienvenido, administrador " + nombre + " " + apellido + ". Perfil: " + tipoPerfil.ToString(), "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else MessageBox.Show("Usuario no encontrado.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
