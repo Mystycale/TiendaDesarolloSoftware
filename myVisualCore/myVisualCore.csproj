@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Menues\Cajero\MenuCajero.cs" />
     <Compile Include="Menues\Cliente\MenuCliente.cs" />
+    <Compile Include="Menues\Factura\MenuFactura.cs" />
     <Compile Include="Menues\MenuPrincipal.cs" />
     <Compile Include="Menues\Producto\frmRegistrarProducto.cs">
       <SubType>Form</SubType>
@@ -84,6 +85,7 @@
       <DependentUpon>frmRegistrarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Menues\Producto\MenuProducto.cs" />
+    <Compile Include="Menues\Producto\FuncionesProducto.cs" />
     <Compile Include="Menues\Servicio\frmRegistrarServicio.cs">
       <SubType>Form</SubType>
     </Compile>

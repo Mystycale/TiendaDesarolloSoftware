@@ -7,7 +7,7 @@ using WebCore.Modelos;
 
 namespace myVisualCore.Menues.Producto
 {
-    internal class MenuProducto
+    internal class MenuFactura
     {
         private static int x;
         private static int y;
@@ -19,25 +19,25 @@ namespace myVisualCore.Menues.Producto
             {
                 case 1:
                     string[] OpcionesMenuCajero1 = new string[] {
-            " [Crear producto] ",
-            " [Mostrar productos] ",
-            " [Actualizar producto] ",
-            " [Eliminar producto] ",
+            " [Crear factura] ",
+            " [Mostrar facturas] ",
+            " [Actualizar factura] ",
+            " [Eliminar factura] ",
             " [Volver al menú principal] "};
                     Ejecutar1(OpcionesMenuCajero1, actualCoreUser);
                     break;
 
                 case 2:
                     string[] OpcionesMenuCajero2 = new string[] {
-            " [Mostrar productos] ",
-            " [Actualizar producto] ",
+            " [Mostrar facturas] ",
+            " [Actualizar factura] ",
             " [Volver al menú principal] " };
 
                     Ejecutar2(OpcionesMenuCajero2, actualCoreUser);
                     break;
                 case 3:
                     string[] OpcionesMenuCajero3 = new string[] {
-            " [Mostrar productos] ",
+            " [Mostrar facturaS] ",
             " [Volver al menú principal] " };
 
                     Ejecutar3(OpcionesMenuCajero3, actualCoreUser);
@@ -57,9 +57,9 @@ namespace myVisualCore.Menues.Producto
 
             Console.Clear();
             actualCoreUser.Mostrar();
-            Console.WriteLine("***********************");
-            Console.WriteLine("*    MENU PRODUCTO    *");
-            Console.WriteLine("***********************\n");
+            Console.WriteLine("**********************");
+            Console.WriteLine("*    MENU FACTURA    *");
+            Console.WriteLine("**********************\n");
 
             x = Console.CursorLeft;
             y = Console.CursorTop;
@@ -70,9 +70,9 @@ namespace myVisualCore.Menues.Producto
             {
                 Console.Clear();
                 actualCoreUser.Mostrar();
-                Console.WriteLine("***********************");
-                Console.WriteLine("*    MENU PRODUCTO    *");
-                Console.WriteLine("***********************\n");
+                Console.WriteLine("**********************");
+                Console.WriteLine("*    MENU FACTURA    *");
+                Console.WriteLine("**********************\n");
                 x = Console.CursorLeft;
                 y = Console.CursorTop;
 
@@ -112,8 +112,6 @@ namespace myVisualCore.Menues.Producto
                         break;
 
                     case 1:
-                        FuncionesProducto.MostrarProductos();
-                        break;
                     case 2:
                     case 3:
                         continue;
@@ -167,9 +165,9 @@ namespace myVisualCore.Menues.Producto
 
             Console.Clear();
             actualCoreUser.Mostrar();
-            Console.WriteLine("***********************");
-            Console.WriteLine("*    MENU PRODUCTO    *");
-            Console.WriteLine("***********************\n");
+            Console.WriteLine("**********************");
+            Console.WriteLine("*    MENU FACTURA    *");
+            Console.WriteLine("**********************\n");
 
             x = Console.CursorLeft;
             y = Console.CursorTop;
@@ -180,9 +178,9 @@ namespace myVisualCore.Menues.Producto
             {
                 Console.Clear();
                 actualCoreUser.Mostrar();
-                Console.WriteLine("***********************");
-                Console.WriteLine("*    MENU PRODUCTO    *");
-                Console.WriteLine("***********************\n");
+                Console.WriteLine("**********************");
+                Console.WriteLine("*    MENU FACTURA    *");
+                Console.WriteLine("**********************\n");
                 x = Console.CursorLeft;
                 y = Console.CursorTop;
 
@@ -267,9 +265,9 @@ namespace myVisualCore.Menues.Producto
 
             Console.Clear();
             actualCoreUser.Mostrar();
-            Console.WriteLine("***********************");
-            Console.WriteLine("*    MENU PRODUCTO    *");
-            Console.WriteLine("***********************\n");
+            Console.WriteLine("**********************");
+            Console.WriteLine("*    MENU FACTURA    *");
+            Console.WriteLine("**********************\n");
 
             x = Console.CursorLeft;
             y = Console.CursorTop;
@@ -280,9 +278,9 @@ namespace myVisualCore.Menues.Producto
             {
                 Console.Clear();
                 actualCoreUser.Mostrar();
-                Console.WriteLine("***********************");
-                Console.WriteLine("*    MENU PRODUCTO    *");
-                Console.WriteLine("***********************\n");
+                Console.WriteLine("**********************");
+                Console.WriteLine("*    MENU FACTURA    *");
+                Console.WriteLine("**********************\n");
 
                 x = Console.CursorLeft;
                 y = Console.CursorTop;
@@ -356,5 +354,7 @@ namespace myVisualCore.Menues.Producto
             return seleccionActual;
         }
         #endregion ::::::::::::::::::::::: MANTENIMEINTO
+
     }
+
 }

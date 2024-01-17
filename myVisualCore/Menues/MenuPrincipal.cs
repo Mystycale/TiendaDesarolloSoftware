@@ -110,6 +110,8 @@ namespace myVisualCore
                         break;
 
                     case 4:
+                        Console.Clear();
+                        MenuFactura.Ejecutar(actualCoreUser);
                         break;
 
                     case 5:

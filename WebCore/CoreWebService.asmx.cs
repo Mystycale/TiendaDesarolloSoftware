@@ -39,15 +39,7 @@ namespace WebCore
         {
             CAJEROTableAdapter myCAJEROTableAdapter = new CAJEROTableAdapter();
 
-            //WCRespuesta _WCRespuesta = new WCRespuesta();
-
-            //_WCRespuesta.Mensaje = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
             int respQwery = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
-
-
-            //MessageBox.Show(respQwery.ToString(), "Mensaje del WebCore", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //_WCRespuesta.Codigo = 100;
 
             return respQwery;
         }
@@ -90,6 +82,80 @@ namespace WebCore
 
             return respQwery;
         }
+
+        #region :::::::::::::::: Registrar una factura
+
+        [WebMethod]
+        public int InsertFactura(WCFactura _WCFactura)
+        {
+            FACTURATableAdapter myFACTURAOTableAdapter = new FACTURATableAdapter();
+
+            int respQwery = myFACTURAOTableAdapter.ppInsertFactura(
+                _WCFactura.codigo,
+                _WCFactura.cotizacion,
+                _WCFactura.fecha,
+                _WCFactura.total,
+                _WCFactura.metodoPago,
+                _WCFactura.cjrCodigo,
+                _WCFactura.cltCodigo);
+
+            return respQwery;
+        }
+
+        [WebMethod]
+        public int InsertFct_Prod(WCFct_Prod _WCFct_Prod)
+        {
+            FCT_PRODTableAdapter myFCT_PRODTableAdapter = new FCT_PRODTableAdapter();
+
+            int respQwery = myFCT_PRODTableAdapter.ppInsertFct_Prod(
+                _WCFct_Prod.prodCodigo,
+                _WCFct_Prod.fctCodigo,
+                _WCFct_Prod.cantidad,
+                _WCFct_Prod.precioUnidad,
+                _WCFct_Prod.total);
+
+            return respQwery;
+        }
+
+        [WebMethod]
+        public int InsertFct_Serv(WCFct_Serv _WCFct_Serv)
+        {
+            FCT_SERVTableAdapter myFCT_SERVTableAdapter = new FCT_SERVTableAdapter();
+
+            int respQwery = myFCT_SERVTableAdapter.ppInsertFct_Serv(
+                _WCFct_Serv.servCodigo,
+                _WCFct_Serv.fctCodigo,
+                _WCFct_Serv.cantidad,
+                _WCFct_Serv.precioUnidad,
+                _WCFct_Serv.total);
+
+            return respQwery;
+        }
+
+        #endregion
+
+        #region :::::::::::::::: Producto 
+
+        [WebMethod]
+        public PRODUCTODataTable SelectProductos()
+        {
+            PRODUCTOTableAdapter myPRODUCTOTableAdapter = new PRODUCTOTableAdapter();
+
+            PRODUCTODataTable myPRODUCTODataTable = myPRODUCTOTableAdapter.GetData();
+
+            return myPRODUCTODataTable;
+        }
+
+        #endregion :::::::::::::::: Producto
+
+
+
+
+
+
+
+
+
 
         [WebMethod]
         public USUARIODataTable BuscarUsuario(string codigo_in, string clave_in)

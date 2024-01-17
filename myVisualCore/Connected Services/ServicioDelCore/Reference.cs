@@ -50,6 +50,34 @@ namespace myVisualCore.ServicioDelCore {
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertServicio", ReplyAction="*")]
         System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCServicio _WCProducto);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertFactura", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int InsertFactura(myVisualCore.ServicioDelCore.WCFactura _WCFactura);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertFactura", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> InsertFacturaAsync(myVisualCore.ServicioDelCore.WCFactura _WCFactura);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertFct_Prod", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int InsertFct_Prod(myVisualCore.ServicioDelCore.WCFct_Prod _WCFct_Prod);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertFct_Prod", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> InsertFct_ProdAsync(myVisualCore.ServicioDelCore.WCFct_Prod _WCFct_Prod);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertFct_Serv", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int InsertFct_Serv(myVisualCore.ServicioDelCore.WCFct_Serv _WCFct_Serv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertFct_Serv", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> InsertFct_ServAsync(myVisualCore.ServicioDelCore.WCFct_Serv _WCFct_Serv);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectProductos", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        WebCoreDataSet.PRODUCTODataTable SelectProductos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectProductos", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebCoreDataSet.PRODUCTODataTable> SelectProductosAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/BuscarUsuario", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in);
@@ -154,6 +182,298 @@ namespace myVisualCore.ServicioDelCore {
             set {
                 this.cjr_direccionField = value;
                 this.RaisePropertyChanged("cjr_direccion");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://google.com")]
+    public partial class WCFct_Serv : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fctCodigoField;
+        
+        private string servCodigoField;
+        
+        private int cantidadField;
+        
+        private decimal precioUnidadField;
+        
+        private decimal totalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string fctCodigo {
+            get {
+                return this.fctCodigoField;
+            }
+            set {
+                this.fctCodigoField = value;
+                this.RaisePropertyChanged("fctCodigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string servCodigo {
+            get {
+                return this.servCodigoField;
+            }
+            set {
+                this.servCodigoField = value;
+                this.RaisePropertyChanged("servCodigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal precioUnidad {
+            get {
+                return this.precioUnidadField;
+            }
+            set {
+                this.precioUnidadField = value;
+                this.RaisePropertyChanged("precioUnidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public decimal total {
+            get {
+                return this.totalField;
+            }
+            set {
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://google.com")]
+    public partial class WCFct_Prod : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string fctCodigoField;
+        
+        private string prodCodigoField;
+        
+        private int cantidadField;
+        
+        private decimal precioUnidadField;
+        
+        private decimal totalField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string fctCodigo {
+            get {
+                return this.fctCodigoField;
+            }
+            set {
+                this.fctCodigoField = value;
+                this.RaisePropertyChanged("fctCodigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string prodCodigo {
+            get {
+                return this.prodCodigoField;
+            }
+            set {
+                this.prodCodigoField = value;
+                this.RaisePropertyChanged("prodCodigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public int cantidad {
+            get {
+                return this.cantidadField;
+            }
+            set {
+                this.cantidadField = value;
+                this.RaisePropertyChanged("cantidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal precioUnidad {
+            get {
+                return this.precioUnidadField;
+            }
+            set {
+                this.precioUnidadField = value;
+                this.RaisePropertyChanged("precioUnidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public decimal total {
+            get {
+                return this.totalField;
+            }
+            set {
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://google.com")]
+    public partial class WCFactura : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string codigoField;
+        
+        private bool cotizacionField;
+        
+        private System.DateTime fechaField;
+        
+        private decimal totalField;
+        
+        private int metodoPagoField;
+        
+        private string cjrCodigoField;
+        
+        private string cltCodigoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public bool cotizacion {
+            get {
+                return this.cotizacionField;
+            }
+            set {
+                this.cotizacionField = value;
+                this.RaisePropertyChanged("cotizacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public System.DateTime fecha {
+            get {
+                return this.fechaField;
+            }
+            set {
+                this.fechaField = value;
+                this.RaisePropertyChanged("fecha");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal total {
+            get {
+                return this.totalField;
+            }
+            set {
+                this.totalField = value;
+                this.RaisePropertyChanged("total");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
+        public int metodoPago {
+            get {
+                return this.metodoPagoField;
+            }
+            set {
+                this.metodoPagoField = value;
+                this.RaisePropertyChanged("metodoPago");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
+        public string cjrCodigo {
+            get {
+                return this.cjrCodigoField;
+            }
+            set {
+                this.cjrCodigoField = value;
+                this.RaisePropertyChanged("cjrCodigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=6)]
+        public string cltCodigo {
+            get {
+                return this.cltCodigoField;
+            }
+            set {
+                this.cltCodigoField = value;
+                this.RaisePropertyChanged("cltCodigo");
             }
         }
         
@@ -4946,6 +5266,38 @@ namespace myVisualCore.ServicioDelCore {
         
         public System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCServicio _WCProducto) {
             return base.Channel.InsertServicioAsync(_WCProducto);
+        }
+        
+        public int InsertFactura(myVisualCore.ServicioDelCore.WCFactura _WCFactura) {
+            return base.Channel.InsertFactura(_WCFactura);
+        }
+        
+        public System.Threading.Tasks.Task<int> InsertFacturaAsync(myVisualCore.ServicioDelCore.WCFactura _WCFactura) {
+            return base.Channel.InsertFacturaAsync(_WCFactura);
+        }
+        
+        public int InsertFct_Prod(myVisualCore.ServicioDelCore.WCFct_Prod _WCFct_Prod) {
+            return base.Channel.InsertFct_Prod(_WCFct_Prod);
+        }
+        
+        public System.Threading.Tasks.Task<int> InsertFct_ProdAsync(myVisualCore.ServicioDelCore.WCFct_Prod _WCFct_Prod) {
+            return base.Channel.InsertFct_ProdAsync(_WCFct_Prod);
+        }
+        
+        public int InsertFct_Serv(myVisualCore.ServicioDelCore.WCFct_Serv _WCFct_Serv) {
+            return base.Channel.InsertFct_Serv(_WCFct_Serv);
+        }
+        
+        public System.Threading.Tasks.Task<int> InsertFct_ServAsync(myVisualCore.ServicioDelCore.WCFct_Serv _WCFct_Serv) {
+            return base.Channel.InsertFct_ServAsync(_WCFct_Serv);
+        }
+        
+        public WebCoreDataSet.PRODUCTODataTable SelectProductos() {
+            return base.Channel.SelectProductos();
+        }
+        
+        public System.Threading.Tasks.Task<WebCoreDataSet.PRODUCTODataTable> SelectProductosAsync() {
+            return base.Channel.SelectProductosAsync();
         }
         
         public WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in) {
