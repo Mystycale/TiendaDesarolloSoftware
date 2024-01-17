@@ -63,6 +63,21 @@ namespace WebCore
         }
 
         [WebMethod]
+        public int InsertProducto(WCProducto _WCProducto)
+        {
+            PRODUCTOTableAdapter myCAJEROTableAdapter = new PRODUCTOTableAdapter();
+
+            int respQwery = myCAJEROTableAdapter.ppInsertProducto(
+                _WCProducto.codigo, 
+                _WCProducto.nombre, 
+                _WCProducto.desc, 
+                _WCProducto.stock, 
+                _WCProducto.precio);
+
+            return respQwery;
+        }
+
+        [WebMethod]
         public USUARIODataTable BuscarUsuario(string codigo_in, string clave_in)
         {
 
