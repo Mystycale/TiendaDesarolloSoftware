@@ -32,17 +32,18 @@
             this.panelLogin = new System.Windows.Forms.Panel();
             this.gpAdmin = new System.Windows.Forms.GroupBox();
             this.btnIngresarAdmin = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAdminContra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAdminUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnMostrarContra = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtCAJRID = new System.Windows.Forms.TextBox();
+            this.txtCAJR = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,9 +74,9 @@
             // gpAdmin
             // 
             this.gpAdmin.Controls.Add(this.btnIngresarAdmin);
-            this.gpAdmin.Controls.Add(this.textBox3);
+            this.gpAdmin.Controls.Add(this.txtAdminContra);
             this.gpAdmin.Controls.Add(this.label4);
-            this.gpAdmin.Controls.Add(this.textBox2);
+            this.gpAdmin.Controls.Add(this.txtAdminUser);
             this.gpAdmin.Controls.Add(this.label2);
             this.gpAdmin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gpAdmin.ForeColor = System.Drawing.Color.White;
@@ -98,14 +99,14 @@
             this.btnIngresarAdmin.UseVisualStyleBackColor = true;
             this.btnIngresarAdmin.Click += new System.EventHandler(this.btnIngresarAdmin_Click);
             // 
-            // textBox3
+            // txtAdminContra
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(18, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(218, 22);
-            this.textBox3.TabIndex = 14;
+            this.txtAdminContra.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdminContra.Location = new System.Drawing.Point(18, 90);
+            this.txtAdminContra.Name = "txtAdminContra";
+            this.txtAdminContra.PasswordChar = '*';
+            this.txtAdminContra.Size = new System.Drawing.Size(218, 22);
+            this.txtAdminContra.TabIndex = 14;
             // 
             // label4
             // 
@@ -118,15 +119,15 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Contraseña";
             // 
-            // textBox2
+            // txtAdminUser
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(18, 41);
-            this.textBox2.MaxLength = 10;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 22);
-            this.textBox2.TabIndex = 12;
+            this.txtAdminUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAdminUser.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdminUser.Location = new System.Drawing.Point(18, 41);
+            this.txtAdminUser.MaxLength = 10;
+            this.txtAdminUser.Name = "txtAdminUser";
+            this.txtAdminUser.Size = new System.Drawing.Size(218, 22);
+            this.txtAdminUser.TabIndex = 12;
             // 
             // label2
             // 
@@ -197,13 +198,40 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtCAJRID);
+            this.panel2.Controls.Add(this.txtCAJR);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Location = new System.Drawing.Point(487, 241);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(293, 36);
             this.panel2.TabIndex = 8;
+            // 
+            // txtCAJRID
+            // 
+            this.txtCAJRID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCAJRID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCAJRID.Location = new System.Drawing.Point(77, 8);
+            this.txtCAJRID.MaxLength = 6;
+            this.txtCAJRID.Name = "txtCAJRID";
+            this.txtCAJRID.Size = new System.Drawing.Size(210, 20);
+            this.txtCAJRID.TabIndex = 6;
+            this.txtCAJRID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCAJRID_KeyPress);
+            // 
+            // txtCAJR
+            // 
+            this.txtCAJR.BackColor = System.Drawing.Color.White;
+            this.txtCAJR.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCAJR.Enabled = false;
+            this.txtCAJR.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCAJR.ForeColor = System.Drawing.Color.Black;
+            this.txtCAJR.Location = new System.Drawing.Point(38, 8);
+            this.txtCAJR.MaxLength = 10;
+            this.txtCAJR.Name = "txtCAJR";
+            this.txtCAJR.ReadOnly = true;
+            this.txtCAJR.Size = new System.Drawing.Size(41, 20);
+            this.txtCAJR.TabIndex = 7;
+            this.txtCAJR.Text = "CAJR";
             // 
             // button2
             // 
@@ -219,17 +247,6 @@
             this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 5;
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(39, 8);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 20);
-            this.textBox1.TabIndex = 1;
             // 
             // btnRegistrar
             // 
@@ -316,7 +333,6 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtContraseña;
@@ -325,10 +341,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox gpAdmin;
         private System.Windows.Forms.Button btnIngresarAdmin;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAdminContra;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAdminUser;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCAJRID;
+        private System.Windows.Forms.TextBox txtCAJR;
     }
 }
 

@@ -12,24 +12,48 @@ namespace ProyectoCaja
 {
     public partial class FormFacturacionCotizacion : Form
     {
+
         public FormFacturacionCotizacion()
         {
             InitializeComponent();
 
-            comboBox1.Items.Add("Si");
-            comboBox1.Items.Add("No");
-
-            comboBox1.SelectedIndex = 1;
+            cmbCotizacion.Items.Add("No");
+            cmbCotizacion.Items.Add("Si");
+            cmbCotizacion.SelectedIndex = 0;
         }
 
+        #region Botones
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        #endregion
+
+        #region Propiedades
+        private void txtPRODID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            textBox10.Text = comboBox1.Text;
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
         }
+
+        private void txtSERVID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCLIEID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
     }
 }
