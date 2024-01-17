@@ -53,21 +53,19 @@ namespace ProyectoCaja
                         connection.Open();
 
                         // Crear un objeto SqlCommand para el stored procedure
-                        using (SqlCommand cmd = new SqlCommand("spInsertarCajero", connection))
+                        using (SqlCommand cmd = new SqlCommand("InsertarCajero", connection))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
 
                             // Agregar parámetros al stored procedure
-                            cmd.Parameters.AddWithValue("@cjr_id", cajrID);
-                            cmd.Parameters.AddWithValue("@cjr_cedula", cajrCedula);
-                            cmd.Parameters.AddWithValue("@cjr_nombre", cajrNombre);
-                            cmd.Parameters.AddWithValue("@cjr_apellido", cajrApellido);
-                            cmd.Parameters.AddWithValue("@cjr_telefono", cajrTelefono);
-                            cmd.Parameters.AddWithValue("@cjr_direccion", cajrDireccion);
-                            cmd.Parameters.AddWithValue("@cjr_fechaIngreso", fechaIngreso);
-                            cmd.Parameters.AddWithValue("@cjr_sucursal", cajrSucursal);
-                            cmd.Parameters.AddWithValue("@cjr_contra", cajrContra);
-                            cmd.Parameters.AddWithValue("@cjr_estado", 1);
+                            cmd.Parameters.AddWithValue("@codigo", cajrID);
+                            cmd.Parameters.AddWithValue("@cedula", cajrCedula);
+                            cmd.Parameters.AddWithValue("@nombre", cajrNombre);
+                            cmd.Parameters.AddWithValue("@apellido", cajrApellido);
+                            cmd.Parameters.AddWithValue("@telefono", cajrTelefono);
+                            cmd.Parameters.AddWithValue("@direccion", cajrDireccion);
+                            cmd.Parameters.AddWithValue("@sucursal", cajrSucursal);
+                            cmd.Parameters.AddWithValue("@contra", cajrContra);
                             cmd.ExecuteNonQuery();
 
                             MessageBox.Show("Datos insertados correctamente.");

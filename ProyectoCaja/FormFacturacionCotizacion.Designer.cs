@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.txtFACTID = new System.Windows.Forms.TextBox();
+            this.txtFACT = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtSERVID = new System.Windows.Forms.TextBox();
             this.txtSERV = new System.Windows.Forms.TextBox();
@@ -39,7 +44,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtNomCLIE = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtCLIEID = new System.Windows.Forms.TextBox();
@@ -55,7 +60,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtNomSERV = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscarServ = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -63,7 +68,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtPrePROD = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarProd = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -71,6 +76,7 @@
             this.txtPROD = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -87,13 +93,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.panel10);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnBuscarCliente);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.label7);
@@ -104,13 +113,13 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnBuscarServ);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnBuscarProd);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel6);
@@ -121,13 +130,73 @@
             this.panel1.Size = new System.Drawing.Size(1021, 603);
             this.panel1.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(784, 157);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(196, 34);
+            this.button2.TabIndex = 51;
+            this.button2.Text = "Agregar a Compra";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(35, 37);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 19);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "Factura ID";
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.txtFACTID);
+            this.panel12.Controls.Add(this.txtFACT);
+            this.panel12.Location = new System.Drawing.Point(35, 59);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(196, 30);
+            this.panel12.TabIndex = 48;
+            // 
+            // txtFACTID
+            // 
+            this.txtFACTID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFACTID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFACTID.Location = new System.Drawing.Point(40, 5);
+            this.txtFACTID.MaxLength = 6;
+            this.txtFACTID.Name = "txtFACTID";
+            this.txtFACTID.Size = new System.Drawing.Size(152, 20);
+            this.txtFACTID.TabIndex = 5;
+            // 
+            // txtFACT
+            // 
+            this.txtFACT.BackColor = System.Drawing.Color.White;
+            this.txtFACT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFACT.Enabled = false;
+            this.txtFACT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFACT.ForeColor = System.Drawing.Color.Black;
+            this.txtFACT.Location = new System.Drawing.Point(4, 5);
+            this.txtFACT.MaxLength = 10;
+            this.txtFACT.Name = "txtFACT";
+            this.txtFACT.ReadOnly = true;
+            this.txtFACT.Size = new System.Drawing.Size(40, 20);
+            this.txtFACT.TabIndex = 6;
+            this.txtFACT.Text = "FACT";
+            // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.txtSERVID);
             this.panel4.Controls.Add(this.txtSERV);
-            this.panel4.Location = new System.Drawing.Point(418, 57);
+            this.panel4.Location = new System.Drawing.Point(536, 60);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(196, 30);
             this.panel4.TabIndex = 47;
@@ -169,6 +238,7 @@
             this.button5.TabIndex = 46;
             this.button5.Text = "Finalizar Compra";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
             // 
@@ -177,7 +247,7 @@
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(668, 161);
+            this.label8.Location = new System.Drawing.Point(784, 200);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 19);
             this.label8.TabIndex = 45;
@@ -188,7 +258,7 @@
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.cmbCotizacion);
-            this.panel9.Location = new System.Drawing.Point(668, 183);
+            this.panel9.Location = new System.Drawing.Point(784, 222);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(194, 30);
             this.panel9.TabIndex = 44;
@@ -211,7 +281,7 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(668, 96);
+            this.label9.Location = new System.Drawing.Point(786, 99);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(124, 19);
             this.label9.TabIndex = 44;
@@ -222,7 +292,7 @@
             this.panel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.Controls.Add(this.txtNomCLIE);
-            this.panel10.Location = new System.Drawing.Point(668, 118);
+            this.panel10.Location = new System.Drawing.Point(786, 121);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(194, 30);
             this.panel10.TabIndex = 43;
@@ -238,16 +308,17 @@
             this.txtNomCLIE.Size = new System.Drawing.Size(187, 20);
             this.txtNomCLIE.TabIndex = 3;
             // 
-            // button6
+            // btnBuscarCliente
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(789, 32);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 42;
-            this.button6.Text = "Buscar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.Location = new System.Drawing.Point(907, 34);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCliente.TabIndex = 42;
+            this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // label10
             // 
@@ -256,7 +327,7 @@
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(668, 35);
+            this.label10.Location = new System.Drawing.Point(786, 38);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 19);
             this.label10.TabIndex = 41;
@@ -268,7 +339,7 @@
             this.panel11.BackColor = System.Drawing.Color.White;
             this.panel11.Controls.Add(this.txtCLIEID);
             this.panel11.Controls.Add(this.txtCLIE);
-            this.panel11.Location = new System.Drawing.Point(668, 57);
+            this.panel11.Location = new System.Drawing.Point(786, 60);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(196, 30);
             this.panel11.TabIndex = 40;
@@ -306,7 +377,7 @@
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(418, 161);
+            this.label7.Location = new System.Drawing.Point(536, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 19);
             this.label7.TabIndex = 39;
@@ -317,7 +388,7 @@
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel8.BackColor = System.Drawing.Color.White;
             this.panel8.Controls.Add(this.txtPreSERV);
-            this.panel8.Location = new System.Drawing.Point(418, 183);
+            this.panel8.Location = new System.Drawing.Point(536, 186);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(194, 30);
             this.panel8.TabIndex = 38;
@@ -340,7 +411,7 @@
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(165, 99);
+            this.label6.Location = new System.Drawing.Point(283, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 19);
             this.label6.TabIndex = 37;
@@ -351,7 +422,7 @@
             this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.txtNomPROD);
-            this.panel7.Location = new System.Drawing.Point(165, 121);
+            this.panel7.Location = new System.Drawing.Point(283, 124);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(196, 30);
             this.panel7.TabIndex = 36;
@@ -371,7 +442,7 @@
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(418, 225);
+            this.button4.Location = new System.Drawing.Point(536, 223);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(196, 34);
             this.button4.TabIndex = 35;
@@ -382,7 +453,7 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(165, 292);
+            this.button3.Location = new System.Drawing.Point(283, 289);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(196, 34);
             this.button3.TabIndex = 34;
@@ -396,7 +467,7 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(418, 96);
+            this.label4.Location = new System.Drawing.Point(536, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 19);
             this.label4.TabIndex = 33;
@@ -407,7 +478,7 @@
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.txtNomSERV);
-            this.panel5.Location = new System.Drawing.Point(418, 118);
+            this.panel5.Location = new System.Drawing.Point(536, 121);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(194, 30);
             this.panel5.TabIndex = 32;
@@ -423,16 +494,17 @@
             this.txtNomSERV.Size = new System.Drawing.Size(187, 20);
             this.txtNomSERV.TabIndex = 3;
             // 
-            // button2
+            // btnBuscarServ
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(545, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 23);
-            this.button2.TabIndex = 31;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscarServ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscarServ.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarServ.Location = new System.Drawing.Point(663, 35);
+            this.btnBuscarServ.Name = "btnBuscarServ";
+            this.btnBuscarServ.Size = new System.Drawing.Size(69, 23);
+            this.btnBuscarServ.TabIndex = 31;
+            this.btnBuscarServ.Text = "Buscar";
+            this.btnBuscarServ.UseVisualStyleBackColor = true;
+            this.btnBuscarServ.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -441,7 +513,7 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(418, 35);
+            this.label3.Location = new System.Drawing.Point(536, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 19);
             this.label3.TabIndex = 30;
@@ -454,7 +526,7 @@
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(165, 228);
+            this.label2.Location = new System.Drawing.Point(283, 231);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 28;
@@ -465,7 +537,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.txtCanPROD);
-            this.panel3.Location = new System.Drawing.Point(165, 250);
+            this.panel3.Location = new System.Drawing.Point(283, 253);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(196, 30);
             this.panel3.TabIndex = 27;
@@ -486,7 +558,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(165, 164);
+            this.label1.Location = new System.Drawing.Point(283, 167);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 19);
             this.label1.TabIndex = 26;
@@ -497,7 +569,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.txtPrePROD);
-            this.panel2.Location = new System.Drawing.Point(165, 186);
+            this.panel2.Location = new System.Drawing.Point(283, 189);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(196, 30);
             this.panel2.TabIndex = 25;
@@ -513,16 +585,18 @@
             this.txtPrePROD.Size = new System.Drawing.Size(188, 20);
             this.txtPrePROD.TabIndex = 3;
             // 
-            // button1
+            // btnBuscarProd
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(299, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 23);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBuscarProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnBuscarProd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProd.Location = new System.Drawing.Point(417, 35);
+            this.btnBuscarProd.Name = "btnBuscarProd";
+            this.btnBuscarProd.Size = new System.Drawing.Size(62, 23);
+            this.btnBuscarProd.TabIndex = 24;
+            this.btnBuscarProd.Text = "Buscar";
+            this.btnBuscarProd.UseVisualStyleBackColor = true;
+            this.btnBuscarProd.Click += new System.EventHandler(this.btnBuscarProd_Click);
             // 
             // dataGridView1
             // 
@@ -543,7 +617,7 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(165, 35);
+            this.label5.Location = new System.Drawing.Point(283, 38);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 19);
             this.label5.TabIndex = 22;
@@ -555,7 +629,7 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.txtPRODID);
             this.panel6.Controls.Add(this.txtPROD);
-            this.panel6.Location = new System.Drawing.Point(165, 57);
+            this.panel6.Location = new System.Drawing.Point(283, 60);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(196, 30);
             this.panel6.TabIndex = 21;
@@ -569,6 +643,7 @@
             this.txtPRODID.Name = "txtPRODID";
             this.txtPRODID.Size = new System.Drawing.Size(146, 20);
             this.txtPRODID.TabIndex = 3;
+            this.txtPRODID.TextChanged += new System.EventHandler(this.txtPRODID_TextChanged);
             this.txtPRODID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPRODID_KeyPress);
             // 
             // txtPROD
@@ -609,6 +684,8 @@
             this.Text = "FormFacturacionCotizacion";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -640,8 +717,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtPRODID;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarProd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtCanPROD;
@@ -651,12 +727,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtNomPROD;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txtNomSERV;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarServ;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel8;
@@ -664,7 +738,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.TextBox txtNomCLIE;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel9;
@@ -677,5 +751,13 @@
         private System.Windows.Forms.TextBox txtSERV;
         private System.Windows.Forms.TextBox txtCLIEID;
         private System.Windows.Forms.TextBox txtCLIE;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TextBox txtFACT;
+        private System.Windows.Forms.TextBox txtFACTID;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

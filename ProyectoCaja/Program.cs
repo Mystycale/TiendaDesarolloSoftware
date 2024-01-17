@@ -14,6 +14,7 @@ namespace ProyectoCaja
         [STAThread]
         static void Main()
         {
+            //hola
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());

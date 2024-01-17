@@ -112,11 +112,11 @@ namespace ProyectoCaja
                 {
                     connection.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("spAutenticarCajero", connection))
+                    using (SqlCommand cmd = new SqlCommand("AutenticarCajero", connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@cjr_id", cajrID);
-                        cmd.Parameters.AddWithValue("@cjr_contra", contra);
+                        cmd.Parameters.AddWithValue("@CodigoCajero", cajrID);
+                        cmd.Parameters.AddWithValue("@Contrasena", contra);
 
                         // Obtener el resultado del procedimiento almacenado
                         resultado = (int)cmd.ExecuteScalar();
