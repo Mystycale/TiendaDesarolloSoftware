@@ -12,6 +12,11 @@ namespace myVisualCore
 {
     public partial class frmLogin : Form
     {
+        public string Codigo = "NA";
+        public string Nombre = "NA";
+        public string Apellido = "NA";
+        public int TipoPerfil = 0;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -51,9 +56,11 @@ namespace myVisualCore
             {
                 if (codigo == item.usr_codigo && clave == item.usr_clave)
                 {
-                    nombre = item.usr_nombre;
-                    apellido = item.usr_apellido;
-                    tipoPerfil = item.usr_perfil_id;
+                    Nombre = item.usr_nombre;
+                    Apellido = item.usr_apellido;
+                    TipoPerfil = item.usr_perfil_id;
+                    Codigo = codigo;
+
 
                     MessageBox.Show(item.usr_nombre);
 
@@ -62,7 +69,11 @@ namespace myVisualCore
                 }
             }
 
-            if (encontrado) MessageBox.Show("Bienvenido, administrador " + nombre + " " + apellido + ". Perfil: " + tipoPerfil.ToString(), "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (encontrado)
+            {
+                MessageBox.Show("Bienvenido, administrador " + Nombre + " " + Apellido + ". Perfil: " + TipoPerfil.ToString(), "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
             else MessageBox.Show("Usuario no encontrado.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
