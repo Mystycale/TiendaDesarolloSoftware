@@ -11,5 +11,15 @@ namespace WebCore.Modelos
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int TipoPerfil { get; set; }
+
+        public void Mostrar()
+        {
+            Console.WriteLine("************** Usuario **************");
+            Console.WriteLine("Codigo: " + Codigo);
+            Console.WriteLine("Nombre: " + Nombre);
+            Console.WriteLine("Apellido: " + Apellido);
+            Console.WriteLine("Fecha: " + DateTime.Now.ToString());
+            Console.WriteLine("*************************************\n");
+        }
     }
 }

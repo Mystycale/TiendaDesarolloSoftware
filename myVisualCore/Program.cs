@@ -36,35 +36,7 @@ namespace myVisualCore
 
         private static void CoreProgram(CoreUser actualCoreUser)
         {
-            #region CoreAntes
-            //while (true)
-            //{
-            //    Console.WriteLine("------MENU------");
-            //    Console.WriteLine("1. Registrar cajero");
-            //    Console.WriteLine("2. Login");
-
-
-            //    int op = int.Parse(Console.ReadLine());
-
-            //    if (op == 1)
-            //    {
-            //        frmRegistrarCajero myFrmRegistrarCajero = new frmRegistrarCajero();
-            //        Application.Run(myFrmRegistrarCajero);
-
-            //        Console.WriteLine("Fin");
-
-            //    }
-            //    else if (op == 2)
-            //    {
-            //        frmLogin frmLogin = new frmLogin();
-            //        Application.Run(frmLogin);
-            //    }
-
-            //    Console.WriteLine(actualCoreUser.Nombre);
-            #endregion
-
-
+            MenuPrincipal.Ejecutar(actualCoreUser);
         }
-    }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebCore.Modelos;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace myVisualCore
@@ -13,9 +14,9 @@ namespace myVisualCore
         private static int y;
 
 
-        public static void Ejecutar(int perfil)
+        public static void Ejecutar(CoreUser actualCoreUser)
         {
-            switch (perfil)
+            switch (actualCoreUser.TipoPerfil)
             {
                 case 1:
                     string[] OpcionesMenuCajero1 = new string[] {
@@ -24,7 +25,7 @@ namespace myVisualCore
             " [Actualizar cajero] ",
             " [Eliminar cajero] ",
             " [Volver al menú principal] "};
-                    Ejecutar1(OpcionesMenuCajero1);
+                    Ejecutar1(OpcionesMenuCajero1, actualCoreUser);
                     break;
 
                 case 2:
@@ -33,21 +34,21 @@ namespace myVisualCore
             " [Actualizar cajero] ",
             " [Volver al menú principal] " };
 
-                    Ejecutar2(OpcionesMenuCajero2);
+                    Ejecutar2(OpcionesMenuCajero2, actualCoreUser);
                     break;
                 case 3:
                     string[] OpcionesMenuCajero3 = new string[] {
             " [Mostrar cajeros] ",
             " [Volver al menú principal] " };
 
-                    Ejecutar3(OpcionesMenuCajero3);
+                    Ejecutar3(OpcionesMenuCajero3, actualCoreUser);
                     break;
             }
         }
 
 
         #region::::::::::::::::::::::: ADMINISTRADOR
-        public static void Ejecutar1(string[] OpcionesMenuCajero)
+        public static void Ejecutar1(string[] OpcionesMenuCajero, CoreUser actualCoreUser)
         {
             bool loop = true;
             int posicionSeleccion = 0;
@@ -56,6 +57,7 @@ namespace myVisualCore
             Console.CursorVisible = false;
 
             Console.Clear();
+            actualCoreUser.Mostrar();
             Console.WriteLine("*********************");
             Console.WriteLine("*    MENU CAJERO    *");
             Console.WriteLine("*********************\n");
@@ -68,6 +70,7 @@ namespace myVisualCore
             while (loop)
             {
                 Console.Clear();
+                actualCoreUser.Mostrar();
                 Console.WriteLine("*********************");
                 Console.WriteLine("*    MENU CAJERO    *");
                 Console.WriteLine("*********************\n");
@@ -149,7 +152,7 @@ namespace myVisualCore
         #endregion ::::::::::::::::::::::: ADMINISTRADOR
 
         #region::::::::::::::::::::::: MANTENIMIENTO
-        public static void Ejecutar2(string[] OpcionesMenuCajero)
+        public static void Ejecutar2(string[] OpcionesMenuCajero, CoreUser actualCoreUser)
         {
             bool loop = true;
             int posicionSeleccion = 0;
@@ -158,6 +161,7 @@ namespace myVisualCore
             Console.CursorVisible = false;
 
             Console.Clear();
+            actualCoreUser.Mostrar();
             Console.WriteLine("*********************");
             Console.WriteLine("*    MENU CAJERO    *");
             Console.WriteLine("*********************\n");
@@ -170,6 +174,7 @@ namespace myVisualCore
             while (loop)
             {
                 Console.Clear();
+                actualCoreUser.Mostrar();
                 Console.WriteLine("*********************");
                 Console.WriteLine("*    MENU CAJERO    *");
                 Console.WriteLine("*********************\n");
@@ -249,7 +254,7 @@ namespace myVisualCore
         #endregion ::::::::::::::::::::::: MANTENIMEINTO
 
         #region ::::::::::::::::::::::: LECTURA
-        public static void Ejecutar3(string[] OpcionesMenuCajero)
+        public static void Ejecutar3(string[] OpcionesMenuCajero, CoreUser actualCoreUser)
         {
             bool loop = true;
             int posicionSeleccion = 0;
@@ -258,6 +263,7 @@ namespace myVisualCore
             Console.CursorVisible = false;
 
             Console.Clear();
+            actualCoreUser.Mostrar();
             Console.WriteLine("*********************");
             Console.WriteLine("*    MENU CAJERO    *");
             Console.WriteLine("*********************\n");
@@ -270,6 +276,7 @@ namespace myVisualCore
             while (loop)
             {
                 Console.Clear();
+                actualCoreUser.Mostrar(); 
                 Console.WriteLine("*********************");
                 Console.WriteLine("*    MENU CAJERO    *");
                 Console.WriteLine("*********************\n");

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebCore.Modelos;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace myVisualCore
@@ -24,7 +25,7 @@ namespace myVisualCore
         private static int x;
         private static int y;
 
-        public static void Ejecutar(int perfil)
+        public static void Ejecutar(CoreUser actualCoreUser)
         {
             bool loop = true;
             int posicionSeleccion = 0;
@@ -33,6 +34,7 @@ namespace myVisualCore
             Console.CursorVisible = false;
 
             Console.Clear();
+            actualCoreUser.Mostrar();
             Console.WriteLine("************************");
             Console.WriteLine("*    MENU PRINCIPAL    *");
             Console.WriteLine("************************\n");
@@ -45,6 +47,7 @@ namespace myVisualCore
             while (loop)
             {
                 Console.Clear();
+                actualCoreUser.Mostrar();
                 Console.WriteLine("************************");
                 Console.WriteLine("*    MENU PRINCIPAL    *");
                 Console.WriteLine("************************\n");
@@ -89,7 +92,7 @@ namespace myVisualCore
 
                     case 3:
                         Console.Clear();
-                        MenuCajero.Ejecutar(perfil);
+                        MenuCajero.Ejecutar(actualCoreUser);
                         break;
 
                     case 4:
