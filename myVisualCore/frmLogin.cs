@@ -71,8 +71,18 @@ namespace myVisualCore
                 MessageBox.Show("Bienvenido, " + Nombre + " " + Apellido, "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
-            else MessageBox.Show("Usuario no encontrado.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+            {
+                MessageBox.Show("Usuario no encontrado.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
         }
+
+        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
     }
-    
 }

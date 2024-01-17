@@ -216,6 +216,8 @@ namespace myVisualCore.Menues.Producto
                 switch (posicionSeleccion)
                 {
                     case 0:
+                        FuncionesProducto.MostrarProductos();
+                        break;
                     case 1:
                         continue;
                     case 2:
@@ -317,7 +319,8 @@ namespace myVisualCore.Menues.Producto
                 switch (posicionSeleccion)
                 {
                     case 0:
-                        continue;
+                        FuncionesProducto.MostrarProductos();
+                        break;
                     case 1:
                         Console.Clear();
                         loop = false;

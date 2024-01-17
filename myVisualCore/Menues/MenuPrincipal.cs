@@ -21,7 +21,7 @@ namespace myVisualCore
             " [Facturas] ",
             " [Corizaciones] ",
             " [Usuarios] ",
-            " [Cerrar seccion] "
+            " [Cerrar aplicacion] "
         };
 
 

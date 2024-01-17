@@ -78,6 +78,27 @@ namespace myVisualCore.ServicioDelCore {
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectProductos", ReplyAction="*")]
         System.Threading.Tasks.Task<WebCoreDataSet.PRODUCTODataTable> SelectProductosAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectServicios", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        WebCoreDataSet.SERVICIODataTable SelectServicios();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectServicios", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebCoreDataSet.SERVICIODataTable> SelectServiciosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectClientes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        WebCoreDataSet.CLIENTEDataTable SelectClientes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectClientes", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebCoreDataSet.CLIENTEDataTable> SelectClientesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectCajeros", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        WebCoreDataSet.CAJERODataTable SelectCajeros();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectCajeros", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebCoreDataSet.CAJERODataTable> SelectCajerosAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/BuscarUsuario", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in);
@@ -5298,6 +5319,30 @@ namespace myVisualCore.ServicioDelCore {
         
         public System.Threading.Tasks.Task<WebCoreDataSet.PRODUCTODataTable> SelectProductosAsync() {
             return base.Channel.SelectProductosAsync();
+        }
+        
+        public WebCoreDataSet.SERVICIODataTable SelectServicios() {
+            return base.Channel.SelectServicios();
+        }
+        
+        public System.Threading.Tasks.Task<WebCoreDataSet.SERVICIODataTable> SelectServiciosAsync() {
+            return base.Channel.SelectServiciosAsync();
+        }
+        
+        public WebCoreDataSet.CLIENTEDataTable SelectClientes() {
+            return base.Channel.SelectClientes();
+        }
+        
+        public System.Threading.Tasks.Task<WebCoreDataSet.CLIENTEDataTable> SelectClientesAsync() {
+            return base.Channel.SelectClientesAsync();
+        }
+        
+        public WebCoreDataSet.CAJERODataTable SelectCajeros() {
+            return base.Channel.SelectCajeros();
+        }
+        
+        public System.Threading.Tasks.Task<WebCoreDataSet.CAJERODataTable> SelectCajerosAsync() {
+            return base.Channel.SelectCajerosAsync();
         }
         
         public WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in) {

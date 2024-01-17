@@ -69,7 +69,7 @@ namespace myVisualCore
             this.panelGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGeneral.Location = new System.Drawing.Point(0, 0);
             this.panelGeneral.Name = "panelGeneral";
-            this.panelGeneral.Size = new System.Drawing.Size(405, 554);
+            this.panelGeneral.Size = new System.Drawing.Size(391, 554);
             this.panelGeneral.TabIndex = 0;
             // 
             // btnRegistrar
@@ -77,7 +77,7 @@ namespace myVisualCore
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(246, 503);
+            this.btnRegistrar.Location = new System.Drawing.Point(239, 503);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(97, 28);
@@ -101,13 +101,13 @@ namespace myVisualCore
             this.groupBox1.Controls.Add(this.panelDatPersonales);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(18, 19);
+            this.groupBox1.Location = new System.Drawing.Point(11, 19);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(355, 474);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Personales";
+            this.groupBox1.Text = "Datos del producto";
             // 
             // lblCodigo
             // 

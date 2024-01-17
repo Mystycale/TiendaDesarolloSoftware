@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myVisualCore.Menues.Producto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -113,6 +114,9 @@ namespace myVisualCore
                         break;
 
                     case 1:
+                        FuncionesCajero.MostrarCajeros();
+                        break;
+
                     case 2:
                     case 3:                    
                         continue;
@@ -216,8 +220,12 @@ namespace myVisualCore
                 switch (posicionSeleccion)
                 {
                     case 0:
+                        FuncionesCajero.MostrarCajeros();
+                        break;
+
                     case 1:
                         continue;
+
                     case 2:
                         Console.Clear();
                         loop = false;
@@ -318,7 +326,9 @@ namespace myVisualCore
                 switch (posicionSeleccion)
                 {
                     case 0:
-                        continue;
+                        FuncionesCajero.MostrarCajeros();
+                        break;
+
                     case 1:
                         Console.Clear();
                         loop = false;

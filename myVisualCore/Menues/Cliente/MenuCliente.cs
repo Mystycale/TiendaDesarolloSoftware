@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myVisualCore.Menues.Producto;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -113,6 +114,9 @@ namespace myVisualCore.Menues
                         break;
 
                     case 1:
+                        FuncionesCliente.MostrarClientes();
+                        break;
+
                     case 2:
                     case 3:
                         continue;
@@ -216,6 +220,8 @@ namespace myVisualCore.Menues
                 switch (posicionSeleccion)
                 {
                     case 0:
+                        FuncionesCliente.MostrarClientes();
+                        break;
                     case 1:
                         continue;
                     case 2:
@@ -317,7 +323,8 @@ namespace myVisualCore.Menues
                 switch (posicionSeleccion)
                 {
                     case 0:
-                        continue;
+                        FuncionesCliente.MostrarClientes();
+                        break;
                     case 1:
                         Console.Clear();
                         loop = false;

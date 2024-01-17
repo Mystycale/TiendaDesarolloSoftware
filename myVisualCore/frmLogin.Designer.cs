@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.panelLogin = new System.Windows.Forms.Panel();
+            this.lblCore = new System.Windows.Forms.Label();
+            this.lblTienda = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txtClave = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.lblTienda = new System.Windows.Forms.Label();
-            this.lblCore = new System.Windows.Forms.Label();
             this.panelLogin.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,6 +64,28 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(459, 440);
             this.panelLogin.TabIndex = 0;
+            // 
+            // lblCore
+            // 
+            this.lblCore.AutoSize = true;
+            this.lblCore.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCore.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblCore.Location = new System.Drawing.Point(84, 156);
+            this.lblCore.Name = "lblCore";
+            this.lblCore.Size = new System.Drawing.Size(279, 33);
+            this.lblCore.TabIndex = 11;
+            this.lblCore.Text = "--------CORE--------";
+            // 
+            // lblTienda
+            // 
+            this.lblTienda.AutoSize = true;
+            this.lblTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTienda.ForeColor = System.Drawing.Color.White;
+            this.lblTienda.Location = new System.Drawing.Point(49, 48);
+            this.lblTienda.Name = "lblTienda";
+            this.lblTienda.Size = new System.Drawing.Size(343, 108);
+            this.lblTienda.TabIndex = 10;
+            this.lblTienda.Text = "Tienda";
             // 
             // panel3
             // 
@@ -196,28 +218,6 @@
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
-            // lblTienda
-            // 
-            this.lblTienda.AutoSize = true;
-            this.lblTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTienda.ForeColor = System.Drawing.Color.White;
-            this.lblTienda.Location = new System.Drawing.Point(49, 48);
-            this.lblTienda.Name = "lblTienda";
-            this.lblTienda.Size = new System.Drawing.Size(343, 108);
-            this.lblTienda.TabIndex = 10;
-            this.lblTienda.Text = "Tienda";
-            // 
-            // lblCore
-            // 
-            this.lblCore.AutoSize = true;
-            this.lblCore.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCore.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblCore.Location = new System.Drawing.Point(84, 156);
-            this.lblCore.Name = "lblCore";
-            this.lblCore.Size = new System.Drawing.Size(279, 33);
-            this.lblCore.TabIndex = 11;
-            this.lblCore.Text = "--------CORE--------";
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +231,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Core - Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
             this.panel3.ResumeLayout(false);

@@ -121,7 +121,7 @@
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfoAAAH9CAYAAADyEL7xAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAMmVJREFUeF7t3Qm0VWXdx3FlihkBZUhAwBAjcQCRBBUkNUzEgUEwiRRDE1NxDnsl
+        wQAADsEBuJFr7QAAMmVJREFUeF7t3Qm0VWXdx3FlihkBZUhAwBAjcQCRBBUkNUzEgUEwiRRDE1NxDnsl
         KROJFKcUKBwgFNEMnANzwqFwQlBwQgWRQUAQBEXgeZ//3o8L4fwv3HOHs5/97O9nre9a7+ot3Wez7/5x
         7z3DbgYAAASLoQcAIGAMPQAAAWPoAQAIGEMPAEDAGHoAAALG0AMAEDCGHgCAgDH0AAAEjKEHACBgDD0A
         AAFj6AEACBhDDwBAwBh6AAACxtADABAwhh4AgIAx9AAABIyhBwAgYAw9AAABY+gBAAgYQw8AQMAYegAA
@@ -342,7 +342,7 @@
   <data name="btnMostrarContra.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfwAAAH6CAYAAADiC/4OAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAQVRJREFUeF7t3QncjVW///Enhds8Zio0mzJkanA450EopEmpSKVUGogiGtBEVIio
+        wQAADsEBuJFr7QAAQVRJREFUeF7t3QncjVW///Enhds8Zio0mzJkanA450EopEmpSKVUGogiGtBEVIio
         JNIohSIUDWYZHmNlijJkDqeToWj9/7+rJQ0L933vva9rrWt93q/X9/U6w/PU2nuvfX/3Na31LwUAAGKP
         wgcAwAMUPgAAHqDwAQDwAIUPAIAHKHwAADxA4QMA4AEKHwAAD1D4AAB4gMIHAMADFD4AAB6g8AEA8ACF
         DwCAByh8AAA8QOEDAOABCh8AAA9Q+AAAeIDCBwDAAxQ+AAAeoPABAPAAhQ8AgAcofAAAPEDhAwDgAQof
@@ -627,7 +627,7 @@
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAf0AAAIFCAYAAADY5SRhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAANHdJREFUeF7t3XucT3X+wPHGGIxb7sklhKRIq9yV65ZrF2Fzacoimdh+CLXJauIn
+        wQAADsEBuJFr7QAANHdJREFUeF7t3XucT3X+wPHGGIxb7sklhKRIq9yV65ZrF2Fzacoimdh+CLXJauIn
         yiZLG34akcumElvEijaX3FJyT4aRW8a1oWEMn9/vc36fWpO3MZfv5XzOeb0ej+ffu51zPp+3+X6/55zr
         5s2bpwAAgPcx9AEA8AmGPgAAPnFdr169FAAA8L7rFBFZ08GDB9W///1v9T//8z/qlVdeUcOGDVMDBgxQ
         vXv3Vl27dlUPPPCAatGihapXr56qUaOGqlixoipZsqSKjo5WkZGRqlChQqp06dKqSpUqqlatWqpRo0bq

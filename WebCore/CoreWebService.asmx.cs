@@ -134,7 +134,7 @@ namespace WebCore
 
         #endregion
 
-        #region :::::::::::::::: Producto 
+        #region :::::::::::::::: SELECT * 
 
         [WebMethod]
         public PRODUCTODataTable SelectProductos()
@@ -146,7 +146,38 @@ namespace WebCore
             return myPRODUCTODataTable;
         }
 
-        #endregion :::::::::::::::: Producto
+        [WebMethod]
+        public SERVICIODataTable SelectServicios()
+        {
+            SERVICIOTableAdapter mySERVICIOTableAdapter = new SERVICIOTableAdapter();
+
+            SERVICIODataTable myPRODUCTODataTable = mySERVICIOTableAdapter.GetData();
+
+            return myPRODUCTODataTable;
+        }
+
+        [WebMethod]
+        public CLIENTEDataTable SelectClientes()
+        {
+            CLIENTETableAdapter myCLIENTETableAdapter = new CLIENTETableAdapter();
+
+            CLIENTEDataTable myCLIENTEDataTable = myCLIENTETableAdapter.GetData();
+
+            return myCLIENTEDataTable;
+        }
+
+        [WebMethod]
+        public CAJERODataTable SelectCajeros()
+        {
+            CAJEROTableAdapter myCAJEROTableAdapter = new CAJEROTableAdapter();
+
+            CAJERODataTable myCLIENTEDataTable = myCAJEROTableAdapter.GetData();
+
+            return myCLIENTEDataTable;
+        }
+
+
+        #endregion :::::::::::::::: SELECT * 
 
 
 

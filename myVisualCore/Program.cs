@@ -30,8 +30,6 @@ namespace myVisualCore
             actualCoreUser.TipoPerfil = frmLogin.TipoPerfil;
 
             CoreProgram(actualCoreUser);
-
-
         }
 
         private static void CoreProgram(CoreUser actualCoreUser)

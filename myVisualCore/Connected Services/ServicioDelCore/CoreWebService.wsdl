@@ -194,6 +194,63 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="SelectServicios">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectServiciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectServiciosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/WebCoreDataSet.xsd" name="namespace" />
+                <s:attribute fixed="SERVICIODataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectClientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectClientesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/WebCoreDataSet.xsd" name="namespace" />
+                <s:attribute fixed="CLIENTEDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectCajeros">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectCajerosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectCajerosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/WebCoreDataSet.xsd" name="namespace" />
+                <s:attribute fixed="CAJERODataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="BuscarUsuario">
         <s:complexType>
           <s:sequence>
@@ -293,6 +350,24 @@
   <wsdl:message name="SelectProductosSoapOut">
     <wsdl:part name="parameters" element="tns:SelectProductosResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectServiciosSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectServicios" />
+  </wsdl:message>
+  <wsdl:message name="SelectServiciosSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectClientes" />
+  </wsdl:message>
+  <wsdl:message name="SelectClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectCajerosSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectCajeros" />
+  </wsdl:message>
+  <wsdl:message name="SelectCajerosSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectCajerosResponse" />
+  </wsdl:message>
   <wsdl:message name="BuscarUsuarioSoapIn">
     <wsdl:part name="parameters" element="tns:BuscarUsuario" />
   </wsdl:message>
@@ -341,6 +416,18 @@
     <wsdl:operation name="SelectProductos">
       <wsdl:input message="tns:SelectProductosSoapIn" />
       <wsdl:output message="tns:SelectProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectServicios">
+      <wsdl:input message="tns:SelectServiciosSoapIn" />
+      <wsdl:output message="tns:SelectServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectClientes">
+      <wsdl:input message="tns:SelectClientesSoapIn" />
+      <wsdl:output message="tns:SelectClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectCajeros">
+      <wsdl:input message="tns:SelectCajerosSoapIn" />
+      <wsdl:output message="tns:SelectCajerosSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="BuscarUsuario">
       <wsdl:input message="tns:BuscarUsuarioSoapIn" />
@@ -427,6 +514,33 @@
     </wsdl:operation>
     <wsdl:operation name="SelectProductos">
       <soap:operation soapAction="http://google.com/SelectProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServicios">
+      <soap:operation soapAction="http://google.com/SelectServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectClientes">
+      <soap:operation soapAction="http://google.com/SelectClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCajeros">
+      <soap:operation soapAction="http://google.com/SelectCajeros" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -529,6 +643,33 @@
     </wsdl:operation>
     <wsdl:operation name="SelectProductos">
       <soap12:operation soapAction="http://google.com/SelectProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectServicios">
+      <soap12:operation soapAction="http://google.com/SelectServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectClientes">
+      <soap12:operation soapAction="http://google.com/SelectClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectCajeros">
+      <soap12:operation soapAction="http://google.com/SelectCajeros" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

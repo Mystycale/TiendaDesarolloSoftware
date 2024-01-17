@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myVisualCore.Menues.Servicio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,8 +46,8 @@ namespace myVisualCore.Menues.Producto
             }
         }
 
-        #region ::::::::::::Atajo
         #region::::::::::::::::::::::: ADMINISTRADOR
+        #region ::::::::::::Atajo
         public static void Ejecutar1(string[] OpcionesMenuCajero, CoreUser actualCoreUser)
         {
             bool loop = true;
@@ -112,6 +113,9 @@ namespace myVisualCore.Menues.Producto
                         break;
 
                     case 1:
+                        FuncionesServicio.MostrarServicios();
+                        break;
+
                     case 2:
                     case 3:
                         continue;
@@ -214,6 +218,8 @@ namespace myVisualCore.Menues.Producto
                 switch (posicionSeleccion)
                 {
                     case 0:
+                        FuncionesServicio.MostrarServicios();
+                        break;
                     case 1:
                         continue;
                     case 2:
@@ -315,7 +321,8 @@ namespace myVisualCore.Menues.Producto
                 switch (posicionSeleccion)
                 {
                     case 0:
-                        continue;
+                        FuncionesServicio.MostrarServicios();
+                        break;
                     case 1:
                         Console.Clear();
                         loop = false;

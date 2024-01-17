@@ -34,26 +34,26 @@ namespace myVisualCore
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.lblDescripcion = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.lblPrecioUnidad = new System.Windows.Forms.Label();
             this.panelDatPersonales = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblPrecioUnidad = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panelGeneral.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panelDatPersonales.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGeneral
@@ -97,7 +97,7 @@ namespace myVisualCore
             this.groupBox1.Size = new System.Drawing.Size(355, 409);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Personales";
+            this.groupBox1.Text = "Datos del servicio";
             // 
             // lblCodigo
             // 
@@ -110,36 +110,6 @@ namespace myVisualCore
             this.lblCodigo.Size = new System.Drawing.Size(54, 19);
             this.lblCodigo.TabIndex = 20;
             this.lblCodigo.Text = "Codigo";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.txtPrecio);
-            this.panel8.Location = new System.Drawing.Point(23, 165);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(296, 30);
-            this.panel8.TabIndex = 13;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(4, 5);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(288, 20);
-            this.txtPrecio.TabIndex = 6;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.Location = new System.Drawing.Point(23, 208);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(82, 19);
-            this.lblDescripcion.TabIndex = 26;
-            this.lblDescripcion.Text = "Descripción";
             // 
             // panel5
             // 
@@ -170,37 +140,6 @@ namespace myVisualCore
             this.lblNombre.Size = new System.Drawing.Size(60, 19);
             this.lblNombre.TabIndex = 22;
             this.lblNombre.Text = "Nombre";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.txtDescripcion);
-            this.panel7.Location = new System.Drawing.Point(23, 230);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(296, 132);
-            this.panel7.TabIndex = 14;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(4, 5);
-            this.txtDescripcion.Multiline = true;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(288, 112);
-            this.txtDescripcion.TabIndex = 7;
-            // 
-            // lblPrecioUnidad
-            // 
-            this.lblPrecioUnidad.AutoSize = true;
-            this.lblPrecioUnidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPrecioUnidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioUnidad.ForeColor = System.Drawing.Color.White;
-            this.lblPrecioUnidad.Location = new System.Drawing.Point(23, 143);
-            this.lblPrecioUnidad.Name = "lblPrecioUnidad";
-            this.lblPrecioUnidad.Size = new System.Drawing.Size(95, 19);
-            this.lblPrecioUnidad.TabIndex = 24;
-            this.lblPrecioUnidad.Text = "Precio unidad";
             // 
             // panelDatPersonales
             // 
@@ -233,6 +172,67 @@ namespace myVisualCore
             this.txtCodigo.Size = new System.Drawing.Size(288, 20);
             this.txtCodigo.TabIndex = 4;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.txtPrecio);
+            this.panel8.Location = new System.Drawing.Point(23, 165);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(296, 30);
+            this.panel8.TabIndex = 13;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(4, 5);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(288, 20);
+            this.txtPrecio.TabIndex = 6;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDescripcion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.ForeColor = System.Drawing.Color.White;
+            this.lblDescripcion.Location = new System.Drawing.Point(23, 208);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(82, 19);
+            this.lblDescripcion.TabIndex = 26;
+            this.lblDescripcion.Text = "Descripción";
+            // 
+            // lblPrecioUnidad
+            // 
+            this.lblPrecioUnidad.AutoSize = true;
+            this.lblPrecioUnidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPrecioUnidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioUnidad.ForeColor = System.Drawing.Color.White;
+            this.lblPrecioUnidad.Location = new System.Drawing.Point(23, 143);
+            this.lblPrecioUnidad.Name = "lblPrecioUnidad";
+            this.lblPrecioUnidad.Size = new System.Drawing.Size(48, 19);
+            this.lblPrecioUnidad.TabIndex = 24;
+            this.lblPrecioUnidad.Text = "Precio";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.txtDescripcion);
+            this.panel7.Location = new System.Drawing.Point(23, 230);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(296, 132);
+            this.panel7.TabIndex = 14;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(4, 5);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(288, 112);
+            this.txtDescripcion.TabIndex = 7;
+            // 
             // btnVolver
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -264,16 +264,16 @@ namespace myVisualCore
             this.panelGeneral.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panelDatPersonales.ResumeLayout(false);
             this.panelDatPersonales.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
