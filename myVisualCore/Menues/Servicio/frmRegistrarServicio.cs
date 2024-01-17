@@ -26,7 +26,7 @@ namespace myVisualCore
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            ServicioDelCore.WCServicio myWCServicio = new ServicioDelCore.WCProducto();
+            ServicioDelCore.WCServicio myWCServicio = new ServicioDelCore.WCServicio();
 
             myWCServicio.codigo = txtCodigo.Text;
             myWCServicio.nombre = txtNombre.Text;

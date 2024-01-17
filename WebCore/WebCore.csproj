@@ -228,8 +228,8 @@
     <Compile Include="Modelos\WCProducto.cs" />
     <Compile Include="Modelos\WCRespuesta.cs" />
     <Compile Include="Modelos\WCCajero.cs" />
-    <Compile Include="Modelos\WCServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WCServicio.cs" />
     <Compile Include="WebCoreDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -748,144 +748,144 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRODUCTO" msprop:Generator_RowClassName="PRODUCTORow" msprop:Generator_RowEvHandlerName="PRODUCTORowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUCTORowDeleted" msprop:Generator_RowDeletingName="PRODUCTORowDeleting" msprop:Generator_RowEvArgName="PRODUCTORowChangeEvent" msprop:Generator_TablePropName="PRODUCTO" msprop:Generator_RowChangedName="PRODUCTORowChanged" msprop:Generator_UserTableName="PRODUCTO" msprop:Generator_RowChangingName="PRODUCTORowChanging" msprop:Generator_TableClassName="PRODUCTODataTable" msprop:Generator_TableVarName="tablePRODUCTO">
+        <xs:element name="PRODUCTO" msprop:Generator_RowEvHandlerName="PRODUCTORowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUCTORowDeleted" msprop:Generator_RowDeletingName="PRODUCTORowDeleting" msprop:Generator_RowEvArgName="PRODUCTORowChangeEvent" msprop:Generator_TablePropName="PRODUCTO" msprop:Generator_RowChangedName="PRODUCTORowChanged" msprop:Generator_UserTableName="PRODUCTO" msprop:Generator_RowChangingName="PRODUCTORowChanging" msprop:Generator_RowClassName="PRODUCTORow" msprop:Generator_TableClassName="PRODUCTODataTable" msprop:Generator_TableVarName="tablePRODUCTO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="prod_codigo" msprop:Generator_UserColumnName="prod_codigo" msprop:Generator_ColumnPropNameInTable="prod_codigoColumn" msprop:Generator_ColumnPropNameInRow="prod_codigo" msprop:Generator_ColumnVarNameInTable="columnprod_codigo">
+              <xs:element name="prod_codigo" msprop:Generator_ColumnPropNameInTable="prod_codigoColumn" msprop:Generator_ColumnPropNameInRow="prod_codigo" msprop:Generator_UserColumnName="prod_codigo" msprop:Generator_ColumnVarNameInTable="columnprod_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="prod_nombre" msprop:Generator_UserColumnName="prod_nombre" msprop:Generator_ColumnPropNameInTable="prod_nombreColumn" msprop:Generator_ColumnPropNameInRow="prod_nombre" msprop:Generator_ColumnVarNameInTable="columnprod_nombre">
+              <xs:element name="prod_nombre" msprop:Generator_ColumnPropNameInTable="prod_nombreColumn" msprop:Generator_ColumnPropNameInRow="prod_nombre" msprop:Generator_UserColumnName="prod_nombre" msprop:Generator_ColumnVarNameInTable="columnprod_nombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="prod_desc" msprop:Generator_UserColumnName="prod_desc" msprop:Generator_ColumnPropNameInTable="prod_descColumn" msprop:Generator_ColumnPropNameInRow="prod_desc" msprop:Generator_ColumnVarNameInTable="columnprod_desc">
+              <xs:element name="prod_desc" msprop:Generator_ColumnPropNameInTable="prod_descColumn" msprop:Generator_ColumnPropNameInRow="prod_desc" msprop:Generator_UserColumnName="prod_desc" msprop:Generator_ColumnVarNameInTable="columnprod_desc">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="prod_stock" msprop:Generator_UserColumnName="prod_stock" msprop:Generator_ColumnPropNameInTable="prod_stockColumn" msprop:Generator_ColumnPropNameInRow="prod_stock" msprop:Generator_ColumnVarNameInTable="columnprod_stock" type="xs:int" />
-              <xs:element name="prod_precio" msprop:Generator_UserColumnName="prod_precio" msprop:Generator_ColumnPropNameInTable="prod_precioColumn" msprop:Generator_ColumnPropNameInRow="prod_precio" msprop:Generator_ColumnVarNameInTable="columnprod_precio" type="xs:decimal" />
-              <xs:element name="prod_fechaIngreso" msprop:Generator_UserColumnName="prod_fechaIngreso" msprop:Generator_ColumnPropNameInTable="prod_fechaIngresoColumn" msprop:Generator_ColumnPropNameInRow="prod_fechaIngreso" msprop:Generator_ColumnVarNameInTable="columnprod_fechaIngreso" type="xs:dateTime" />
-              <xs:element name="prod_estado" msprop:Generator_UserColumnName="prod_estado" msprop:Generator_ColumnPropNameInTable="prod_estadoColumn" msprop:Generator_ColumnPropNameInRow="prod_estado" msprop:Generator_ColumnVarNameInTable="columnprod_estado" type="xs:int" />
+              <xs:element name="prod_stock" msprop:Generator_ColumnPropNameInTable="prod_stockColumn" msprop:Generator_ColumnPropNameInRow="prod_stock" msprop:Generator_UserColumnName="prod_stock" msprop:Generator_ColumnVarNameInTable="columnprod_stock" type="xs:int" />
+              <xs:element name="prod_precio" msprop:Generator_ColumnPropNameInTable="prod_precioColumn" msprop:Generator_ColumnPropNameInRow="prod_precio" msprop:Generator_UserColumnName="prod_precio" msprop:Generator_ColumnVarNameInTable="columnprod_precio" type="xs:decimal" />
+              <xs:element name="prod_fechaIngreso" msprop:Generator_ColumnPropNameInTable="prod_fechaIngresoColumn" msprop:Generator_ColumnPropNameInRow="prod_fechaIngreso" msprop:Generator_UserColumnName="prod_fechaIngreso" msprop:Generator_ColumnVarNameInTable="columnprod_fechaIngreso" type="xs:dateTime" />
+              <xs:element name="prod_estado" msprop:Generator_ColumnPropNameInTable="prod_estadoColumn" msprop:Generator_ColumnPropNameInRow="prod_estado" msprop:Generator_UserColumnName="prod_estado" msprop:Generator_ColumnVarNameInTable="columnprod_estado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SERVICIO" msprop:Generator_RowEvHandlerName="SERVICIORowChangeEventHandler" msprop:Generator_RowDeletedName="SERVICIORowDeleted" msprop:Generator_RowDeletingName="SERVICIORowDeleting" msprop:Generator_RowEvArgName="SERVICIORowChangeEvent" msprop:Generator_TablePropName="SERVICIO" msprop:Generator_RowChangedName="SERVICIORowChanged" msprop:Generator_RowChangingName="SERVICIORowChanging" msprop:Generator_TableClassName="SERVICIODataTable" msprop:Generator_RowClassName="SERVICIORow" msprop:Generator_TableVarName="tableSERVICIO" msprop:Generator_UserTableName="SERVICIO">
+        <xs:element name="SERVICIO" msprop:Generator_RowClassName="SERVICIORow" msprop:Generator_RowEvHandlerName="SERVICIORowChangeEventHandler" msprop:Generator_RowDeletedName="SERVICIORowDeleted" msprop:Generator_RowDeletingName="SERVICIORowDeleting" msprop:Generator_RowEvArgName="SERVICIORowChangeEvent" msprop:Generator_TablePropName="SERVICIO" msprop:Generator_RowChangedName="SERVICIORowChanged" msprop:Generator_UserTableName="SERVICIO" msprop:Generator_RowChangingName="SERVICIORowChanging" msprop:Generator_TableClassName="SERVICIODataTable" msprop:Generator_TableVarName="tableSERVICIO">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="serv_codigo" msprop:Generator_ColumnPropNameInRow="serv_codigo" msprop:Generator_ColumnPropNameInTable="serv_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnserv_codigo" msprop:Generator_UserColumnName="serv_codigo">
+              <xs:element name="serv_codigo" msprop:Generator_UserColumnName="serv_codigo" msprop:Generator_ColumnPropNameInTable="serv_codigoColumn" msprop:Generator_ColumnPropNameInRow="serv_codigo" msprop:Generator_ColumnVarNameInTable="columnserv_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="serv_nombre" msprop:Generator_ColumnPropNameInRow="serv_nombre" msprop:Generator_ColumnPropNameInTable="serv_nombreColumn" msprop:Generator_ColumnVarNameInTable="columnserv_nombre" msprop:Generator_UserColumnName="serv_nombre">
+              <xs:element name="serv_nombre" msprop:Generator_UserColumnName="serv_nombre" msprop:Generator_ColumnPropNameInTable="serv_nombreColumn" msprop:Generator_ColumnPropNameInRow="serv_nombre" msprop:Generator_ColumnVarNameInTable="columnserv_nombre">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="serv_desc" msprop:Generator_ColumnPropNameInRow="serv_desc" msprop:Generator_ColumnPropNameInTable="serv_descColumn" msprop:Generator_ColumnVarNameInTable="columnserv_desc" msprop:Generator_UserColumnName="serv_desc">
+              <xs:element name="serv_desc" msprop:Generator_UserColumnName="serv_desc" msprop:Generator_ColumnPropNameInTable="serv_descColumn" msprop:Generator_ColumnPropNameInRow="serv_desc" msprop:Generator_ColumnVarNameInTable="columnserv_desc">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="200" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="serv_precio" msprop:Generator_ColumnPropNameInRow="serv_precio" msprop:Generator_ColumnPropNameInTable="serv_precioColumn" msprop:Generator_ColumnVarNameInTable="columnserv_precio" msprop:Generator_UserColumnName="serv_precio" type="xs:decimal" />
-              <xs:element name="serv_fechaIngreso" msprop:Generator_ColumnPropNameInRow="serv_fechaIngreso" msprop:Generator_ColumnPropNameInTable="serv_fechaIngresoColumn" msprop:Generator_ColumnVarNameInTable="columnserv_fechaIngreso" msprop:Generator_UserColumnName="serv_fechaIngreso" type="xs:dateTime" />
-              <xs:element name="serv_estado" msprop:Generator_ColumnPropNameInRow="serv_estado" msprop:Generator_ColumnPropNameInTable="serv_estadoColumn" msprop:Generator_ColumnVarNameInTable="columnserv_estado" msprop:Generator_UserColumnName="serv_estado" type="xs:int" />
+              <xs:element name="serv_precio" msprop:Generator_UserColumnName="serv_precio" msprop:Generator_ColumnPropNameInTable="serv_precioColumn" msprop:Generator_ColumnPropNameInRow="serv_precio" msprop:Generator_ColumnVarNameInTable="columnserv_precio" type="xs:decimal" />
+              <xs:element name="serv_fechaIngreso" msprop:Generator_UserColumnName="serv_fechaIngreso" msprop:Generator_ColumnPropNameInTable="serv_fechaIngresoColumn" msprop:Generator_ColumnPropNameInRow="serv_fechaIngreso" msprop:Generator_ColumnVarNameInTable="columnserv_fechaIngreso" type="xs:dateTime" />
+              <xs:element name="serv_estado" msprop:Generator_UserColumnName="serv_estado" msprop:Generator_ColumnPropNameInTable="serv_estadoColumn" msprop:Generator_ColumnPropNameInRow="serv_estado" msprop:Generator_ColumnVarNameInTable="columnserv_estado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FACTURA" msprop:Generator_RowEvHandlerName="FACTURARowChangeEventHandler" msprop:Generator_RowDeletedName="FACTURARowDeleted" msprop:Generator_RowDeletingName="FACTURARowDeleting" msprop:Generator_RowEvArgName="FACTURARowChangeEvent" msprop:Generator_TablePropName="FACTURA" msprop:Generator_RowChangedName="FACTURARowChanged" msprop:Generator_RowChangingName="FACTURARowChanging" msprop:Generator_TableClassName="FACTURADataTable" msprop:Generator_RowClassName="FACTURARow" msprop:Generator_TableVarName="tableFACTURA" msprop:Generator_UserTableName="FACTURA">
+        <xs:element name="FACTURA" msprop:Generator_RowClassName="FACTURARow" msprop:Generator_RowEvHandlerName="FACTURARowChangeEventHandler" msprop:Generator_RowDeletedName="FACTURARowDeleted" msprop:Generator_RowDeletingName="FACTURARowDeleting" msprop:Generator_RowEvArgName="FACTURARowChangeEvent" msprop:Generator_TablePropName="FACTURA" msprop:Generator_RowChangedName="FACTURARowChanged" msprop:Generator_UserTableName="FACTURA" msprop:Generator_RowChangingName="FACTURARowChanging" msprop:Generator_TableClassName="FACTURADataTable" msprop:Generator_TableVarName="tableFACTURA">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="fct_codigo" msprop:Generator_ColumnPropNameInRow="fct_codigo" msprop:Generator_ColumnPropNameInTable="fct_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnfct_codigo" msprop:Generator_UserColumnName="fct_codigo">
+              <xs:element name="fct_codigo" msprop:Generator_UserColumnName="fct_codigo" msprop:Generator_ColumnPropNameInTable="fct_codigoColumn" msprop:Generator_ColumnPropNameInRow="fct_codigo" msprop:Generator_ColumnVarNameInTable="columnfct_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fct_cotizacion" msprop:Generator_ColumnPropNameInRow="fct_cotizacion" msprop:Generator_ColumnPropNameInTable="fct_cotizacionColumn" msprop:Generator_ColumnVarNameInTable="columnfct_cotizacion" msprop:Generator_UserColumnName="fct_cotizacion" type="xs:boolean" />
-              <xs:element name="fct_fecha" msprop:Generator_ColumnPropNameInRow="fct_fecha" msprop:Generator_ColumnPropNameInTable="fct_fechaColumn" msprop:Generator_ColumnVarNameInTable="columnfct_fecha" msprop:Generator_UserColumnName="fct_fecha" type="xs:dateTime" />
-              <xs:element name="fct_total" msprop:Generator_ColumnPropNameInRow="fct_total" msprop:Generator_ColumnPropNameInTable="fct_totalColumn" msprop:Generator_ColumnVarNameInTable="columnfct_total" msprop:Generator_UserColumnName="fct_total" type="xs:decimal" />
-              <xs:element name="fct_metodoPago" msprop:Generator_ColumnPropNameInRow="fct_metodoPago" msprop:Generator_ColumnPropNameInTable="fct_metodoPagoColumn" msprop:Generator_ColumnVarNameInTable="columnfct_metodoPago" msprop:Generator_UserColumnName="fct_metodoPago" type="xs:int" />
-              <xs:element name="fct_cjr_codigo" msprop:Generator_ColumnPropNameInRow="fct_cjr_codigo" msprop:Generator_ColumnPropNameInTable="fct_cjr_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnfct_cjr_codigo" msprop:Generator_UserColumnName="fct_cjr_codigo">
+              <xs:element name="fct_cotizacion" msprop:Generator_UserColumnName="fct_cotizacion" msprop:Generator_ColumnPropNameInTable="fct_cotizacionColumn" msprop:Generator_ColumnPropNameInRow="fct_cotizacion" msprop:Generator_ColumnVarNameInTable="columnfct_cotizacion" type="xs:boolean" />
+              <xs:element name="fct_fecha" msprop:Generator_UserColumnName="fct_fecha" msprop:Generator_ColumnPropNameInTable="fct_fechaColumn" msprop:Generator_ColumnPropNameInRow="fct_fecha" msprop:Generator_ColumnVarNameInTable="columnfct_fecha" type="xs:dateTime" />
+              <xs:element name="fct_total" msprop:Generator_UserColumnName="fct_total" msprop:Generator_ColumnPropNameInTable="fct_totalColumn" msprop:Generator_ColumnPropNameInRow="fct_total" msprop:Generator_ColumnVarNameInTable="columnfct_total" type="xs:decimal" />
+              <xs:element name="fct_metodoPago" msprop:Generator_UserColumnName="fct_metodoPago" msprop:Generator_ColumnPropNameInTable="fct_metodoPagoColumn" msprop:Generator_ColumnPropNameInRow="fct_metodoPago" msprop:Generator_ColumnVarNameInTable="columnfct_metodoPago" type="xs:int" />
+              <xs:element name="fct_cjr_codigo" msprop:Generator_UserColumnName="fct_cjr_codigo" msprop:Generator_ColumnPropNameInTable="fct_cjr_codigoColumn" msprop:Generator_ColumnPropNameInRow="fct_cjr_codigo" msprop:Generator_ColumnVarNameInTable="columnfct_cjr_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fct_clt_codigo" msprop:Generator_ColumnPropNameInRow="fct_clt_codigo" msprop:Generator_ColumnPropNameInTable="fct_clt_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnfct_clt_codigo" msprop:Generator_UserColumnName="fct_clt_codigo">
+              <xs:element name="fct_clt_codigo" msprop:Generator_UserColumnName="fct_clt_codigo" msprop:Generator_ColumnPropNameInTable="fct_clt_codigoColumn" msprop:Generator_ColumnPropNameInRow="fct_clt_codigo" msprop:Generator_ColumnVarNameInTable="columnfct_clt_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fct_estado" msprop:Generator_ColumnPropNameInRow="fct_estado" msprop:Generator_ColumnPropNameInTable="fct_estadoColumn" msprop:Generator_ColumnVarNameInTable="columnfct_estado" msprop:Generator_UserColumnName="fct_estado" type="xs:int" />
+              <xs:element name="fct_estado" msprop:Generator_UserColumnName="fct_estado" msprop:Generator_ColumnPropNameInTable="fct_estadoColumn" msprop:Generator_ColumnPropNameInRow="fct_estado" msprop:Generator_ColumnVarNameInTable="columnfct_estado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FCT_PROD" msprop:Generator_RowEvHandlerName="FCT_PRODRowChangeEventHandler" msprop:Generator_RowDeletedName="FCT_PRODRowDeleted" msprop:Generator_RowDeletingName="FCT_PRODRowDeleting" msprop:Generator_RowEvArgName="FCT_PRODRowChangeEvent" msprop:Generator_TablePropName="FCT_PROD" msprop:Generator_RowChangedName="FCT_PRODRowChanged" msprop:Generator_RowChangingName="FCT_PRODRowChanging" msprop:Generator_TableClassName="FCT_PRODDataTable" msprop:Generator_RowClassName="FCT_PRODRow" msprop:Generator_TableVarName="tableFCT_PROD" msprop:Generator_UserTableName="FCT_PROD">
+        <xs:element name="FCT_PROD" msprop:Generator_RowClassName="FCT_PRODRow" msprop:Generator_RowEvHandlerName="FCT_PRODRowChangeEventHandler" msprop:Generator_RowDeletedName="FCT_PRODRowDeleted" msprop:Generator_RowDeletingName="FCT_PRODRowDeleting" msprop:Generator_RowEvArgName="FCT_PRODRowChangeEvent" msprop:Generator_TablePropName="FCT_PROD" msprop:Generator_RowChangedName="FCT_PRODRowChanged" msprop:Generator_UserTableName="FCT_PROD" msprop:Generator_RowChangingName="FCT_PRODRowChanging" msprop:Generator_TableClassName="FCT_PRODDataTable" msprop:Generator_TableVarName="tableFCT_PROD">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="fp_prod_codigo" msprop:Generator_ColumnPropNameInRow="fp_prod_codigo" msprop:Generator_ColumnPropNameInTable="fp_prod_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnfp_prod_codigo" msprop:Generator_UserColumnName="fp_prod_codigo">
+              <xs:element name="fp_prod_codigo" msprop:Generator_UserColumnName="fp_prod_codigo" msprop:Generator_ColumnPropNameInTable="fp_prod_codigoColumn" msprop:Generator_ColumnPropNameInRow="fp_prod_codigo" msprop:Generator_ColumnVarNameInTable="columnfp_prod_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fp_fct_codigo" msprop:Generator_ColumnPropNameInRow="fp_fct_codigo" msprop:Generator_ColumnPropNameInTable="fp_fct_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnfp_fct_codigo" msprop:Generator_UserColumnName="fp_fct_codigo">
+              <xs:element name="fp_fct_codigo" msprop:Generator_UserColumnName="fp_fct_codigo" msprop:Generator_ColumnPropNameInTable="fp_fct_codigoColumn" msprop:Generator_ColumnPropNameInRow="fp_fct_codigo" msprop:Generator_ColumnVarNameInTable="columnfp_fct_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fp_cantidad" msprop:Generator_ColumnPropNameInRow="fp_cantidad" msprop:Generator_ColumnPropNameInTable="fp_cantidadColumn" msprop:Generator_ColumnVarNameInTable="columnfp_cantidad" msprop:Generator_UserColumnName="fp_cantidad" type="xs:int" />
-              <xs:element name="fp_precio_u" msprop:Generator_ColumnPropNameInRow="fp_precio_u" msprop:Generator_ColumnPropNameInTable="fp_precio_uColumn" msprop:Generator_ColumnVarNameInTable="columnfp_precio_u" msprop:Generator_UserColumnName="fp_precio_u" type="xs:decimal" />
-              <xs:element name="fp_total" msprop:Generator_ColumnPropNameInRow="fp_total" msprop:Generator_ColumnPropNameInTable="fp_totalColumn" msprop:Generator_ColumnVarNameInTable="columnfp_total" msprop:Generator_UserColumnName="fp_total" type="xs:decimal" />
-              <xs:element name="fp_estado" msprop:Generator_ColumnPropNameInRow="fp_estado" msprop:Generator_ColumnPropNameInTable="fp_estadoColumn" msprop:Generator_ColumnVarNameInTable="columnfp_estado" msprop:Generator_UserColumnName="fp_estado" type="xs:int" />
+              <xs:element name="fp_cantidad" msprop:Generator_UserColumnName="fp_cantidad" msprop:Generator_ColumnPropNameInTable="fp_cantidadColumn" msprop:Generator_ColumnPropNameInRow="fp_cantidad" msprop:Generator_ColumnVarNameInTable="columnfp_cantidad" type="xs:int" />
+              <xs:element name="fp_precio_u" msprop:Generator_UserColumnName="fp_precio_u" msprop:Generator_ColumnPropNameInTable="fp_precio_uColumn" msprop:Generator_ColumnPropNameInRow="fp_precio_u" msprop:Generator_ColumnVarNameInTable="columnfp_precio_u" type="xs:decimal" />
+              <xs:element name="fp_total" msprop:Generator_UserColumnName="fp_total" msprop:Generator_ColumnPropNameInTable="fp_totalColumn" msprop:Generator_ColumnPropNameInRow="fp_total" msprop:Generator_ColumnVarNameInTable="columnfp_total" type="xs:decimal" />
+              <xs:element name="fp_estado" msprop:Generator_UserColumnName="fp_estado" msprop:Generator_ColumnPropNameInTable="fp_estadoColumn" msprop:Generator_ColumnPropNameInRow="fp_estado" msprop:Generator_ColumnVarNameInTable="columnfp_estado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FCT_SERV" msprop:Generator_RowEvHandlerName="FCT_SERVRowChangeEventHandler" msprop:Generator_RowDeletedName="FCT_SERVRowDeleted" msprop:Generator_RowDeletingName="FCT_SERVRowDeleting" msprop:Generator_RowEvArgName="FCT_SERVRowChangeEvent" msprop:Generator_TablePropName="FCT_SERV" msprop:Generator_RowChangedName="FCT_SERVRowChanged" msprop:Generator_RowChangingName="FCT_SERVRowChanging" msprop:Generator_TableClassName="FCT_SERVDataTable" msprop:Generator_RowClassName="FCT_SERVRow" msprop:Generator_TableVarName="tableFCT_SERV" msprop:Generator_UserTableName="FCT_SERV">
+        <xs:element name="FCT_SERV" msprop:Generator_RowClassName="FCT_SERVRow" msprop:Generator_RowEvHandlerName="FCT_SERVRowChangeEventHandler" msprop:Generator_RowDeletedName="FCT_SERVRowDeleted" msprop:Generator_RowDeletingName="FCT_SERVRowDeleting" msprop:Generator_RowEvArgName="FCT_SERVRowChangeEvent" msprop:Generator_TablePropName="FCT_SERV" msprop:Generator_RowChangedName="FCT_SERVRowChanged" msprop:Generator_UserTableName="FCT_SERV" msprop:Generator_RowChangingName="FCT_SERVRowChanging" msprop:Generator_TableClassName="FCT_SERVDataTable" msprop:Generator_TableVarName="tableFCT_SERV">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="fs_serv_codigo" msprop:Generator_ColumnPropNameInRow="fs_serv_codigo" msprop:Generator_ColumnPropNameInTable="fs_serv_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnfs_serv_codigo" msprop:Generator_UserColumnName="fs_serv_codigo">
+              <xs:element name="fs_serv_codigo" msprop:Generator_UserColumnName="fs_serv_codigo" msprop:Generator_ColumnPropNameInTable="fs_serv_codigoColumn" msprop:Generator_ColumnPropNameInRow="fs_serv_codigo" msprop:Generator_ColumnVarNameInTable="columnfs_serv_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fs_fct_codigo" msprop:Generator_ColumnPropNameInRow="fs_fct_codigo" msprop:Generator_ColumnPropNameInTable="fs_fct_codigoColumn" msprop:Generator_ColumnVarNameInTable="columnfs_fct_codigo" msprop:Generator_UserColumnName="fs_fct_codigo">
+              <xs:element name="fs_fct_codigo" msprop:Generator_UserColumnName="fs_fct_codigo" msprop:Generator_ColumnPropNameInTable="fs_fct_codigoColumn" msprop:Generator_ColumnPropNameInRow="fs_fct_codigo" msprop:Generator_ColumnVarNameInTable="columnfs_fct_codigo">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="fs_cantidad" msprop:Generator_ColumnPropNameInRow="fs_cantidad" msprop:Generator_ColumnPropNameInTable="fs_cantidadColumn" msprop:Generator_ColumnVarNameInTable="columnfs_cantidad" msprop:Generator_UserColumnName="fs_cantidad" type="xs:int" />
-              <xs:element name="fs_precio_u" msprop:Generator_ColumnPropNameInRow="fs_precio_u" msprop:Generator_ColumnPropNameInTable="fs_precio_uColumn" msprop:Generator_ColumnVarNameInTable="columnfs_precio_u" msprop:Generator_UserColumnName="fs_precio_u" type="xs:decimal" />
-              <xs:element name="fs_total" msprop:Generator_ColumnPropNameInRow="fs_total" msprop:Generator_ColumnPropNameInTable="fs_totalColumn" msprop:Generator_ColumnVarNameInTable="columnfs_total" msprop:Generator_UserColumnName="fs_total" type="xs:decimal" />
-              <xs:element name="fs_estado" msprop:Generator_ColumnPropNameInRow="fs_estado" msprop:Generator_ColumnPropNameInTable="fs_estadoColumn" msprop:Generator_ColumnVarNameInTable="columnfs_estado" msprop:Generator_UserColumnName="fs_estado" type="xs:int" />
+              <xs:element name="fs_cantidad" msprop:Generator_UserColumnName="fs_cantidad" msprop:Generator_ColumnPropNameInTable="fs_cantidadColumn" msprop:Generator_ColumnPropNameInRow="fs_cantidad" msprop:Generator_ColumnVarNameInTable="columnfs_cantidad" type="xs:int" />
+              <xs:element name="fs_precio_u" msprop:Generator_UserColumnName="fs_precio_u" msprop:Generator_ColumnPropNameInTable="fs_precio_uColumn" msprop:Generator_ColumnPropNameInRow="fs_precio_u" msprop:Generator_ColumnVarNameInTable="columnfs_precio_u" type="xs:decimal" />
+              <xs:element name="fs_total" msprop:Generator_UserColumnName="fs_total" msprop:Generator_ColumnPropNameInTable="fs_totalColumn" msprop:Generator_ColumnPropNameInRow="fs_total" msprop:Generator_ColumnVarNameInTable="columnfs_total" type="xs:decimal" />
+              <xs:element name="fs_estado" msprop:Generator_UserColumnName="fs_estado" msprop:Generator_ColumnPropNameInTable="fs_estadoColumn" msprop:Generator_ColumnPropNameInRow="fs_estado" msprop:Generator_ColumnVarNameInTable="columnfs_estado" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

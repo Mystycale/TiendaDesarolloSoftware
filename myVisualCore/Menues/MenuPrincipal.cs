@@ -96,8 +96,9 @@ namespace myVisualCore
                         break;
 
                     case 1:
-                        continue;
-
+                        Console.Clear();
+                        MenuServicio.Ejecutar(actualCoreUser);
+                        break;
                     case 2:
                         Console.Clear();
                         MenuCliente.Ejecutar(actualCoreUser);
@@ -109,6 +110,8 @@ namespace myVisualCore
                         break;
 
                     case 4:
+                        break;
+
                     case 5:
                     case 6:
                         continue;

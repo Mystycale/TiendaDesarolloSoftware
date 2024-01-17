@@ -78,7 +78,7 @@ namespace WebCore
         }
 
         [WebMethod]
-        public int InsertServicio(WCProducto _WCProducto)
+        public int InsertServicio(WCServicio _WCProducto)
         {
             SERVICIOTableAdapter mySERVICIOTableAdapter = new SERVICIOTableAdapter();
 

@@ -45,10 +45,10 @@ namespace myVisualCore.ServicioDelCore {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertServicio", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        int InsertServicio(myVisualCore.ServicioDelCore.WCProducto _WCProducto);
+        int InsertServicio(myVisualCore.ServicioDelCore.WCServicio _WCProducto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertServicio", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCProducto _WCProducto);
+        System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCServicio _WCProducto);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/BuscarUsuario", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -154,6 +154,80 @@ namespace myVisualCore.ServicioDelCore {
             set {
                 this.cjr_direccionField = value;
                 this.RaisePropertyChanged("cjr_direccion");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://google.com")]
+    public partial class WCServicio : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string codigoField;
+        
+        private string nombreField;
+        
+        private string descField;
+        
+        private decimal precioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
+        public string desc {
+            get {
+                return this.descField;
+            }
+            set {
+                this.descField = value;
+                this.RaisePropertyChanged("desc");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
+        public decimal precio {
+            get {
+                return this.precioField;
+            }
+            set {
+                this.precioField = value;
+                this.RaisePropertyChanged("precio");
             }
         }
         
@@ -4866,11 +4940,11 @@ namespace myVisualCore.ServicioDelCore {
             return base.Channel.InsertProductoAsync(_WCProducto);
         }
         
-        public int InsertServicio(myVisualCore.ServicioDelCore.WCProducto _WCProducto) {
+        public int InsertServicio(myVisualCore.ServicioDelCore.WCServicio _WCProducto) {
             return base.Channel.InsertServicio(_WCProducto);
         }
         
-        public System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCProducto _WCProducto) {
+        public System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCServicio _WCProducto) {
             return base.Channel.InsertServicioAsync(_WCProducto);
         }
         
