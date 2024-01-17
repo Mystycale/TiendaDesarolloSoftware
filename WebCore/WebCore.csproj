@@ -225,6 +225,9 @@
     </Compile>
     <Compile Include="Modelos\CoreUser.cs" />
     <Compile Include="Modelos\WCCliente.cs" />
+    <Compile Include="Modelos\WCFactura.cs" />
+    <Compile Include="Modelos\WCFct_Prod.cs" />
+    <Compile Include="Modelos\WCFct_Serv.cs" />
     <Compile Include="Modelos\WCProducto.cs" />
     <Compile Include="Modelos\WCRespuesta.cs" />
     <Compile Include="Modelos\WCCajero.cs" />
