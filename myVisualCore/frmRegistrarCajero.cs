@@ -58,5 +58,9 @@ namespace myVisualCore
             }
         }
 
+        private void frmRegistrarCajero_Load(object sender, EventArgs e)
+        {
+            this.BringToFront();
+        }
     }
 }

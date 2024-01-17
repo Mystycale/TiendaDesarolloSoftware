@@ -21,14 +21,15 @@ namespace WebCore
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+
         
+
         [WebMethod]
-        public string HelloWorld()
+        public void WCLog()
         {
             log.Info("Prueba del log"); // El log va antes del return
             //log.Debug("");
             //log.Error("");
-            return "Hola a todos";
         }
 
 

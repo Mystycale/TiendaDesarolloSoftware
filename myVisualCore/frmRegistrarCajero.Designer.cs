@@ -52,9 +52,9 @@ namespace myVisualCore
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDatPersonales = new System.Windows.Forms.Panel();
-            this.btnVolver = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panelGeneral.SuspendLayout();
             this.groupBoxUsuario.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -312,6 +312,24 @@ namespace myVisualCore
             this.panelDatPersonales.Size = new System.Drawing.Size(343, 339);
             this.panelDatPersonales.TabIndex = 18;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Location = new System.Drawing.Point(23, 31);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(296, 30);
+            this.panel1.TabIndex = 12;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(2, 5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(288, 20);
+            this.txtNombre.TabIndex = 4;
+            // 
             // btnVolver
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -329,24 +347,6 @@ namespace myVisualCore
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // txtNombre
-            // 
-            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(2, 5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(288, 20);
-            this.txtNombre.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.txtNombre);
-            this.panel1.Location = new System.Drawing.Point(23, 31);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 30);
-            this.panel1.TabIndex = 12;
-            // 
             // frmRegistrarCajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,6 +357,7 @@ namespace myVisualCore
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRegistrarCajero";
             this.Text = "Registrar cajero";
+            this.Load += new System.EventHandler(this.frmRegistrarCajero_Load);
             this.panelGeneral.ResumeLayout(false);
             this.groupBoxUsuario.ResumeLayout(false);
             this.groupBoxUsuario.PerformLayout();

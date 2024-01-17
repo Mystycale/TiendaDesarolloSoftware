@@ -37,7 +37,7 @@ namespace myVisualCore
                 if (op == 1)
                 {
                     frmRegistrarCajero myFrmRegistrarCajero = new frmRegistrarCajero();
-                    Application.Run(myFrmRegistrarCajero);                    
+                    Application.Run(myFrmRegistrarCajero);
 
                     Console.WriteLine("Fin");
 
