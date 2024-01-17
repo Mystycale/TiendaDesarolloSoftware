@@ -78,6 +78,20 @@ namespace WebCore
         }
 
         [WebMethod]
+        public int InsertServicio(WCProducto _WCProducto)
+        {
+            SERVICIOTableAdapter mySERVICIOTableAdapter = new SERVICIOTableAdapter();
+
+            int respQwery = mySERVICIOTableAdapter.ppInsertServicio(
+                _WCProducto.codigo,
+                _WCProducto.nombre,
+                _WCProducto.desc,
+                _WCProducto.precio);
+
+            return respQwery;
+        }
+
+        [WebMethod]
         public USUARIODataTable BuscarUsuario(string codigo_in, string clave_in)
         {
 

@@ -43,6 +43,13 @@ namespace myVisualCore.ServicioDelCore {
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertProducto", ReplyAction="*")]
         System.Threading.Tasks.Task<int> InsertProductoAsync(myVisualCore.ServicioDelCore.WCProducto _WCProducto);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertServicio", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int InsertServicio(myVisualCore.ServicioDelCore.WCProducto _WCProducto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertServicio", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCProducto _WCProducto);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/BuscarUsuario", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in);
@@ -4857,6 +4864,14 @@ namespace myVisualCore.ServicioDelCore {
         
         public System.Threading.Tasks.Task<int> InsertProductoAsync(myVisualCore.ServicioDelCore.WCProducto _WCProducto) {
             return base.Channel.InsertProductoAsync(_WCProducto);
+        }
+        
+        public int InsertServicio(myVisualCore.ServicioDelCore.WCProducto _WCProducto) {
+            return base.Channel.InsertServicio(_WCProducto);
+        }
+        
+        public System.Threading.Tasks.Task<int> InsertServicioAsync(myVisualCore.ServicioDelCore.WCProducto _WCProducto) {
+            return base.Channel.InsertServicioAsync(_WCProducto);
         }
         
         public WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in) {
