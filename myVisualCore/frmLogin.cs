@@ -19,8 +19,8 @@ namespace myVisualCore
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string codigo = txtContrasenia.Text;
-            string clave = txtCodigo.Text;
+            string codigo = txtCodigo.Text;
+            string clave = txtClave.Text;
 
             ServicioDelCore.CoreWebServiceSoapClient client = new ServicioDelCore.CoreWebServiceSoapClient();
 
@@ -28,35 +28,43 @@ namespace myVisualCore
 
             try
             {
-                tblUsuarios = client.BuscarUsuario(codigo, clave);
+                tblUsuarios = client.SelectUsuarios();
             }
             catch (Exception exx)
             {
                 MessageBox.Show("Ocurrio un error: \n" + exx.Message, "Core", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
             }
 
             if (tblUsuarios.Rows.Count == 0)
             {
-                MessageBox.Show("Ese usuaro no existe.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Algo salio mal.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
-            DataRowCollection myDataRowCollection = tblUsuarios.Rows;
+            bool encontrado = false;
 
             string nombre = "NA";
             string apellido = "NA";
-            string tipoPerfil = "00";
+            int tipoPerfil = 0;
 
-
-            foreach (DataRow item in myDataRowCollection)
+            foreach (var item in tblUsuarios)
             {
-                nombre = item[0].ToString();
-                apellido = item[1].ToString();
-                tipoPerfil = item[1].ToString();
+                if (codigo == item.usr_codigo && clave == item.usr_clave)
+                {
+                    nombre = item.usr_nombre;
+                    apellido = item.usr_apellido;
+                    tipoPerfil = item.usr_perfil_id;
+
+                    MessageBox.Show(item.usr_nombre);
+
+                    encontrado = true;
+                    break;
+                }
             }
 
-            MessageBox.Show("Bienvenido, administrador " + nombre + " " + apellido + ". Perfil: " + tipoPerfil.ToString(), "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (encontrado) MessageBox.Show("Bienvenido, administrador " + nombre + " " + apellido + ". Perfil: " + tipoPerfil.ToString(), "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else MessageBox.Show("Usuario no encontrado.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
+    
 }

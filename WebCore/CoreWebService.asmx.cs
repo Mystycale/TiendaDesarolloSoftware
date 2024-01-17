@@ -62,6 +62,17 @@ namespace WebCore
 
             return myUSUARIODataTable;
         }
+
+        [WebMethod]
+        public USUARIODataTable SelectUsuarios()
+        {
+
+            USUARIOTableAdapter myUSUARIOTableAdapter = new USUARIOTableAdapter();
+
+            USUARIODataTable myUSUARIODataTable = myUSUARIOTableAdapter.GetData();
+
+            return myUSUARIODataTable;
+        }
     }
 }
 

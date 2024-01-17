@@ -35,6 +35,13 @@ namespace myVisualCore.ServicioDelCore {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://google.com/BuscarUsuario", ReplyAction="*")]
         System.Threading.Tasks.Task<WebCoreDataSet.USUARIODataTable> BuscarUsuarioAsync(string codigo_in, string clave_in);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectUsuarios", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        WebCoreDataSet.USUARIODataTable SelectUsuarios();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/SelectUsuarios", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebCoreDataSet.USUARIODataTable> SelectUsuariosAsync();
     }
     
     /// <remarks/>
@@ -1549,6 +1556,14 @@ namespace myVisualCore.ServicioDelCore {
         
         public System.Threading.Tasks.Task<WebCoreDataSet.USUARIODataTable> BuscarUsuarioAsync(string codigo_in, string clave_in) {
             return base.Channel.BuscarUsuarioAsync(codigo_in, clave_in);
+        }
+        
+        public WebCoreDataSet.USUARIODataTable SelectUsuarios() {
+            return base.Channel.SelectUsuarios();
+        }
+        
+        public System.Threading.Tasks.Task<WebCoreDataSet.USUARIODataTable> SelectUsuariosAsync() {
+            return base.Channel.SelectUsuariosAsync();
         }
     }
 }

@@ -37,7 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtContrasenia = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.btnMostrarContra = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -141,7 +141,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.txtContrasenia);
+            this.panel3.Controls.Add(this.txtClave);
             this.panel3.Controls.Add(this.btnMostrarContra);
             this.panel3.Location = new System.Drawing.Point(213, 317);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
@@ -163,15 +163,15 @@
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // txtContrasenia
+            // txtClave
             // 
-            this.txtContrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContrasenia.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasenia.Location = new System.Drawing.Point(39, 8);
-            this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.PasswordChar = '*';
-            this.txtContrasenia.Size = new System.Drawing.Size(216, 20);
-            this.txtContrasenia.TabIndex = 2;
+            this.txtClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClave.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.Location = new System.Drawing.Point(39, 8);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(216, 20);
+            this.txtClave.TabIndex = 2;
             // 
             // btnMostrarContra
             // 
@@ -309,7 +309,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtContrasenia;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnMostrarContra;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

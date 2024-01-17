@@ -58,6 +58,25 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="SelectUsuarios">
+        <s:complexType />
+      </s:element>
+      <s:element name="SelectUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/WebCoreDataSet.xsd" name="namespace" />
+                <s:attribute fixed="USUARIODataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="WCLogSoapIn">
@@ -78,6 +97,12 @@
   <wsdl:message name="BuscarUsuarioSoapOut">
     <wsdl:part name="parameters" element="tns:BuscarUsuarioResponse" />
   </wsdl:message>
+  <wsdl:message name="SelectUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="SelectUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectUsuariosResponse" />
+  </wsdl:message>
   <wsdl:portType name="CoreWebServiceSoap">
     <wsdl:operation name="WCLog">
       <wsdl:input message="tns:WCLogSoapIn" />
@@ -90,6 +115,10 @@
     <wsdl:operation name="BuscarUsuario">
       <wsdl:input message="tns:BuscarUsuarioSoapIn" />
       <wsdl:output message="tns:BuscarUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarios">
+      <wsdl:input message="tns:SelectUsuariosSoapIn" />
+      <wsdl:output message="tns:SelectUsuariosSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="CoreWebServiceSoap" type="tns:CoreWebServiceSoap">
@@ -121,6 +150,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectUsuarios">
+      <soap:operation soapAction="http://google.com/SelectUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="CoreWebServiceSoap12" type="tns:CoreWebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -144,6 +182,15 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarUsuario">
       <soap12:operation soapAction="http://google.com/BuscarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectUsuarios">
+      <soap12:operation soapAction="http://google.com/SelectUsuarios" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
