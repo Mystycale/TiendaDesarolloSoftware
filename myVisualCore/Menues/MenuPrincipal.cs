@@ -23,6 +23,8 @@ namespace myVisualCore
             " [Cerrar seccion] "
         };
 
+
+        #region ::::::::::::: No interesa
         private static int x;
         private static int y;
 
@@ -83,6 +85,7 @@ namespace myVisualCore
                     resultado = MostrarOpciones(OpcionesMenuPrincipal, posicionSeleccion);
                 }
 
+                #endregion ::::::::::::: No interesa
 
                 switch (posicionSeleccion)
                 {

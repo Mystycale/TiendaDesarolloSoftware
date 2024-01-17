@@ -62,30 +62,30 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarCliente.cs">
+    <Compile Include="Menues\Cliente\frmRegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarCliente.Designer.cs">
+    <Compile Include="Menues\Cliente\frmRegistrarCliente.Designer.cs">
       <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarCajero.cs">
+    <Compile Include="Menues\Cajero\frmRegistrarCajero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarCajero.Designer.cs">
+    <Compile Include="Menues\Cajero\frmRegistrarCajero.Designer.cs">
       <DependentUpon>frmRegistrarCajero.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menues\MenuCajero.cs" />
-    <Compile Include="Menues\MenuCliente.cs" />
+    <Compile Include="Menues\Cajero\MenuCajero.cs" />
+    <Compile Include="Menues\Cliente\MenuCliente.cs" />
     <Compile Include="Menues\MenuPrincipal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarCajero.resx">
+    <EmbeddedResource Include="Menues\Cajero\frmRegistrarCajero.resx">
       <DependentUpon>frmRegistrarCajero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarCliente.resx">
+    <EmbeddedResource Include="Menues\Cliente\frmRegistrarCliente.resx">
       <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
