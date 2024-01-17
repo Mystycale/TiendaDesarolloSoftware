@@ -81,7 +81,11 @@ namespace myVisualCore
 
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Environment.Exit(0);
+
+            if (Codigo == "NA")
+            {
+                Environment.Exit(0);
+            }
         }
 
     }
