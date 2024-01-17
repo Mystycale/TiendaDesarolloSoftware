@@ -15,11 +15,21 @@ namespace ProyectoCaja
         public FormFacturacionCotizacion()
         {
             InitializeComponent();
+
+            comboBox1.Items.Add("Si");
+            comboBox1.Items.Add("No");
+
+            comboBox1.SelectedIndex = 1;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox10.Text = comboBox1.Text;
         }
     }
 }
