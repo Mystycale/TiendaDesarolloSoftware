@@ -29,7 +29,6 @@ namespace myVisualCore
             actualCoreUser.Apellido = frmLogin.Apellido;
             actualCoreUser.TipoPerfil = frmLogin.TipoPerfil;
 
-
             CoreProgram(actualCoreUser);
 
 
@@ -37,32 +36,35 @@ namespace myVisualCore
 
         private static void CoreProgram(CoreUser actualCoreUser)
         {
-            while (true)
-            {
-                Console.WriteLine("------MENU------");
-                Console.WriteLine("1. Registrar cajero");
-                Console.WriteLine("2. Login");
+            #region CoreAntes
+            //while (true)
+            //{
+            //    Console.WriteLine("------MENU------");
+            //    Console.WriteLine("1. Registrar cajero");
+            //    Console.WriteLine("2. Login");
 
 
-                int op = int.Parse(Console.ReadLine());
+            //    int op = int.Parse(Console.ReadLine());
 
-                if (op == 1)
-                {
-                    frmRegistrarCajero myFrmRegistrarCajero = new frmRegistrarCajero();
-                    Application.Run(myFrmRegistrarCajero);
+            //    if (op == 1)
+            //    {
+            //        frmRegistrarCajero myFrmRegistrarCajero = new frmRegistrarCajero();
+            //        Application.Run(myFrmRegistrarCajero);
 
-                    Console.WriteLine("Fin");
+            //        Console.WriteLine("Fin");
 
-                }
-                else if (op == 2)
-                {
-                    frmLogin frmLogin = new frmLogin();
-                    Application.Run(frmLogin);
-                }
+            //    }
+            //    else if (op == 2)
+            //    {
+            //        frmLogin frmLogin = new frmLogin();
+            //        Application.Run(frmLogin);
+            //    }
 
-                Console.WriteLine(actualCoreUser.Nombre);
+            //    Console.WriteLine(actualCoreUser.Nombre);
+            #endregion
 
-            }
+
         }
+    }
     }
 }

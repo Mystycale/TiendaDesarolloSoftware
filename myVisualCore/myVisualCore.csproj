@@ -68,6 +68,8 @@
     <Compile Include="frmRegistrarCajero.Designer.cs">
       <DependentUpon>frmRegistrarCajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menues\MenuCajero.cs" />
+    <Compile Include="Menues\MenuPrincipal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
