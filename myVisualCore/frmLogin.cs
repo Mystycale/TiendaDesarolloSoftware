@@ -40,17 +40,16 @@ namespace myVisualCore
                 MessageBox.Show("Ocurrio un error: \n" + exx.Message, "Core", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if (tblUsuarios.Rows.Count == 0)
+            DataRowCollection myDataRowCollection = tblUsuarios.Rows;
+
+            if (myDataRowCollection == null)
             {
                 MessageBox.Show("Algo salio mal.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
 
             bool encontrado = false;
 
-            string nombre = "NA";
-            string apellido = "NA";
-            int tipoPerfil = 0;
 
             foreach (var item in tblUsuarios)
             {

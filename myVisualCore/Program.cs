@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebCore.Modelos;
 
 namespace myVisualCore
 {
     internal static class Program
     {
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,13 +19,23 @@ namespace myVisualCore
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            CoreUser actualCoreUser = new CoreUser();
 
-            CoreProgram();
+            frmLogin frmLogin = new frmLogin();
+            Application.Run(frmLogin);
+
+            actualCoreUser.Codigo = frmLogin.Codigo;
+            actualCoreUser.Nombre = frmLogin.Nombre;
+            actualCoreUser.Apellido = frmLogin.Apellido;
+            actualCoreUser.TipoPerfil = frmLogin.TipoPerfil;
+
+
+            CoreProgram(actualCoreUser);
 
 
         }
 
-        private static void CoreProgram()
+        private static void CoreProgram(CoreUser actualCoreUser)
         {
             while (true)
             {
@@ -47,6 +59,8 @@ namespace myVisualCore
                     frmLogin frmLogin = new frmLogin();
                     Application.Run(frmLogin);
                 }
+
+                Console.WriteLine(actualCoreUser.Nombre);
 
             }
         }

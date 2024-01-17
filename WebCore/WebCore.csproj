@@ -223,6 +223,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\CoreUser.cs" />
     <Compile Include="Modelos\WCRespuesta.cs" />
     <Compile Include="Modelos\WCCajero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
