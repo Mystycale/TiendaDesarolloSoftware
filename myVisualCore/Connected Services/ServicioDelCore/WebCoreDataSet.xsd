@@ -162,6 +162,147 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="PRODUCTO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prod_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_desc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="prod_stock" type="xs:int" />
+              <xs:element name="prod_precio" type="xs:decimal" />
+              <xs:element name="prod_fechaIngreso" type="xs:dateTime" />
+              <xs:element name="prod_estado" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SERVICIO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="serv_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="serv_nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="serv_desc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="serv_precio" type="xs:decimal" />
+              <xs:element name="serv_fechaIngreso" type="xs:dateTime" />
+              <xs:element name="serv_estado" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FACTURA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fct_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fct_cotizacion" type="xs:boolean" />
+              <xs:element name="fct_fecha" type="xs:dateTime" />
+              <xs:element name="fct_total" type="xs:decimal" />
+              <xs:element name="fct_metodoPago" type="xs:int" />
+              <xs:element name="fct_cjr_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fct_clt_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fct_estado" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FCT_PROD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fp_prod_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fp_fct_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fp_cantidad" type="xs:int" />
+              <xs:element name="fp_precio_u" type="xs:decimal" />
+              <xs:element name="fp_total" type="xs:decimal" />
+              <xs:element name="fp_estado" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FCT_SERV">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fs_serv_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fs_fct_codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fs_cantidad" type="xs:int" />
+              <xs:element name="fs_precio_u" type="xs:decimal" />
+              <xs:element name="fs_total" type="xs:decimal" />
+              <xs:element name="fs_estado" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique msdata:PrimaryKey="true" name="Constraint1">
@@ -175,6 +316,28 @@
     <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="CLIENTE_Constraint1">
       <xs:selector xpath=".//mstns:CLIENTE" />
       <xs:field xpath="mstns:clt_codigo" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="PRODUCTO_Constraint1">
+      <xs:selector xpath=".//mstns:PRODUCTO" />
+      <xs:field xpath="mstns:prod_codigo" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="SERVICIO_Constraint1">
+      <xs:selector xpath=".//mstns:SERVICIO" />
+      <xs:field xpath="mstns:serv_codigo" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FACTURA_Constraint1">
+      <xs:selector xpath=".//mstns:FACTURA" />
+      <xs:field xpath="mstns:fct_codigo" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FCT_PROD_Constraint1">
+      <xs:selector xpath=".//mstns:FCT_PROD" />
+      <xs:field xpath="mstns:fp_prod_codigo" />
+      <xs:field xpath="mstns:fp_fct_codigo" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FCT_SERV_Constraint1">
+      <xs:selector xpath=".//mstns:FCT_SERV" />
+      <xs:field xpath="mstns:fs_serv_codigo" />
+      <xs:field xpath="mstns:fs_fct_codigo" />
     </xs:unique>
   </xs:element>
 </xs:schema>

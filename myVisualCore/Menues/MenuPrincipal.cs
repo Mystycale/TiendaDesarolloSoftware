@@ -1,4 +1,5 @@
 ﻿using myVisualCore.Menues;
+using myVisualCore.Menues.Producto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,6 +91,10 @@ namespace myVisualCore
                 switch (posicionSeleccion)
                 {
                     case 0:
+                        Console.Clear();
+                        MenuProducto.Ejecutar(actualCoreUser);
+                        break;
+
                     case 1:
                         continue;
 

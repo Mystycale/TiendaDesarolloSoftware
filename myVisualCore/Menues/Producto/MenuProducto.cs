@@ -57,9 +57,9 @@ namespace myVisualCore.Menues.Producto
 
             Console.Clear();
             actualCoreUser.Mostrar();
-            Console.WriteLine("*********************");
+            Console.WriteLine("***********************");
             Console.WriteLine("*    MENU PRODUCTO    *");
-            Console.WriteLine("*********************\n");
+            Console.WriteLine("***********************\n");
 
             x = Console.CursorLeft;
             y = Console.CursorTop;
@@ -70,10 +70,9 @@ namespace myVisualCore.Menues.Producto
             {
                 Console.Clear();
                 actualCoreUser.Mostrar();
-                Console.WriteLine("*********************");
+                Console.WriteLine("***********************");
                 Console.WriteLine("*    MENU PRODUCTO    *");
-                Console.WriteLine("*********************\n");
-
+                Console.WriteLine("***********************\n");
                 x = Console.CursorLeft;
                 y = Console.CursorTop;
 
@@ -108,8 +107,8 @@ namespace myVisualCore.Menues.Producto
                 switch (posicionSeleccion)
                 {
                     case 0:
-                        frmRegistrarCliente myFrmRegistrarlienteo = new frmRegistrarCliente();
-                        myFrmRegistrarlienteo.ShowDialog();
+                        frmRegistrarProducto myFrmRegistrarProducto = new frmRegistrarProducto();
+                        myFrmRegistrarProducto.ShowDialog();
                         break;
 
                     case 1:
@@ -166,9 +165,9 @@ namespace myVisualCore.Menues.Producto
 
             Console.Clear();
             actualCoreUser.Mostrar();
-            Console.WriteLine("*********************");
+            Console.WriteLine("***********************");
             Console.WriteLine("*    MENU PRODUCTO    *");
-            Console.WriteLine("*********************\n");
+            Console.WriteLine("***********************\n");
 
             x = Console.CursorLeft;
             y = Console.CursorTop;
@@ -179,10 +178,9 @@ namespace myVisualCore.Menues.Producto
             {
                 Console.Clear();
                 actualCoreUser.Mostrar();
-                Console.WriteLine("*********************");
+                Console.WriteLine("***********************");
                 Console.WriteLine("*    MENU PRODUCTO    *");
-                Console.WriteLine("*********************\n");
-
+                Console.WriteLine("***********************\n");
                 x = Console.CursorLeft;
                 y = Console.CursorTop;
 
@@ -267,9 +265,9 @@ namespace myVisualCore.Menues.Producto
 
             Console.Clear();
             actualCoreUser.Mostrar();
-            Console.WriteLine("*********************");
+            Console.WriteLine("***********************");
             Console.WriteLine("*    MENU PRODUCTO    *");
-            Console.WriteLine("*********************\n");
+            Console.WriteLine("***********************\n");
 
             x = Console.CursorLeft;
             y = Console.CursorTop;
@@ -280,9 +278,9 @@ namespace myVisualCore.Menues.Producto
             {
                 Console.Clear();
                 actualCoreUser.Mostrar();
-                Console.WriteLine("*********************");
+                Console.WriteLine("***********************");
                 Console.WriteLine("*    MENU PRODUCTO    *");
-                Console.WriteLine("*********************\n");
+                Console.WriteLine("***********************\n");
 
                 x = Console.CursorLeft;
                 y = Console.CursorTop;

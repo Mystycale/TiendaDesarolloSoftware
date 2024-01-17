@@ -61,9 +61,6 @@ namespace myVisualCore
                     TipoPerfil = item.usr_perfil_id;
                     Codigo = codigo;
 
-
-                    MessageBox.Show(item.usr_nombre);
-
                     encontrado = true;
                     break;
                 }
@@ -71,7 +68,7 @@ namespace myVisualCore
 
             if (encontrado)
             {
-                MessageBox.Show("Bienvenido, administrador " + Nombre + " " + Apellido + ". Perfil: " + TipoPerfil.ToString(), "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bienvenido, " + Nombre + " " + Apellido, "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else MessageBox.Show("Usuario no encontrado.", "Core", MessageBoxButtons.OK, MessageBoxIcon.Information);
