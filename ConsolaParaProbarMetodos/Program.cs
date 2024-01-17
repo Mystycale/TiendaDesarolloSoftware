@@ -19,13 +19,27 @@ namespace ConsolaParaProbarMetodos
             public string direccion { get; set; }
         }
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             ServiceReference1.ServicioCapaSoapClient metodos = new ServiceReference1.ServicioCapaSoapClient();
 
+
+            while (true)
+            {
+
+                metodos.VerificarCajerosIntroducidosACore(); //verifica si todos los cajeros han sido ingresados a core
+                metodos.VerificarClientesIntroducidosACore(); //verifica si todos lo clientes han sido ingresados a core
+                metodos.VerificarFacturaIntroducidosACore(); //"" '"" "" """ Facturas
+                metodos.VerificarFacturaProductoIntroducidosACore(); // " ' "" " factura_preducto
+                metodos.VerificarFacturaServicioIntroducidosACore(); // "" "" "" factura_servicio
+                Console.WriteLine("Ejecutado a las: " + DateTime.Now);
+
+                // Espera 5 minutos
+                await Task.Delay(TimeSpan.FromMinutes(5));
+            }
             //string respuesta = metodos.HelloWorld(); //llamando al metodo hello world
             //Console.WriteLine(respuesta);
-            
+
             //insertar datos a la tabla cajero
             //metodos.insertarCajero("CAJ011", "0010001", "Carlos", "Perez", "80944421", "Alli");
 
@@ -36,22 +50,22 @@ namespace ConsolaParaProbarMetodos
 
 
             //Forma de obtener los cajeros, arriba se crea una clases que es la misma que se usa en el webcore
-    //        List<Cajero> cajeros = metodos.ObtenerCajero()
-    //.Select(c => new Cajero
-    //{
-    //    codigo = c.codigo,
-    //    cedula = c.cedula,
-    //    nombre = c.nombre,
-    //    apellido = c.apellido,
-    //    telefono = c.telefono,
-    //    direccion = c.direccion
-    //})
-    //.ToList();
+            //        List<Cajero> cajeros = metodos.ObtenerCajero()
+            //.Select(c => new Cajero
+            //{
+            //    codigo = c.codigo,
+            //    cedula = c.cedula,
+            //    nombre = c.nombre,
+            //    apellido = c.apellido,
+            //    telefono = c.telefono,
+            //    direccion = c.direccion
+            //})
+            //.ToList();
 
-    //        foreach (var cajero in cajeros)
-    //        {
-    //            Console.WriteLine(cajero.codigo + " " + cajero.nombre);
-    //        }
+            //        foreach (var cajero in cajeros)
+            //        {
+            //            Console.WriteLine(cajero.codigo + " " + cajero.nombre);
+            //        }
 
 
 

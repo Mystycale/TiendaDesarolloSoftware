@@ -2,6 +2,36 @@
 <wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://intec.edu.do" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://intec.edu.do" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://intec.edu.do">
+      <s:element name="VerificarCajerosIntroducidosACore">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarCajerosIntroducidosACoreResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarClientesIntroducidosACore">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarClientesIntroducidosACoreResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarFacturaIntroducidosACore">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarFacturaIntroducidosACoreResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarFacturaProductoIntroducidosACore">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarFacturaProductoIntroducidosACoreResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarFacturaServicioIntroducidosACore">
+        <s:complexType />
+      </s:element>
+      <s:element name="VerificarFacturaServicioIntroducidosACoreResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="HelloWorld">
         <s:complexType />
       </s:element>
@@ -43,19 +73,6 @@
       <s:element name="insertarClienteResponse">
         <s:complexType />
       </s:element>
-      <s:element name="insertarServicio">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="insertarServicioResponse">
-        <s:complexType />
-      </s:element>
       <s:element name="insertarFactura">
         <s:complexType>
           <s:sequence>
@@ -70,20 +87,6 @@
         </s:complexType>
       </s:element>
       <s:element name="insertarFacturaResponse">
-        <s:complexType />
-      </s:element>
-      <s:element name="insertarProducto">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="stock" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="insertarProductoResponse">
         <s:complexType />
       </s:element>
       <s:element name="insertarFacturaProducto">
@@ -114,22 +117,22 @@
       <s:element name="insertarFacturaServicioResponse">
         <s:complexType />
       </s:element>
-      <s:element name="ObtenerCajero">
+      <s:element name="ObtenerCliente">
         <s:complexType />
       </s:element>
-      <s:element name="ObtenerCajeroResponse">
+      <s:element name="ObtenerClienteResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCajeroResult" type="tns:ArrayOfCajero" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerClienteResult" type="tns:ArrayOfCliente" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfCajero">
+      <s:complexType name="ArrayOfCliente">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="Cajero" nillable="true" type="tns:Cajero" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="Cajero">
+      <s:complexType name="Cliente">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
@@ -137,10 +140,190 @@
           <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="saldo" type="s:decimal" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ObtenerProductos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerProductosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerProductosResult" type="tns:ArrayOfProducto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProducto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Producto" nillable="true" type="tns:Producto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Producto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="stock" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerServicios">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerServiciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerServiciosResult" type="tns:ArrayOfServicio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfServicio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Servicio" nillable="true" type="tns:Servicio" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Servicio">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DelCoreCajero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCoreCajeroResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelCoreCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="direccion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="saldo" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCoreClienteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelCoreServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCoreServicioResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelCoreFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bit" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="metodoPago" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoCajero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoCliente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCoreFacturaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelCoreProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stock" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCoreProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelCoreFacturaProducto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoProducto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoFactura" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCoreFacturaProductoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DelCoreFacturaServicio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigoServicio" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codigoFactura" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="precio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelCoreFacturaServicioResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
+  <wsdl:message name="VerificarCajerosIntroducidosACoreSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarCajerosIntroducidosACore" />
+  </wsdl:message>
+  <wsdl:message name="VerificarCajerosIntroducidosACoreSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarCajerosIntroducidosACoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificarClientesIntroducidosACoreSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarClientesIntroducidosACore" />
+  </wsdl:message>
+  <wsdl:message name="VerificarClientesIntroducidosACoreSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarClientesIntroducidosACoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificarFacturaIntroducidosACoreSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarFacturaIntroducidosACore" />
+  </wsdl:message>
+  <wsdl:message name="VerificarFacturaIntroducidosACoreSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarFacturaIntroducidosACoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificarFacturaProductoIntroducidosACoreSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarFacturaProductoIntroducidosACore" />
+  </wsdl:message>
+  <wsdl:message name="VerificarFacturaProductoIntroducidosACoreSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarFacturaProductoIntroducidosACoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerificarFacturaServicioIntroducidosACoreSoapIn">
+    <wsdl:part name="parameters" element="tns:VerificarFacturaServicioIntroducidosACore" />
+  </wsdl:message>
+  <wsdl:message name="VerificarFacturaServicioIntroducidosACoreSoapOut">
+    <wsdl:part name="parameters" element="tns:VerificarFacturaServicioIntroducidosACoreResponse" />
+  </wsdl:message>
   <wsdl:message name="HelloWorldSoapIn">
     <wsdl:part name="parameters" element="tns:HelloWorld" />
   </wsdl:message>
@@ -159,23 +342,11 @@
   <wsdl:message name="insertarClienteSoapOut">
     <wsdl:part name="parameters" element="tns:insertarClienteResponse" />
   </wsdl:message>
-  <wsdl:message name="insertarServicioSoapIn">
-    <wsdl:part name="parameters" element="tns:insertarServicio" />
-  </wsdl:message>
-  <wsdl:message name="insertarServicioSoapOut">
-    <wsdl:part name="parameters" element="tns:insertarServicioResponse" />
-  </wsdl:message>
   <wsdl:message name="insertarFacturaSoapIn">
     <wsdl:part name="parameters" element="tns:insertarFactura" />
   </wsdl:message>
   <wsdl:message name="insertarFacturaSoapOut">
     <wsdl:part name="parameters" element="tns:insertarFacturaResponse" />
-  </wsdl:message>
-  <wsdl:message name="insertarProductoSoapIn">
-    <wsdl:part name="parameters" element="tns:insertarProducto" />
-  </wsdl:message>
-  <wsdl:message name="insertarProductoSoapOut">
-    <wsdl:part name="parameters" element="tns:insertarProductoResponse" />
   </wsdl:message>
   <wsdl:message name="insertarFacturaProductoSoapIn">
     <wsdl:part name="parameters" element="tns:insertarFacturaProducto" />
@@ -189,13 +360,87 @@
   <wsdl:message name="insertarFacturaServicioSoapOut">
     <wsdl:part name="parameters" element="tns:insertarFacturaServicioResponse" />
   </wsdl:message>
-  <wsdl:message name="ObtenerCajeroSoapIn">
-    <wsdl:part name="parameters" element="tns:ObtenerCajero" />
+  <wsdl:message name="ObtenerClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCliente" />
   </wsdl:message>
-  <wsdl:message name="ObtenerCajeroSoapOut">
-    <wsdl:part name="parameters" element="tns:ObtenerCajeroResponse" />
+  <wsdl:message name="ObtenerClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerProductosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerProductos" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerProductosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerServiciosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerServicios" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerServiciosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreCajeroSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCoreCajero" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreCajeroSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCoreCajeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCoreCliente" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCoreClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCoreServicio" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCoreServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCoreFactura" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCoreFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCoreProducto" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCoreProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreFacturaProductoSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCoreFacturaProducto" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreFacturaProductoSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCoreFacturaProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreFacturaServicioSoapIn">
+    <wsdl:part name="parameters" element="tns:DelCoreFacturaServicio" />
+  </wsdl:message>
+  <wsdl:message name="DelCoreFacturaServicioSoapOut">
+    <wsdl:part name="parameters" element="tns:DelCoreFacturaServicioResponse" />
   </wsdl:message>
   <wsdl:portType name="ServicioCapaSoap">
+    <wsdl:operation name="VerificarCajerosIntroducidosACore">
+      <wsdl:input message="tns:VerificarCajerosIntroducidosACoreSoapIn" />
+      <wsdl:output message="tns:VerificarCajerosIntroducidosACoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarClientesIntroducidosACore">
+      <wsdl:input message="tns:VerificarClientesIntroducidosACoreSoapIn" />
+      <wsdl:output message="tns:VerificarClientesIntroducidosACoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaIntroducidosACore">
+      <wsdl:input message="tns:VerificarFacturaIntroducidosACoreSoapIn" />
+      <wsdl:output message="tns:VerificarFacturaIntroducidosACoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaProductoIntroducidosACore">
+      <wsdl:input message="tns:VerificarFacturaProductoIntroducidosACoreSoapIn" />
+      <wsdl:output message="tns:VerificarFacturaProductoIntroducidosACoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaServicioIntroducidosACore">
+      <wsdl:input message="tns:VerificarFacturaServicioIntroducidosACoreSoapIn" />
+      <wsdl:output message="tns:VerificarFacturaServicioIntroducidosACoreSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
       <wsdl:output message="tns:HelloWorldSoapOut" />
@@ -208,17 +453,9 @@
       <wsdl:input message="tns:insertarClienteSoapIn" />
       <wsdl:output message="tns:insertarClienteSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="insertarServicio">
-      <wsdl:input message="tns:insertarServicioSoapIn" />
-      <wsdl:output message="tns:insertarServicioSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="insertarFactura">
       <wsdl:input message="tns:insertarFacturaSoapIn" />
       <wsdl:output message="tns:insertarFacturaSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="insertarProducto">
-      <wsdl:input message="tns:insertarProductoSoapIn" />
-      <wsdl:output message="tns:insertarProductoSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="insertarFacturaProducto">
       <wsdl:input message="tns:insertarFacturaProductoSoapIn" />
@@ -228,13 +465,94 @@
       <wsdl:input message="tns:insertarFacturaServicioSoapIn" />
       <wsdl:output message="tns:insertarFacturaServicioSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="ObtenerCajero">
-      <wsdl:input message="tns:ObtenerCajeroSoapIn" />
-      <wsdl:output message="tns:ObtenerCajeroSoapOut" />
+    <wsdl:operation name="ObtenerCliente">
+      <wsdl:input message="tns:ObtenerClienteSoapIn" />
+      <wsdl:output message="tns:ObtenerClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductos">
+      <wsdl:input message="tns:ObtenerProductosSoapIn" />
+      <wsdl:output message="tns:ObtenerProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerServicios">
+      <wsdl:input message="tns:ObtenerServiciosSoapIn" />
+      <wsdl:output message="tns:ObtenerServiciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreCajero">
+      <wsdl:input message="tns:DelCoreCajeroSoapIn" />
+      <wsdl:output message="tns:DelCoreCajeroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreCliente">
+      <wsdl:input message="tns:DelCoreClienteSoapIn" />
+      <wsdl:output message="tns:DelCoreClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreServicio">
+      <wsdl:input message="tns:DelCoreServicioSoapIn" />
+      <wsdl:output message="tns:DelCoreServicioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFactura">
+      <wsdl:input message="tns:DelCoreFacturaSoapIn" />
+      <wsdl:output message="tns:DelCoreFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreProducto">
+      <wsdl:input message="tns:DelCoreProductoSoapIn" />
+      <wsdl:output message="tns:DelCoreProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFacturaProducto">
+      <wsdl:input message="tns:DelCoreFacturaProductoSoapIn" />
+      <wsdl:output message="tns:DelCoreFacturaProductoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFacturaServicio">
+      <wsdl:input message="tns:DelCoreFacturaServicioSoapIn" />
+      <wsdl:output message="tns:DelCoreFacturaServicioSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ServicioCapaSoap" type="tns:ServicioCapaSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarCajerosIntroducidosACore">
+      <soap:operation soapAction="http://intec.edu.do/VerificarCajerosIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarClientesIntroducidosACore">
+      <soap:operation soapAction="http://intec.edu.do/VerificarClientesIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaIntroducidosACore">
+      <soap:operation soapAction="http://intec.edu.do/VerificarFacturaIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaProductoIntroducidosACore">
+      <soap:operation soapAction="http://intec.edu.do/VerificarFacturaProductoIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaServicioIntroducidosACore">
+      <soap:operation soapAction="http://intec.edu.do/VerificarFacturaServicioIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="HelloWorld">
       <soap:operation soapAction="http://intec.edu.do/HelloWorld" style="document" />
       <wsdl:input>
@@ -262,26 +580,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="insertarServicio">
-      <soap:operation soapAction="http://intec.edu.do/insertarServicio" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="insertarFactura">
       <soap:operation soapAction="http://intec.edu.do/insertarFactura" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="insertarProducto">
-      <soap:operation soapAction="http://intec.edu.do/insertarProducto" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -307,8 +607,89 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ObtenerCajero">
-      <soap:operation soapAction="http://intec.edu.do/ObtenerCajero" style="document" />
+    <wsdl:operation name="ObtenerCliente">
+      <soap:operation soapAction="http://intec.edu.do/ObtenerCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductos">
+      <soap:operation soapAction="http://intec.edu.do/ObtenerProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerServicios">
+      <soap:operation soapAction="http://intec.edu.do/ObtenerServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreCajero">
+      <soap:operation soapAction="http://intec.edu.do/DelCoreCajero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreCliente">
+      <soap:operation soapAction="http://intec.edu.do/DelCoreCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreServicio">
+      <soap:operation soapAction="http://intec.edu.do/DelCoreServicio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFactura">
+      <soap:operation soapAction="http://intec.edu.do/DelCoreFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreProducto">
+      <soap:operation soapAction="http://intec.edu.do/DelCoreProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFacturaProducto">
+      <soap:operation soapAction="http://intec.edu.do/DelCoreFacturaProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFacturaServicio">
+      <soap:operation soapAction="http://intec.edu.do/DelCoreFacturaServicio" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -319,6 +700,51 @@
   </wsdl:binding>
   <wsdl:binding name="ServicioCapaSoap12" type="tns:ServicioCapaSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VerificarCajerosIntroducidosACore">
+      <soap12:operation soapAction="http://intec.edu.do/VerificarCajerosIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarClientesIntroducidosACore">
+      <soap12:operation soapAction="http://intec.edu.do/VerificarClientesIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaIntroducidosACore">
+      <soap12:operation soapAction="http://intec.edu.do/VerificarFacturaIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaProductoIntroducidosACore">
+      <soap12:operation soapAction="http://intec.edu.do/VerificarFacturaProductoIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarFacturaServicioIntroducidosACore">
+      <soap12:operation soapAction="http://intec.edu.do/VerificarFacturaServicioIntroducidosACore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="HelloWorld">
       <soap12:operation soapAction="http://intec.edu.do/HelloWorld" style="document" />
       <wsdl:input>
@@ -346,26 +772,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="insertarServicio">
-      <soap12:operation soapAction="http://intec.edu.do/insertarServicio" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="insertarFactura">
       <soap12:operation soapAction="http://intec.edu.do/insertarFactura" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="insertarProducto">
-      <soap12:operation soapAction="http://intec.edu.do/insertarProducto" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -391,8 +799,89 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ObtenerCajero">
-      <soap12:operation soapAction="http://intec.edu.do/ObtenerCajero" style="document" />
+    <wsdl:operation name="ObtenerCliente">
+      <soap12:operation soapAction="http://intec.edu.do/ObtenerCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProductos">
+      <soap12:operation soapAction="http://intec.edu.do/ObtenerProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerServicios">
+      <soap12:operation soapAction="http://intec.edu.do/ObtenerServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreCajero">
+      <soap12:operation soapAction="http://intec.edu.do/DelCoreCajero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreCliente">
+      <soap12:operation soapAction="http://intec.edu.do/DelCoreCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreServicio">
+      <soap12:operation soapAction="http://intec.edu.do/DelCoreServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFactura">
+      <soap12:operation soapAction="http://intec.edu.do/DelCoreFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreProducto">
+      <soap12:operation soapAction="http://intec.edu.do/DelCoreProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFacturaProducto">
+      <soap12:operation soapAction="http://intec.edu.do/DelCoreFacturaProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelCoreFacturaServicio">
+      <soap12:operation soapAction="http://intec.edu.do/DelCoreFacturaServicio" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
