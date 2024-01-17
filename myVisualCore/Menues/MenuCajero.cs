@@ -108,6 +108,10 @@ namespace myVisualCore
                 switch (posicionSeleccion)
                 {
                     case 0:
+                        frmRegistrarCajero myFrmRegistrarCaro = new frmRegistrarCajero();
+                        myFrmRegistrarCaro.ShowDialog();
+                        break;
+
                     case 1:
                     case 2:
                     case 3:                    

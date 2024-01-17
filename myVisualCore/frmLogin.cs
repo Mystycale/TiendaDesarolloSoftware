@@ -17,6 +17,7 @@ namespace myVisualCore
         public string Apellido = "NA";
         public int TipoPerfil = 0;
 
+
         public frmLogin()
         {
             InitializeComponent();

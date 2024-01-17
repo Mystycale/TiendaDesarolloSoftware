@@ -14,12 +14,36 @@ namespace WebCore.Modelos
 
         public void Mostrar()
         {
+            string perfil = "";
+            switch (TipoPerfil)
+            {
+                case 1:
+                    perfil = "Administrativo";
+                    break;
+
+                case 2:
+                    perfil = "Mantenimiento";
+                    break;
+
+                case 3:
+                    perfil = "Lector";
+                    break;
+
+                default:
+                    break;
+            }
+
+
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("************** Usuario **************");
             Console.WriteLine("Codigo: " + Codigo);
+            Console.WriteLine("Perfil: " + perfil);
             Console.WriteLine("Nombre: " + Nombre);
             Console.WriteLine("Apellido: " + Apellido);
             Console.WriteLine("Fecha: " + DateTime.Now.ToString());
             Console.WriteLine("*************************************\n");
+            Console.ForegroundColor = ConsoleColor.White;
+
         }
     }
 }
