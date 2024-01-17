@@ -6,6 +6,7 @@ using System.Web.Services;
 using System.Windows.Forms;
 using WebCore.Modelos;
 using WebCore.WebCoreDataSetTableAdapters;
+using static WebCore.WebCoreDataSet;
 
 namespace WebCore
 {
@@ -22,7 +23,7 @@ namespace WebCore
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
 
-        
+
 
         [WebMethod]
         public void WCLog()
@@ -43,12 +44,23 @@ namespace WebCore
             //_WCRespuesta.Mensaje = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
             int respQwery = myCAJEROTableAdapter.ppInsertCAJERO(_WCCajero.cjr_codigo, _WCCajero.cjr_cedula, _WCCajero.cjr_nombre, _WCCajero.cjr_apellido, _WCCajero.cjr_telefono, _WCCajero.cjr_direccion);
 
-            
+
             //MessageBox.Show(respQwery.ToString(), "Mensaje del WebCore", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //_WCRespuesta.Codigo = 100;
 
             return respQwery;
+        }
+
+        [WebMethod]
+        public USUARIODataTable BuscarUsuario(string codigo_in, string clave_in)
+        {
+
+            USUARIOTableAdapter myUSUARIOTableAdapter = new USUARIOTableAdapter();
+
+            USUARIODataTable myUSUARIODataTable = myUSUARIOTableAdapter.GetDataByCodigoYClave(codigo_in, clave_in);
+
+            return myUSUARIODataTable;
         }
     }
 }

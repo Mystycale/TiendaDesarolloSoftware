@@ -41,7 +41,7 @@
             this.btnMostrarContra = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -191,7 +191,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.txtID);
+            this.panel2.Controls.Add(this.txtCodigo);
             this.panel2.Location = new System.Drawing.Point(213, 253);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
@@ -212,16 +212,16 @@
             this.button2.TabIndex = 5;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // txtID
+            // txtCodigo
             // 
-            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(39, 8);
-            this.txtID.MaxLength = 10;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(246, 20);
-            this.txtID.TabIndex = 1;
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCodigo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(39, 8);
+            this.txtCodigo.MaxLength = 10;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(246, 20);
+            this.txtCodigo.TabIndex = 1;
             // 
             // btnRegistrar
             // 
@@ -272,6 +272,7 @@
             this.btnIniciarSesion.TabIndex = 3;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // frmLogin
             // 
@@ -305,7 +306,7 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtContrasenia;

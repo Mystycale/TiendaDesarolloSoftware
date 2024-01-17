@@ -2,15 +2,13 @@
 <wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://google.com" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://google.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://google.com">
-      <s:element name="HelloWorld">
+      <s:import namespace="http://tempuri.org/WebCoreDataSet.xsd" />
+      <s:import schemaLocation="https://localhost:44311/CoreWebService.asmx?schema=WebCoreDataSet" namespace="http://tempuri.org/WebCoreDataSet.xsd" />
+      <s:element name="WCLog">
         <s:complexType />
       </s:element>
-      <s:element name="HelloWorldResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
-          </s:sequence>
-        </s:complexType>
+      <s:element name="WCLogResponse">
+        <s:complexType />
       </s:element>
       <s:element name="InsertCajero">
         <s:complexType>
@@ -36,13 +34,37 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="BuscarUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codigo_in" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave_in" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/WebCoreDataSet.xsd" name="namespace" />
+                <s:attribute fixed="USUARIODataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="HelloWorldSoapIn">
-    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  <wsdl:message name="WCLogSoapIn">
+    <wsdl:part name="parameters" element="tns:WCLog" />
   </wsdl:message>
-  <wsdl:message name="HelloWorldSoapOut">
-    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  <wsdl:message name="WCLogSoapOut">
+    <wsdl:part name="parameters" element="tns:WCLogResponse" />
   </wsdl:message>
   <wsdl:message name="InsertCajeroSoapIn">
     <wsdl:part name="parameters" element="tns:InsertCajero" />
@@ -50,20 +72,30 @@
   <wsdl:message name="InsertCajeroSoapOut">
     <wsdl:part name="parameters" element="tns:InsertCajeroResponse" />
   </wsdl:message>
+  <wsdl:message name="BuscarUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="BuscarUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarUsuarioResponse" />
+  </wsdl:message>
   <wsdl:portType name="CoreWebServiceSoap">
-    <wsdl:operation name="HelloWorld">
-      <wsdl:input message="tns:HelloWorldSoapIn" />
-      <wsdl:output message="tns:HelloWorldSoapOut" />
+    <wsdl:operation name="WCLog">
+      <wsdl:input message="tns:WCLogSoapIn" />
+      <wsdl:output message="tns:WCLogSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertCajero">
       <wsdl:input message="tns:InsertCajeroSoapIn" />
       <wsdl:output message="tns:InsertCajeroSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <wsdl:input message="tns:BuscarUsuarioSoapIn" />
+      <wsdl:output message="tns:BuscarUsuarioSoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="CoreWebServiceSoap" type="tns:CoreWebServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap:operation soapAction="http://google.com/HelloWorld" style="document" />
+    <wsdl:operation name="WCLog">
+      <soap:operation soapAction="http://google.com/WCLog" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -80,11 +112,20 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <soap:operation soapAction="http://google.com/BuscarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="CoreWebServiceSoap12" type="tns:CoreWebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="HelloWorld">
-      <soap12:operation soapAction="http://google.com/HelloWorld" style="document" />
+    <wsdl:operation name="WCLog">
+      <soap12:operation soapAction="http://google.com/WCLog" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -94,6 +135,15 @@
     </wsdl:operation>
     <wsdl:operation name="InsertCajero">
       <soap12:operation soapAction="http://google.com/InsertCajero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUsuario">
+      <soap12:operation soapAction="http://google.com/BuscarUsuario" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

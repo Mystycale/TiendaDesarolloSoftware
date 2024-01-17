@@ -9,122 +9,123 @@
 //------------------------------------------------------------------------------
 
 namespace myVisualCore.ServicioDelCore {
-    using System.Runtime.Serialization;
-    using System;
     
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="WCCajero", Namespace="http://google.com")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://google.com", ConfigurationName="ServicioDelCore.CoreWebServiceSoap")]
+    public interface CoreWebServiceSoap {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/WCLog", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        void WCLog();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/WCLog", ReplyAction="*")]
+        System.Threading.Tasks.Task WCLogAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertCajero", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        int InsertCajero(myVisualCore.ServicioDelCore.WCCajero _WCCajero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertCajero", ReplyAction="*")]
+        System.Threading.Tasks.Task<int> InsertCajeroAsync(myVisualCore.ServicioDelCore.WCCajero _WCCajero);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/BuscarUsuario", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/BuscarUsuario", ReplyAction="*")]
+        System.Threading.Tasks.Task<WebCoreDataSet.USUARIODataTable> BuscarUsuarioAsync(string codigo_in, string clave_in);
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
-    public partial class WCCajero : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://google.com")]
+    public partial class WCCajero : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string cjr_codigoField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string cjr_cedulaField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string cjr_nombreField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string cjr_apellidoField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string cjr_telefonoField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string cjr_direccionField;
         
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=0)]
         public string cjr_codigo {
             get {
                 return this.cjr_codigoField;
             }
             set {
-                if ((object.ReferenceEquals(this.cjr_codigoField, value) != true)) {
-                    this.cjr_codigoField = value;
-                    this.RaisePropertyChanged("cjr_codigo");
-                }
+                this.cjr_codigoField = value;
+                this.RaisePropertyChanged("cjr_codigo");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=1)]
         public string cjr_cedula {
             get {
                 return this.cjr_cedulaField;
             }
             set {
-                if ((object.ReferenceEquals(this.cjr_cedulaField, value) != true)) {
-                    this.cjr_cedulaField = value;
-                    this.RaisePropertyChanged("cjr_cedula");
-                }
+                this.cjr_cedulaField = value;
+                this.RaisePropertyChanged("cjr_cedula");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=2)]
         public string cjr_nombre {
             get {
                 return this.cjr_nombreField;
             }
             set {
-                if ((object.ReferenceEquals(this.cjr_nombreField, value) != true)) {
-                    this.cjr_nombreField = value;
-                    this.RaisePropertyChanged("cjr_nombre");
-                }
+                this.cjr_nombreField = value;
+                this.RaisePropertyChanged("cjr_nombre");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=3)]
         public string cjr_apellido {
             get {
                 return this.cjr_apellidoField;
             }
             set {
-                if ((object.ReferenceEquals(this.cjr_apellidoField, value) != true)) {
-                    this.cjr_apellidoField = value;
-                    this.RaisePropertyChanged("cjr_apellido");
-                }
+                this.cjr_apellidoField = value;
+                this.RaisePropertyChanged("cjr_apellido");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=4)]
         public string cjr_telefono {
             get {
                 return this.cjr_telefonoField;
             }
             set {
-                if ((object.ReferenceEquals(this.cjr_telefonoField, value) != true)) {
-                    this.cjr_telefonoField = value;
-                    this.RaisePropertyChanged("cjr_telefono");
-                }
+                this.cjr_telefonoField = value;
+                this.RaisePropertyChanged("cjr_telefono");
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Order=5)]
         public string cjr_direccion {
             get {
                 return this.cjr_direccionField;
             }
             set {
-                if ((object.ReferenceEquals(this.cjr_direccionField, value) != true)) {
-                    this.cjr_direccionField = value;
-                    this.RaisePropertyChanged("cjr_direccion");
-                }
+                this.cjr_direccionField = value;
+                this.RaisePropertyChanged("cjr_direccion");
             }
         }
         
@@ -138,151 +139,1364 @@ namespace myVisualCore.ServicioDelCore {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://google.com", ConfigurationName="ServicioDelCore.CoreWebServiceSoap")]
-    public interface CoreWebServiceSoap {
+    /// <summary>
+    ///Represents a strongly typed in-memory cache of data.
+    ///</summary>
+    // This type definition was generated by System.Data.Design.TypedDataSetSchemaImporterExtensionFx35 schema importer extension.
+    [global::System.Serializable()]
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
+    [global::System.Xml.Serialization.XmlRootAttribute("WebCoreDataSet")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
+    public partial class WebCoreDataSet : global::System.Data.DataSet {
         
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://google.com is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/HelloWorld", ReplyAction="*")]
-        myVisualCore.ServicioDelCore.HelloWorldResponse HelloWorld(myVisualCore.ServicioDelCore.HelloWorldRequest request);
+        private CAJERODataTable tableCAJERO;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<myVisualCore.ServicioDelCore.HelloWorldResponse> HelloWorldAsync(myVisualCore.ServicioDelCore.HelloWorldRequest request);
+        private USUARIODataTable tableUSUARIO;
         
-        // CODEGEN: Generating message contract since element name _WCCajero from namespace http://google.com is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertCajero", ReplyAction="*")]
-        myVisualCore.ServicioDelCore.InsertCajeroResponse InsertCajero(myVisualCore.ServicioDelCore.InsertCajeroRequest request);
+        private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://google.com/InsertCajero", ReplyAction="*")]
-        System.Threading.Tasks.Task<myVisualCore.ServicioDelCore.InsertCajeroResponse> InsertCajeroAsync(myVisualCore.ServicioDelCore.InsertCajeroRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://google.com", Order=0)]
-        public myVisualCore.ServicioDelCore.HelloWorldRequestBody Body;
-        
-        public HelloWorldRequest() {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public WebCoreDataSet() {
+            this.BeginInit();
+            this.InitClass();
+            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+            base.Tables.CollectionChanged += schemaChangedHandler;
+            base.Relations.CollectionChanged += schemaChangedHandler;
+            this.EndInit();
         }
         
-        public HelloWorldRequest(myVisualCore.ServicioDelCore.HelloWorldRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody {
-        
-        public HelloWorldRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://google.com", Order=0)]
-        public myVisualCore.ServicioDelCore.HelloWorldResponseBody Body;
-        
-        public HelloWorldResponse() {
-        }
-        
-        public HelloWorldResponse(myVisualCore.ServicioDelCore.HelloWorldResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://google.com")]
-    public partial class HelloWorldResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
-        
-        public HelloWorldResponseBody() {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected WebCoreDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                base(info, context, false) {
+            if ((this.IsBinarySerialized(info, context) == true)) {
+                this.InitVars(false);
+                global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+                this.Tables.CollectionChanged += schemaChangedHandler1;
+                this.Relations.CollectionChanged += schemaChangedHandler1;
+                return;
+            }
+            string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
+            if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+                global::System.Data.DataSet ds = new global::System.Data.DataSet();
+                ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                if ((ds.Tables["CAJERO"] != null)) {
+                    base.Tables.Add(new CAJERODataTable(ds.Tables["CAJERO"]));
+                }
+                if ((ds.Tables["USUARIO"] != null)) {
+                    base.Tables.Add(new USUARIODataTable(ds.Tables["USUARIO"]));
+                }
+                this.DataSetName = ds.DataSetName;
+                this.Prefix = ds.Prefix;
+                this.Namespace = ds.Namespace;
+                this.Locale = ds.Locale;
+                this.CaseSensitive = ds.CaseSensitive;
+                this.EnforceConstraints = ds.EnforceConstraints;
+                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
+                this.InitVars();
+            }
+            else {
+                this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+            }
+            this.GetSerializationData(info, context);
+            global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
+            base.Tables.CollectionChanged += schemaChangedHandler;
+            this.Relations.CollectionChanged += schemaChangedHandler;
         }
         
-        public HelloWorldResponseBody(string HelloWorldResult) {
-            this.HelloWorldResult = HelloWorldResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertCajeroRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertCajero", Namespace="http://google.com", Order=0)]
-        public myVisualCore.ServicioDelCore.InsertCajeroRequestBody Body;
-        
-        public InsertCajeroRequest() {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CAJERODataTable CAJERO {
+            get {
+                return this.tableCAJERO;
+            }
         }
         
-        public InsertCajeroRequest(myVisualCore.ServicioDelCore.InsertCajeroRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://google.com")]
-    public partial class InsertCajeroRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public myVisualCore.ServicioDelCore.WCCajero _WCCajero;
-        
-        public InsertCajeroRequestBody() {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public USUARIODataTable USUARIO {
+            get {
+                return this.tableUSUARIO;
+            }
         }
         
-        public InsertCajeroRequestBody(myVisualCore.ServicioDelCore.WCCajero _WCCajero) {
-            this._WCCajero = _WCCajero;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertCajeroResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertCajeroResponse", Namespace="http://google.com", Order=0)]
-        public myVisualCore.ServicioDelCore.InsertCajeroResponseBody Body;
-        
-        public InsertCajeroResponse() {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.BrowsableAttribute(true)]
+        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
+        public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
+            get {
+                return this._schemaSerializationMode;
+            }
+            set {
+                this._schemaSerializationMode = value;
+            }
         }
         
-        public InsertCajeroResponse(myVisualCore.ServicioDelCore.InsertCajeroResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://google.com")]
-    public partial class InsertCajeroResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int InsertCajeroResult;
-        
-        public InsertCajeroResponseBody() {
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public new global::System.Data.DataTableCollection Tables {
+            get {
+                return base.Tables;
+            }
         }
         
-        public InsertCajeroResponseBody(int InsertCajeroResult) {
-            this.InsertCajeroResult = InsertCajeroResult;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public new global::System.Data.DataRelationCollection Relations {
+            get {
+                return base.Relations;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected override void InitializeDerivedDataSet() {
+            this.BeginInit();
+            this.InitClass();
+            this.EndInit();
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public override global::System.Data.DataSet Clone() {
+            WebCoreDataSet cln = ((WebCoreDataSet)(base.Clone()));
+            cln.InitVars();
+            cln.SchemaSerializationMode = this.SchemaSerializationMode;
+            return cln;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected override bool ShouldSerializeTables() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected override bool ShouldSerializeRelations() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
+            if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
+                this.Reset();
+                global::System.Data.DataSet ds = new global::System.Data.DataSet();
+                ds.ReadXml(reader);
+                if ((ds.Tables["CAJERO"] != null)) {
+                    base.Tables.Add(new CAJERODataTable(ds.Tables["CAJERO"]));
+                }
+                if ((ds.Tables["USUARIO"] != null)) {
+                    base.Tables.Add(new USUARIODataTable(ds.Tables["USUARIO"]));
+                }
+                this.DataSetName = ds.DataSetName;
+                this.Prefix = ds.Prefix;
+                this.Namespace = ds.Namespace;
+                this.Locale = ds.Locale;
+                this.CaseSensitive = ds.CaseSensitive;
+                this.EnforceConstraints = ds.EnforceConstraints;
+                this.Merge(ds, false, global::System.Data.MissingSchemaAction.Add);
+                this.InitVars();
+            }
+            else {
+                this.ReadXml(reader);
+                this.InitVars();
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
+            global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
+            this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
+            stream.Position = 0;
+            return global::System.Xml.Schema.XmlSchema.Read(new global::System.Xml.XmlTextReader(stream), null);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal void InitVars() {
+            this.InitVars(true);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal void InitVars(bool initTable) {
+            this.tableCAJERO = ((CAJERODataTable)(base.Tables["CAJERO"]));
+            if ((initTable == true)) {
+                if ((this.tableCAJERO != null)) {
+                    this.tableCAJERO.InitVars();
+                }
+            }
+            this.tableUSUARIO = ((USUARIODataTable)(base.Tables["USUARIO"]));
+            if ((initTable == true)) {
+                if ((this.tableUSUARIO != null)) {
+                    this.tableUSUARIO.InitVars();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitClass() {
+            this.DataSetName = "WebCoreDataSet";
+            this.Prefix = "";
+            this.Namespace = "http://tempuri.org/WebCoreDataSet.xsd";
+            this.EnforceConstraints = true;
+            this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tableCAJERO = new CAJERODataTable();
+            base.Tables.Add(this.tableCAJERO);
+            this.tableUSUARIO = new USUARIODataTable();
+            base.Tables.Add(this.tableUSUARIO);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeCAJERO() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeUSUARIO() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
+            if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
+                this.InitVars();
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+            WebCoreDataSet ds = new WebCoreDataSet();
+            global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+            global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+            global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
+            any.Namespace = ds.Namespace;
+            sequence.Items.Add(any);
+            type.Particle = sequence;
+            global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+            if (xs.Contains(dsSchema.TargetNamespace)) {
+                global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                try {
+                    global::System.Xml.Schema.XmlSchema schema = null;
+                    dsSchema.Write(s1);
+                    for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                        schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                        s2.SetLength(0);
+                        schema.Write(s2);
+                        if ((s1.Length == s2.Length)) {
+                            s1.Position = 0;
+                            s2.Position = 0;
+                            for (; ((s1.Position != s1.Length) 
+                                        && (s1.ReadByte() == s2.ReadByte())); ) {
+                                ;
+                            }
+                            if ((s1.Position == s1.Length)) {
+                                return type;
+                            }
+                        }
+                    }
+                }
+                finally {
+                    if ((s1 != null)) {
+                        s1.Close();
+                    }
+                    if ((s2 != null)) {
+                        s2.Close();
+                    }
+                }
+            }
+            xs.Add(dsSchema);
+            return type;
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void CAJERORowChangeEventHandler(object sender, CAJERORowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void USUARIORowChangeEventHandler(object sender, USUARIORowChangeEvent e);
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CAJERODataTable : global::System.Data.TypedTableBase<CAJERORow> {
+            
+            private global::System.Data.DataColumn columncjr_codigo;
+            
+            private global::System.Data.DataColumn columncjr_cedula;
+            
+            private global::System.Data.DataColumn columncjr_nombre;
+            
+            private global::System.Data.DataColumn columncjr_apellido;
+            
+            private global::System.Data.DataColumn columncjr_telefono;
+            
+            private global::System.Data.DataColumn columncjr_direccion;
+            
+            private global::System.Data.DataColumn columncjr_fechaIngreso;
+            
+            private global::System.Data.DataColumn columncjr_estado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CAJERODataTable() {
+                this.TableName = "CAJERO";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CAJERODataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected CAJERODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_codigoColumn {
+                get {
+                    return this.columncjr_codigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_cedulaColumn {
+                get {
+                    return this.columncjr_cedula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_nombreColumn {
+                get {
+                    return this.columncjr_nombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_apellidoColumn {
+                get {
+                    return this.columncjr_apellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_telefonoColumn {
+                get {
+                    return this.columncjr_telefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_direccionColumn {
+                get {
+                    return this.columncjr_direccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_fechaIngresoColumn {
+                get {
+                    return this.columncjr_fechaIngreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cjr_estadoColumn {
+                get {
+                    return this.columncjr_estado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CAJERORow this[int index] {
+                get {
+                    return ((CAJERORow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CAJERORowChangeEventHandler CAJERORowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CAJERORowChangeEventHandler CAJERORowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CAJERORowChangeEventHandler CAJERORowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CAJERORowChangeEventHandler CAJERORowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddCAJERORow(CAJERORow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CAJERORow AddCAJERORow(string cjr_codigo, string cjr_cedula, string cjr_nombre, string cjr_apellido, string cjr_telefono, string cjr_direccion, System.DateTime cjr_fechaIngreso, int cjr_estado) {
+                CAJERORow rowCAJERORow = ((CAJERORow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        cjr_codigo,
+                        cjr_cedula,
+                        cjr_nombre,
+                        cjr_apellido,
+                        cjr_telefono,
+                        cjr_direccion,
+                        cjr_fechaIngreso,
+                        cjr_estado};
+                rowCAJERORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCAJERORow);
+                return rowCAJERORow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CAJERORow FindBycjr_codigo(string cjr_codigo) {
+                return ((CAJERORow)(this.Rows.Find(new object[] {
+                            cjr_codigo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CAJERODataTable cln = ((CAJERODataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CAJERODataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columncjr_codigo = base.Columns["cjr_codigo"];
+                this.columncjr_cedula = base.Columns["cjr_cedula"];
+                this.columncjr_nombre = base.Columns["cjr_nombre"];
+                this.columncjr_apellido = base.Columns["cjr_apellido"];
+                this.columncjr_telefono = base.Columns["cjr_telefono"];
+                this.columncjr_direccion = base.Columns["cjr_direccion"];
+                this.columncjr_fechaIngreso = base.Columns["cjr_fechaIngreso"];
+                this.columncjr_estado = base.Columns["cjr_estado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columncjr_codigo = new global::System.Data.DataColumn("cjr_codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_codigo);
+                this.columncjr_cedula = new global::System.Data.DataColumn("cjr_cedula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_cedula);
+                this.columncjr_nombre = new global::System.Data.DataColumn("cjr_nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_nombre);
+                this.columncjr_apellido = new global::System.Data.DataColumn("cjr_apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_apellido);
+                this.columncjr_telefono = new global::System.Data.DataColumn("cjr_telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_telefono);
+                this.columncjr_direccion = new global::System.Data.DataColumn("cjr_direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_direccion);
+                this.columncjr_fechaIngreso = new global::System.Data.DataColumn("cjr_fechaIngreso", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_fechaIngreso);
+                this.columncjr_estado = new global::System.Data.DataColumn("cjr_estado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncjr_estado);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncjr_codigo}, true));
+                this.columncjr_codigo.AllowDBNull = false;
+                this.columncjr_codigo.Unique = true;
+                this.columncjr_codigo.MaxLength = 10;
+                this.columncjr_cedula.AllowDBNull = false;
+                this.columncjr_cedula.MaxLength = 11;
+                this.columncjr_nombre.AllowDBNull = false;
+                this.columncjr_nombre.MaxLength = 150;
+                this.columncjr_apellido.AllowDBNull = false;
+                this.columncjr_apellido.MaxLength = 150;
+                this.columncjr_telefono.AllowDBNull = false;
+                this.columncjr_telefono.MaxLength = 10;
+                this.columncjr_direccion.AllowDBNull = false;
+                this.columncjr_direccion.MaxLength = 200;
+                this.columncjr_fechaIngreso.AllowDBNull = false;
+                this.columncjr_estado.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CAJERORow NewCAJERORow() {
+                return ((CAJERORow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CAJERORow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CAJERORow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CAJERORowChanged != null)) {
+                    this.CAJERORowChanged(this, new CAJERORowChangeEvent(((CAJERORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CAJERORowChanging != null)) {
+                    this.CAJERORowChanging(this, new CAJERORowChangeEvent(((CAJERORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CAJERORowDeleted != null)) {
+                    this.CAJERORowDeleted(this, new CAJERORowChangeEvent(((CAJERORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CAJERORowDeleting != null)) {
+                    this.CAJERORowDeleting(this, new CAJERORowChangeEvent(((CAJERORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveCAJERORow(CAJERORow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                WebCoreDataSet ds = new WebCoreDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CAJERODataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class USUARIODataTable : global::System.Data.TypedTableBase<USUARIORow> {
+            
+            private global::System.Data.DataColumn columnusr_codigo;
+            
+            private global::System.Data.DataColumn columnusr_perfil_id;
+            
+            private global::System.Data.DataColumn columnusr_cedula;
+            
+            private global::System.Data.DataColumn columnusr_clave;
+            
+            private global::System.Data.DataColumn columnusr_nombre;
+            
+            private global::System.Data.DataColumn columnusr_apellido;
+            
+            private global::System.Data.DataColumn columnusr_telefono;
+            
+            private global::System.Data.DataColumn columnusr_direccion;
+            
+            private global::System.Data.DataColumn columnusr_fechaIngreso;
+            
+            private global::System.Data.DataColumn columnusr_estado;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USUARIODataTable() {
+                this.TableName = "USUARIO";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal USUARIODataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected USUARIODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_codigoColumn {
+                get {
+                    return this.columnusr_codigo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_perfil_idColumn {
+                get {
+                    return this.columnusr_perfil_id;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_cedulaColumn {
+                get {
+                    return this.columnusr_cedula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_claveColumn {
+                get {
+                    return this.columnusr_clave;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_nombreColumn {
+                get {
+                    return this.columnusr_nombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_apellidoColumn {
+                get {
+                    return this.columnusr_apellido;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_telefonoColumn {
+                get {
+                    return this.columnusr_telefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_direccionColumn {
+                get {
+                    return this.columnusr_direccion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_fechaIngresoColumn {
+                get {
+                    return this.columnusr_fechaIngreso;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn usr_estadoColumn {
+                get {
+                    return this.columnusr_estado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USUARIORow this[int index] {
+                get {
+                    return ((USUARIORow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event USUARIORowChangeEventHandler USUARIORowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event USUARIORowChangeEventHandler USUARIORowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event USUARIORowChangeEventHandler USUARIORowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event USUARIORowChangeEventHandler USUARIORowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddUSUARIORow(USUARIORow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USUARIORow AddUSUARIORow(string usr_codigo, int usr_perfil_id, string usr_cedula, string usr_clave, string usr_nombre, string usr_apellido, string usr_telefono, string usr_direccion, System.DateTime usr_fechaIngreso, int usr_estado) {
+                USUARIORow rowUSUARIORow = ((USUARIORow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        usr_codigo,
+                        usr_perfil_id,
+                        usr_cedula,
+                        usr_clave,
+                        usr_nombre,
+                        usr_apellido,
+                        usr_telefono,
+                        usr_direccion,
+                        usr_fechaIngreso,
+                        usr_estado};
+                rowUSUARIORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUSUARIORow);
+                return rowUSUARIORow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USUARIORow FindByusr_codigo(string usr_codigo) {
+                return ((USUARIORow)(this.Rows.Find(new object[] {
+                            usr_codigo})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                USUARIODataTable cln = ((USUARIODataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new USUARIODataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnusr_codigo = base.Columns["usr_codigo"];
+                this.columnusr_perfil_id = base.Columns["usr_perfil_id"];
+                this.columnusr_cedula = base.Columns["usr_cedula"];
+                this.columnusr_clave = base.Columns["usr_clave"];
+                this.columnusr_nombre = base.Columns["usr_nombre"];
+                this.columnusr_apellido = base.Columns["usr_apellido"];
+                this.columnusr_telefono = base.Columns["usr_telefono"];
+                this.columnusr_direccion = base.Columns["usr_direccion"];
+                this.columnusr_fechaIngreso = base.Columns["usr_fechaIngreso"];
+                this.columnusr_estado = base.Columns["usr_estado"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnusr_codigo = new global::System.Data.DataColumn("usr_codigo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_codigo);
+                this.columnusr_perfil_id = new global::System.Data.DataColumn("usr_perfil_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_perfil_id);
+                this.columnusr_cedula = new global::System.Data.DataColumn("usr_cedula", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_cedula);
+                this.columnusr_clave = new global::System.Data.DataColumn("usr_clave", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_clave);
+                this.columnusr_nombre = new global::System.Data.DataColumn("usr_nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_nombre);
+                this.columnusr_apellido = new global::System.Data.DataColumn("usr_apellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_apellido);
+                this.columnusr_telefono = new global::System.Data.DataColumn("usr_telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_telefono);
+                this.columnusr_direccion = new global::System.Data.DataColumn("usr_direccion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_direccion);
+                this.columnusr_fechaIngreso = new global::System.Data.DataColumn("usr_fechaIngreso", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_fechaIngreso);
+                this.columnusr_estado = new global::System.Data.DataColumn("usr_estado", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnusr_estado);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnusr_codigo}, true));
+                this.columnusr_codigo.AllowDBNull = false;
+                this.columnusr_codigo.Unique = true;
+                this.columnusr_codigo.MaxLength = 10;
+                this.columnusr_perfil_id.AllowDBNull = false;
+                this.columnusr_cedula.AllowDBNull = false;
+                this.columnusr_cedula.MaxLength = 11;
+                this.columnusr_clave.AllowDBNull = false;
+                this.columnusr_clave.MaxLength = 20;
+                this.columnusr_nombre.AllowDBNull = false;
+                this.columnusr_nombre.MaxLength = 150;
+                this.columnusr_apellido.AllowDBNull = false;
+                this.columnusr_apellido.MaxLength = 150;
+                this.columnusr_telefono.AllowDBNull = false;
+                this.columnusr_telefono.MaxLength = 10;
+                this.columnusr_direccion.AllowDBNull = false;
+                this.columnusr_direccion.MaxLength = 200;
+                this.columnusr_fechaIngreso.AllowDBNull = false;
+                this.columnusr_estado.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USUARIORow NewUSUARIORow() {
+                return ((USUARIORow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new USUARIORow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(USUARIORow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.USUARIORowChanged != null)) {
+                    this.USUARIORowChanged(this, new USUARIORowChangeEvent(((USUARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.USUARIORowChanging != null)) {
+                    this.USUARIORowChanging(this, new USUARIORowChangeEvent(((USUARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.USUARIORowDeleted != null)) {
+                    this.USUARIORowDeleted(this, new USUARIORowChangeEvent(((USUARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.USUARIORowDeleting != null)) {
+                    this.USUARIORowDeleting(this, new USUARIORowChangeEvent(((USUARIORow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveUSUARIORow(USUARIORow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                WebCoreDataSet ds = new WebCoreDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "USUARIODataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CAJERORow : global::System.Data.DataRow {
+            
+            private CAJERODataTable tableCAJERO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CAJERORow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCAJERO = ((CAJERODataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cjr_codigo {
+                get {
+                    return ((string)(this[this.tableCAJERO.cjr_codigoColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cjr_cedula {
+                get {
+                    return ((string)(this[this.tableCAJERO.cjr_cedulaColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_cedulaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cjr_nombre {
+                get {
+                    return ((string)(this[this.tableCAJERO.cjr_nombreColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cjr_apellido {
+                get {
+                    return ((string)(this[this.tableCAJERO.cjr_apellidoColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_apellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cjr_telefono {
+                get {
+                    return ((string)(this[this.tableCAJERO.cjr_telefonoColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_telefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cjr_direccion {
+                get {
+                    return ((string)(this[this.tableCAJERO.cjr_direccionColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_direccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime cjr_fechaIngreso {
+                get {
+                    return ((global::System.DateTime)(this[this.tableCAJERO.cjr_fechaIngresoColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_fechaIngresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int cjr_estado {
+                get {
+                    return ((int)(this[this.tableCAJERO.cjr_estadoColumn]));
+                }
+                set {
+                    this[this.tableCAJERO.cjr_estadoColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class USUARIORow : global::System.Data.DataRow {
+            
+            private USUARIODataTable tableUSUARIO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal USUARIORow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableUSUARIO = ((USUARIODataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string usr_codigo {
+                get {
+                    return ((string)(this[this.tableUSUARIO.usr_codigoColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_codigoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int usr_perfil_id {
+                get {
+                    return ((int)(this[this.tableUSUARIO.usr_perfil_idColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_perfil_idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string usr_cedula {
+                get {
+                    return ((string)(this[this.tableUSUARIO.usr_cedulaColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_cedulaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string usr_clave {
+                get {
+                    return ((string)(this[this.tableUSUARIO.usr_claveColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_claveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string usr_nombre {
+                get {
+                    return ((string)(this[this.tableUSUARIO.usr_nombreColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_nombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string usr_apellido {
+                get {
+                    return ((string)(this[this.tableUSUARIO.usr_apellidoColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_apellidoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string usr_telefono {
+                get {
+                    return ((string)(this[this.tableUSUARIO.usr_telefonoColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_telefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string usr_direccion {
+                get {
+                    return ((string)(this[this.tableUSUARIO.usr_direccionColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_direccionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime usr_fechaIngreso {
+                get {
+                    return ((global::System.DateTime)(this[this.tableUSUARIO.usr_fechaIngresoColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_fechaIngresoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int usr_estado {
+                get {
+                    return ((int)(this[this.tableUSUARIO.usr_estadoColumn]));
+                }
+                set {
+                    this[this.tableUSUARIO.usr_estadoColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class CAJERORowChangeEvent : global::System.EventArgs {
+            
+            private CAJERORow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CAJERORowChangeEvent(CAJERORow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CAJERORow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class USUARIORowChangeEvent : global::System.EventArgs {
+            
+            private USUARIORow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USUARIORowChangeEvent(USUARIORow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public USUARIORow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
         }
     }
     
@@ -313,52 +1527,28 @@ namespace myVisualCore.ServicioDelCore {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        myVisualCore.ServicioDelCore.HelloWorldResponse myVisualCore.ServicioDelCore.CoreWebServiceSoap.HelloWorld(myVisualCore.ServicioDelCore.HelloWorldRequest request) {
-            return base.Channel.HelloWorld(request);
+        public void WCLog() {
+            base.Channel.WCLog();
         }
         
-        public string HelloWorld() {
-            myVisualCore.ServicioDelCore.HelloWorldRequest inValue = new myVisualCore.ServicioDelCore.HelloWorldRequest();
-            inValue.Body = new myVisualCore.ServicioDelCore.HelloWorldRequestBody();
-            myVisualCore.ServicioDelCore.HelloWorldResponse retVal = ((myVisualCore.ServicioDelCore.CoreWebServiceSoap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<myVisualCore.ServicioDelCore.HelloWorldResponse> myVisualCore.ServicioDelCore.CoreWebServiceSoap.HelloWorldAsync(myVisualCore.ServicioDelCore.HelloWorldRequest request) {
-            return base.Channel.HelloWorldAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<myVisualCore.ServicioDelCore.HelloWorldResponse> HelloWorldAsync() {
-            myVisualCore.ServicioDelCore.HelloWorldRequest inValue = new myVisualCore.ServicioDelCore.HelloWorldRequest();
-            inValue.Body = new myVisualCore.ServicioDelCore.HelloWorldRequestBody();
-            return ((myVisualCore.ServicioDelCore.CoreWebServiceSoap)(this)).HelloWorldAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        myVisualCore.ServicioDelCore.InsertCajeroResponse myVisualCore.ServicioDelCore.CoreWebServiceSoap.InsertCajero(myVisualCore.ServicioDelCore.InsertCajeroRequest request) {
-            return base.Channel.InsertCajero(request);
+        public System.Threading.Tasks.Task WCLogAsync() {
+            return base.Channel.WCLogAsync();
         }
         
         public int InsertCajero(myVisualCore.ServicioDelCore.WCCajero _WCCajero) {
-            myVisualCore.ServicioDelCore.InsertCajeroRequest inValue = new myVisualCore.ServicioDelCore.InsertCajeroRequest();
-            inValue.Body = new myVisualCore.ServicioDelCore.InsertCajeroRequestBody();
-            inValue.Body._WCCajero = _WCCajero;
-            myVisualCore.ServicioDelCore.InsertCajeroResponse retVal = ((myVisualCore.ServicioDelCore.CoreWebServiceSoap)(this)).InsertCajero(inValue);
-            return retVal.Body.InsertCajeroResult;
+            return base.Channel.InsertCajero(_WCCajero);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<myVisualCore.ServicioDelCore.InsertCajeroResponse> myVisualCore.ServicioDelCore.CoreWebServiceSoap.InsertCajeroAsync(myVisualCore.ServicioDelCore.InsertCajeroRequest request) {
-            return base.Channel.InsertCajeroAsync(request);
+        public System.Threading.Tasks.Task<int> InsertCajeroAsync(myVisualCore.ServicioDelCore.WCCajero _WCCajero) {
+            return base.Channel.InsertCajeroAsync(_WCCajero);
         }
         
-        public System.Threading.Tasks.Task<myVisualCore.ServicioDelCore.InsertCajeroResponse> InsertCajeroAsync(myVisualCore.ServicioDelCore.WCCajero _WCCajero) {
-            myVisualCore.ServicioDelCore.InsertCajeroRequest inValue = new myVisualCore.ServicioDelCore.InsertCajeroRequest();
-            inValue.Body = new myVisualCore.ServicioDelCore.InsertCajeroRequestBody();
-            inValue.Body._WCCajero = _WCCajero;
-            return ((myVisualCore.ServicioDelCore.CoreWebServiceSoap)(this)).InsertCajeroAsync(inValue);
+        public WebCoreDataSet.USUARIODataTable BuscarUsuario(string codigo_in, string clave_in) {
+            return base.Channel.BuscarUsuario(codigo_in, clave_in);
+        }
+        
+        public System.Threading.Tasks.Task<WebCoreDataSet.USUARIODataTable> BuscarUsuarioAsync(string codigo_in, string clave_in) {
+            return base.Channel.BuscarUsuarioAsync(codigo_in, clave_in);
         }
     }
 }

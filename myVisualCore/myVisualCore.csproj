@@ -86,12 +86,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Connected Services\ServicioDelCore\CoreWebService.wsdl" />
-    <None Include="Connected Services\ServicioDelCore\myVisualCore.ServicioDelCore.HelloWorldResponse.datasource">
+    <None Include="Connected Services\ServicioDelCore\myVisualCore.ServicioDelCore.WebCoreDataSet.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServicioDelCore\myVisualCore.ServicioDelCore.InsertCajeroResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
+    <None Include="Connected Services\ServicioDelCore\WebCoreDataSet.xsd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

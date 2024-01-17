@@ -24,6 +24,7 @@
   <Metadata>
     <MetadataFile FileName="CoreWebService.wsdl" MetadataType="Wsdl" ID="74baf2f5-29a4-43fb-ad0d-d4fdf3b9aad8" SourceId="1" SourceUrl="https://localhost:44311/CoreWebService.asmx?wsdl" />
     <MetadataFile FileName="CoreWebService.disco" MetadataType="Disco" ID="7e47a648-a65f-474a-8da8-5d440ccd3434" SourceId="1" SourceUrl="https://localhost:44311/CoreWebService.asmx?disco" />
+    <MetadataFile FileName="WebCoreDataSet.xsd" MetadataType="Schema" ID="6847e09c-b6c6-4aca-b024-05df6693a71b" SourceId="1" SourceUrl="https://localhost:44311/CoreWebService.asmx?schema=WebCoreDataSet" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
