@@ -34,6 +34,31 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="InsertCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_WCCliente" type="tns:WCCliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WCCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="clt_codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clt_cedula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clt_nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clt_apellido" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clt_telefono" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clt_direccion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="clt_saldo" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertClienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="BuscarUsuario">
         <s:complexType>
           <s:sequence>
@@ -91,6 +116,12 @@
   <wsdl:message name="InsertCajeroSoapOut">
     <wsdl:part name="parameters" element="tns:InsertCajeroResponse" />
   </wsdl:message>
+  <wsdl:message name="InsertClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCliente" />
+  </wsdl:message>
+  <wsdl:message name="InsertClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertClienteResponse" />
+  </wsdl:message>
   <wsdl:message name="BuscarUsuarioSoapIn">
     <wsdl:part name="parameters" element="tns:BuscarUsuario" />
   </wsdl:message>
@@ -111,6 +142,10 @@
     <wsdl:operation name="InsertCajero">
       <wsdl:input message="tns:InsertCajeroSoapIn" />
       <wsdl:output message="tns:InsertCajeroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCliente">
+      <wsdl:input message="tns:InsertClienteSoapIn" />
+      <wsdl:output message="tns:InsertClienteSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="BuscarUsuario">
       <wsdl:input message="tns:BuscarUsuarioSoapIn" />
@@ -134,6 +169,15 @@
     </wsdl:operation>
     <wsdl:operation name="InsertCajero">
       <soap:operation soapAction="http://google.com/InsertCajero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCliente">
+      <soap:operation soapAction="http://google.com/InsertCliente" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -173,6 +217,15 @@
     </wsdl:operation>
     <wsdl:operation name="InsertCajero">
       <soap12:operation soapAction="http://google.com/InsertCajero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCliente">
+      <soap12:operation soapAction="http://google.com/InsertCliente" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

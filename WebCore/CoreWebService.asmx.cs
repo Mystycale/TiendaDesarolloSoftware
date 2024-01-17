@@ -53,6 +53,16 @@ namespace WebCore
         }
 
         [WebMethod]
+        public int InsertCliente(WCCliente _WCCliente)
+        {
+            CLIENTETableAdapter myCAJEROTableAdapter = new CLIENTETableAdapter();
+
+            int respQwery = myCAJEROTableAdapter.ppInsertCliente(_WCCliente.clt_codigo, _WCCliente.clt_cedula, _WCCliente.clt_nombre, _WCCliente.clt_apellido, _WCCliente.clt_telefono, _WCCliente.clt_direccion, _WCCliente.clt_saldo);
+
+            return respQwery;
+        }
+
+        [WebMethod]
         public USUARIODataTable BuscarUsuario(string codigo_in, string clave_in)
         {
 

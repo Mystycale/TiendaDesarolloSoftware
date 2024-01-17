@@ -1,4 +1,5 @@
-﻿using System;
+﻿using myVisualCore.Menues;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -87,8 +88,12 @@ namespace myVisualCore
                 {
                     case 0:
                     case 1:
-                    case 2:
                         continue;
+
+                    case 2:
+                        Console.Clear();
+                        MenuCliente.Ejecutar(actualCoreUser);
+                        break;
 
                     case 3:
                         Console.Clear();

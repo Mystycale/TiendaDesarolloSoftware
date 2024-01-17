@@ -62,6 +62,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarCliente.Designer.cs">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarCajero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,7 @@
       <DependentUpon>frmRegistrarCajero.cs</DependentUpon>
     </Compile>
     <Compile Include="Menues\MenuCajero.cs" />
+    <Compile Include="Menues\MenuCliente.cs" />
     <Compile Include="Menues\MenuPrincipal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarCajero.resx">
       <DependentUpon>frmRegistrarCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarCliente.resx">
+      <DependentUpon>frmRegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

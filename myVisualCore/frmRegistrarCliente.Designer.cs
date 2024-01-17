@@ -2,7 +2,7 @@
 
 namespace myVisualCore
 {
-    partial class frmRegistrarCajero
+    partial class frmRegistrarCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -55,6 +55,9 @@ namespace myVisualCore
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.txtSaldo = new System.Windows.Forms.TextBox();
+            this.pnlSaldo = new System.Windows.Forms.Panel();
+            this.lblSaldo = new System.Windows.Forms.Label();
             this.panelGeneral.SuspendLayout();
             this.groupBoxUsuario.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -65,6 +68,7 @@ namespace myVisualCore
             this.panel7.SuspendLayout();
             this.panelDatPersonales.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlSaldo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelGeneral
@@ -77,7 +81,7 @@ namespace myVisualCore
             this.panelGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGeneral.Location = new System.Drawing.Point(0, 0);
             this.panelGeneral.Name = "panelGeneral";
-            this.panelGeneral.Size = new System.Drawing.Size(515, 532);
+            this.panelGeneral.Size = new System.Drawing.Size(515, 584);
             this.panelGeneral.TabIndex = 0;
             // 
             // btnRegistrar
@@ -85,7 +89,7 @@ namespace myVisualCore
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(391, 484);
+            this.btnRegistrar.Location = new System.Drawing.Point(391, 541);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(97, 28);
@@ -163,10 +167,10 @@ namespace myVisualCore
             this.groupBox1.Controls.Add(this.panelDatPersonales);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(9, 141);
+            this.groupBox1.Location = new System.Drawing.Point(9, 140);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(355, 371);
+            this.groupBox1.Size = new System.Drawing.Size(355, 435);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
@@ -306,10 +310,12 @@ namespace myVisualCore
             // panelDatPersonales
             // 
             this.panelDatPersonales.BackColor = System.Drawing.Color.Black;
+            this.panelDatPersonales.Controls.Add(this.lblSaldo);
             this.panelDatPersonales.Controls.Add(this.panel1);
+            this.panelDatPersonales.Controls.Add(this.pnlSaldo);
             this.panelDatPersonales.Location = new System.Drawing.Point(6, 25);
             this.panelDatPersonales.Name = "panelDatPersonales";
-            this.panelDatPersonales.Size = new System.Drawing.Size(343, 339);
+            this.panelDatPersonales.Size = new System.Drawing.Size(343, 404);
             this.panelDatPersonales.TabIndex = 18;
             // 
             // panel1
@@ -338,7 +344,7 @@ namespace myVisualCore
             this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(391, 435);
+            this.btnVolver.Location = new System.Drawing.Point(391, 508);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(0);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(68, 24);
@@ -347,16 +353,47 @@ namespace myVisualCore
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // frmRegistrarCajero
+            // txtSaldo
+            // 
+            this.txtSaldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSaldo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSaldo.Location = new System.Drawing.Point(2, 7);
+            this.txtSaldo.Name = "txtSaldo";
+            this.txtSaldo.Size = new System.Drawing.Size(288, 20);
+            this.txtSaldo.TabIndex = 7;
+            // 
+            // pnlSaldo
+            // 
+            this.pnlSaldo.BackColor = System.Drawing.Color.White;
+            this.pnlSaldo.Controls.Add(this.txtSaldo);
+            this.pnlSaldo.Location = new System.Drawing.Point(23, 355);
+            this.pnlSaldo.Name = "pnlSaldo";
+            this.pnlSaldo.Size = new System.Drawing.Size(296, 30);
+            this.pnlSaldo.TabIndex = 15;
+            // 
+            // lblSaldo
+            // 
+            this.lblSaldo.AutoSize = true;
+            this.lblSaldo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblSaldo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSaldo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaldo.ForeColor = System.Drawing.Color.White;
+            this.lblSaldo.Location = new System.Drawing.Point(23, 333);
+            this.lblSaldo.Name = "lblSaldo";
+            this.lblSaldo.Size = new System.Drawing.Size(44, 19);
+            this.lblSaldo.TabIndex = 27;
+            this.lblSaldo.Text = "Saldo";
+            // 
+            // frmRegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(515, 532);
+            this.ClientSize = new System.Drawing.Size(515, 584);
             this.Controls.Add(this.panelGeneral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmRegistrarCajero";
-            this.Text = "Registrar cajero";
+            this.Name = "frmRegistrarCliente";
+            this.Text = "Registrar cliente";
             this.Load += new System.EventHandler(this.frmRegistrarCajero_Load);
             this.panelGeneral.ResumeLayout(false);
             this.groupBoxUsuario.ResumeLayout(false);
@@ -374,8 +411,11 @@ namespace myVisualCore
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panelDatPersonales.ResumeLayout(false);
+            this.panelDatPersonales.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pnlSaldo.ResumeLayout(false);
+            this.pnlSaldo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -407,5 +447,8 @@ namespace myVisualCore
         private System.Windows.Forms.Panel panelDatPersonales;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtSaldo;
+        private System.Windows.Forms.Label lblSaldo;
+        private System.Windows.Forms.Panel pnlSaldo;
     }
 }
